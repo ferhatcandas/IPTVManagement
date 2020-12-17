@@ -27,7 +27,7 @@ namespace Core
         {
             var channels = M3UManager.FetchChannels();
 
-            var existChannels = channelManager.GetChannels().Where(x=>x.IsActive).ToList();
+            var existChannels = channelManager.GetChannels().Where(x => x.IsActive).ToList();
 
             List<M3U8Channel> filteredChannels = new List<M3U8Channel>();
 
@@ -39,7 +39,7 @@ namespace Core
                     {
                         if (channel.ChannelName.ToLower().Contains(tag.ToLower()))
                         {
-                            if (!filteredChannels.Any(x=>x.StreamLink == channel.StreamLink))
+                            if (!filteredChannels.Any(x => x.StreamLink == channel.StreamLink))
                             {
                                 filteredChannels.Add(channel);
                             }
@@ -86,12 +86,16 @@ namespace Core
 
         public void SaveChannels(List<TVChannel> channels) => channelManager.SaveChannels(channels);
 
-        public (bool status, string message) SaveChannel(M3U8Channel existData) => channelManager.SaveChannel(existData);
+        public (bool status, string message) SaveChannel(M3U8Channel existData) => channelManager.SaveChannel(existData.ToTVChannel());
 
-        public List<TVChannel> GetTVChannels() => channelManager.GetChannels();
 
         public void ChangeStatus(List<string> ids) => channelManager.ChangeStatus(ids);
 
         public (bool status, string message) UpdateChannel(M3U8Channel existData) => channelManager.UpdateChannel(existData);
+        public List<TVChannel> GetTVChannels() => channelManager.GetChannels();
+        public TVChannelModel GetTVChannel(string channelId) => channelManager.GetChannel(channelId).ToTVChannelModel();
+        public void AddChannel(TVChannel channel) => channelManager.SaveChannel(channel);
+        public void RemoveChannel(string channelId) => channelManager.RemoveChannels(new List<string> { channelId });
+        public void UpdateChannel(string channelId, TVChannel channel) => channelManager.UpdateChannel(channelId,channel);
     }
 }

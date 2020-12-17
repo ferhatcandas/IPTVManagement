@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  ui:
+    image: ui
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4000:4000
+    command: npm start

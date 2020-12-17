@@ -15,7 +15,7 @@ namespace Core
         {
             this.channelRepository = channelRepository;
         }
-        public (bool status, string message) SaveChannel(M3U8Channel channel)
+        public (bool status, string message) SaveChannel(TVChannel channel)
         {
             var existChannels = GetChannels();
             var existChannel = existChannels.FirstOrDefault(x => x.StreamLink.Contains(channel.StreamLink));
@@ -25,7 +25,7 @@ namespace Core
             }
             else
             {
-                channelRepository.Insert(channel.ToTVChannel());
+                channelRepository.Insert(channel);
                 return (true, "channel saved");
             }
         }
@@ -71,6 +71,27 @@ namespace Core
                 }
             }
             SaveChannels(existChannels);
+        }
+
+        internal void UpdateChannel(string channelId, TVChannel channel)
+        {
+            var existChannels = GetChannels();
+
+            var existChannel = existChannels.FirstOrDefault(x => x.Id == channelId);
+            if (existChannel != null)
+            {
+                existChannels = existChannels.Where(x => x.Id != channelId).ToList();
+                channel.Id = channelId;
+                existChannels.Add(channel);
+                SaveChannels(existChannels);
+            }
+        }
+
+        internal TVChannel GetChannel(string channelId)
+        {
+            var existChannels = GetChannels();
+
+            return existChannels.FirstOrDefault(x => x.Id == channelId);
         }
     }
 }

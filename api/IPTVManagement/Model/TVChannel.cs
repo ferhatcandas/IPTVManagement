@@ -43,10 +43,27 @@ namespace Model
                 ChannelName = this.ShowChannelName,
                 Country = this.Country,
                 Language = this.Language,
-                StreamLink=this.StreamLink,
+                StreamLink = this.StreamLink,
                 Logo = this.Logo,
                 Url = null
             };
         }
+
+        public TVChannelModel ToTVChannelModel()
+        {
+            return new TVChannelModel
+            {
+                Logo = Logo,
+                Category = Category,
+                IsActive = IsActive,
+                IsFound = Found,
+                Country = Country,
+                Language = Language,
+                Name = ShowChannelName,
+                StreamLink = StreamLink,
+                Tags = ChannelTags != null ? string.Join(",", ChannelTags) : null
+            };
+        }
+
     }
 }

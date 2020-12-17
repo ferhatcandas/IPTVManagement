@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style/index.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import App from './App.js';
+// import { createStore } from "redux";
+// function foodReducer(state = 'elma', action) {
+//   switch (action.type) {
+//     case "UPDATE_FOOD":
+//       return action.payload;
+//     default:
+//       return state;
+//   }
+// }
+// const store = createStore(foodReducer);
+// console.log(store.getState());
+// const updateFoodDatas = {
+//   type: "UPDATE_FOOD",
+//   payload: "armut"
+// }
 
-import ChannelsComponent from "./components/Channels.js";
+// store.dispatch(updateFoodDatas);
+// console.log(store.getState());
 
-
-ReactDOM.render(<ChannelsComponent />,
-  document.getElementById('tvchannels')
-);
-
+ReactDOM.render(<App />, document.getElementById('app'));
