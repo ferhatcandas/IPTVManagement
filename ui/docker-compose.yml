@@ -1,4 +1,4 @@
-version: "3.7"
+version: '3.4'
 
 services:
   ui:
@@ -6,9 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    stdin_open: true
     environment:
       NODE_ENV: production
     ports:
-      - 4000:4000
-    command: npm start
+      - 9090:9090

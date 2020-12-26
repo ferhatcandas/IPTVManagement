@@ -59,20 +59,6 @@ namespace Core
             SaveChannels(existChannels.ToList());
         }
 
-        internal void ChangeStatus(List<string> ids)
-        {
-            var existChannels = GetChannels();
-
-            foreach (var item in existChannels)
-            {
-                if (ids.Contains(item.Id))
-                {
-                    item.IsActive = !item.IsActive;
-                }
-            }
-            SaveChannels(existChannels);
-        }
-
         internal void UpdateChannel(string channelId, TVChannel channel)
         {
             var existChannels = GetChannels();

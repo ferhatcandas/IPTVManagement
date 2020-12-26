@@ -1,0 +1,118 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="TRT Haber" tvg-name="TRT Haber" tvg-language="Turkish" tvg-logo="https://i.ibb.co/3pKN9gx/BYsl7Nc.jpg" tvg-country="TR" tvg-url="" group-title="Haber",TRT Haber
+http://tv-trthaber.live.trt.com.tr/master_720.m3u8
+#EXTINF:-1 tvg-id="TRT World" tvg-name="TRT World" tvg-language="English" tvg-logo="https://i.ibb.co/phw4pjP/mjTjJ1N.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TRT World
+http://tv-trtworld.live.trt.com.tr/master_720.m3u8
+#EXTINF:-1 tvg-id="TLC" tvg-name="TLC" tvg-language="Turkish" tvg-logo="https://i.ibb.co/rp1rtsC/Mp1BWwp.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TLC
+https://canli.ensonhaber.com/tr/tlc/index.m3u8
+#EXTINF:-1 tvg-id="NTV HD" tvg-name="NTV HD" tvg-language="Turkish" tvg-logo="https://i.ibb.co/4Jv1LRS/QP18ELE.png" tvg-country="TR" tvg-url="" group-title="Haber",NTV HD
+https://nt4p9nef.rocketcdn.com/ntvhd.stream_720p/chunklist.m3u8
+#EXTINF:-1 tvg-id="Power Türk HD" tvg-name="Power Türk HD" tvg-language="Turkish" tvg-logo="https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_35.png" tvg-country="TR" tvg-url="" group-title="Müzik",Power Türk HD
+https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_b2650000_sltur.m3u8
+#EXTINF:-1 tvg-id="Kral Pop HD" tvg-name="Kral Pop HD" tvg-language="Turkish" tvg-logo="https://i.ibb.co/7v8wmsb/7H8WKei.png" tvg-country="TR" tvg-url="" group-title="Müzik",Kral Pop HD
+https://0ajuu84p.rocketcdn.com/kralpop_720/chunklist.m3u8
+#EXTINF:-1 tvg-id="Halk TV HD" tvg-name="Halk TV HD" tvg-language="Turkish" tvg-logo="https://i.imgur.com/vYEnfbj.jpg" tvg-country="TR" tvg-url="" group-title="Haber",Halk TV HD
+https://mn-nl.mncdn.com/blutv_halktv/smil:halktv_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="CNN Türk HD" tvg-name="CNN Türk HD" tvg-language="Turkish" tvg-logo="https://img1.pnghut.com/21/16/23/MD6acbsVcq/vecteur-area-cnnmoney-trademark-text.jpg" tvg-country="TR" tvg-url="" group-title="Haber",CNN Türk HD
+https://mn-nl.mncdn.com/blutv_cnnturk/smil:cnnturk_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="Habertürk" tvg-name="Habertürk" tvg-language="Turkish" tvg-logo="https://i.pinimg.com/originals/b4/14/77/b41477a961468b99b51db1e3905ece45.png" tvg-country="TR" tvg-url="" group-title="Haber",Habertürk
+https://canli.ensonhaber.com/tr/haberturk/index.m3u8
+#EXTINF:-1 tvg-id="Canal Algérie" tvg-name="Canal Algérie" tvg-language="Arabic" tvg-logo="https://i.imgur.com/GxSZcYi.png" tvg-country="DZ" tvg-url="" group-title="Fujika",Canal Algérie
+https://hta.cdn.easybroadcast.fr/HTATV_CDN/CANAL_ALGERIE/iptvdz/CANAL_ALGERIE_720p/chunks.m3u8
+#EXTINF:-1 tvg-id="Beyaz Tv" tvg-name="Beyaz Tv" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/8/8d/Beyaz_TV_logo.jpeg" tvg-country="TR" tvg-url="" group-title="Ulusal",Beyaz Tv
+https://mn-nl.mncdn.com/blutv_beyaztv/smil:beyaztv_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="Kanal 7" tvg-name="Kanal 7" tvg-language="Turkish" tvg-logo="https://izle7-image.kanal7-cdn.com/assets/img/kanal7-logo_new.jpg" tvg-country="TR" tvg-url="" group-title="Ulusal",Kanal 7
+https://mn-nl.mncdn.com/blutv_kanal7/kanal7_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="TV 8" tvg-name="TV 8" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TV 8
+https://mn-nl.mncdn.com/blutv_tv8/smil:tv8_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="TV 8.5" tvg-name="TV 8.5" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/1/1f/TV8.5_Logosu.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TV 8.5
+https://mn-nl.mncdn.com/blutv_tv8_5/smil:tv8_5_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="Haber Global" tvg-name="Haber Global" tvg-language="Turkish" tvg-logo="https://yt3.ggpht.com/ytc/AAUvwnh8naTgb5DIRa_TRtTfeP4o_Cr2bclSmUPNgNYX_w=s900-c-k-c0x00ffffff-no-rj" tvg-country="TR" tvg-url="" group-title="Haber",Haber Global
+https://canli.ensonhaber.com/tr/haberglobal/index.m3u8
+#EXTINF:-1 tvg-id="Ulke TV" tvg-name="Ulke TV" tvg-language="Turkish" tvg-logo="https://cdn.kanal7.com/ulketv/wp-content/uploads/2015/12/29112014172109.jpg" tvg-country="TR" tvg-url="" group-title="Haber",Ulke TV
+https://stream-01.ix7.dailymotion.com/sec(0HE75RGSqqnhnSdEMl12ZRsrvucn49Q2Y427rW37YPQ)/dm/3/x7vatf0/s/live-4.m3u8
+#EXTINF:-1 tvg-id="TV NET" tvg-name="TV NET" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/34/Tvnet_Logo.jpg" tvg-country="TR" tvg-url="" group-title="Haber",TV NET
+https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8
+#EXTINF:-1 tvg-id="Bloomberg HT" tvg-name="Bloomberg HT" tvg-language="Turkish" tvg-logo="https://im.haberturk.com/2018/01/27/ver1517064135/1813956_620x410.jpg" tvg-country="TR" tvg-url="" group-title="Haber",Bloomberg HT
+https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8
+#EXTINF:-1 tvg-id="TRT Belgesel" tvg-name="TRT Belgesel" tvg-language="Turkish" tvg-logo="https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-11.19.01/69a03b09fca64ae0b1503a05729cdf22.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TRT Belgesel
+http://tv-trtbelgesel.live.trt.com.tr/master_720.m3u8
+#EXTINF:-1 tvg-id="Fox TV HD" tvg-name="Fox TV HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/1200px-FOX_wordmark-red.svg.png" tvg-country="TR" tvg-url="" group-title="Ulusal",Fox TV HD
+https://stream.hdtvizlecanli.com/fox.m3u8
+#EXTINF:-1 tvg-id="Star Tv" tvg-name="Star Tv" tvg-language="Turkish" tvg-logo="https://2.bp.blogspot.com/-OWN79xICnxc/TxSKSwDI8hI/AAAAAAAAB3M/TKFq7LS2yCI/s1600/star_logo_3.jpg" tvg-country="TR" tvg-url="" group-title="Ulusal",Star Tv
+https://mn-nl.mncdn.com/blutv_star/smil:star_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="Show TV HD" tvg-name="Show TV HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png" tvg-country="TR" tvg-url="" group-title="Ulusal",Show TV HD
+https://canli.ensonhaber.com/tr/showtv/index.m3u8
+#EXTINF:-1 tvg-id="TGRT Haber" tvg-name="TGRT Haber" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/e/e1/TGRT_Haber_logosu.png" tvg-country="TR" tvg-url="" group-title="Haber",TGRT Haber
+https://canli.ensonhaber.com/tr/tgrthaber/index.m3u8
+#EXTINF:-1 tvg-id="TGRT Belgesel" tvg-name="TGRT Belgesel" tvg-language="Turkish" tvg-logo="https://yt3.ggpht.com/ytc/AAUvwnh_FcCI9aOoOAsC2ZcHxvnk7qOaEKkpi4j6Ct4w=s900-c-k-c0x00ffffff-no-rj" tvg-country="TR" tvg-url="" group-title="Belgesel",TGRT Belgesel
+https://canli.ensonhaber.com/tr/tgrtbelgesel/index.m3u8
+#EXTINF:-1 tvg-id="Power TV" tvg-name="Power TV" tvg-language="English" tvg-logo="https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_44.png" tvg-country="TR" tvg-url="" group-title="Müzik",Power TV
+https://livetv.powerapp.com.tr/powerTV/powerhd.smil/chunklist_b1428000_sltur.m3u8
+#EXTINF:-1 tvg-id="TF1" tvg-name="TF1" tvg-language="Français" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/dc/TF1_logo_2013.png" tvg-country="FR" tvg-url="" group-title="Fujika",TF1
+https://tf1-hls-live-ssl.tf1.fr/tf1/1/hls/live_2328.m3u8
+#EXTINF:-1 tvg-id="Cima 1 TV" tvg-name="Cima 1 TV" tvg-language="Arabic" tvg-logo="https://media.elcinema.com/tvguide/1176_1.png" tvg-country="EG" tvg-url="" group-title="Fujika",Cima 1 TV
+http://178.132.3.162:88/Cima/video.m3u8?token=test
+#EXTINF:-1 tvg-id="TV 100" tvg-name="TV 100" tvg-language="Turkish" tvg-logo="https://s.tv100.com/assets/web/images/default.jpg" tvg-country="TR" tvg-url="" group-title="Ulusal",TV 100
+https://stream.hdtvizlecanli.com/t1.m3u8
+#EXTINF:-1 tvg-id="Nil Drama" tvg-name="Nil Drama" tvg-language="Arabic" tvg-logo="https://media.elcinema.com/tvguide/1156_1.png" tvg-country="EG" tvg-url="" group-title="Fujika",Nil Drama
+http://178.132.3.162:88/Nile_Drama/video.m3u8?token=test
+#EXTINF:-1 tvg-id="Nil Cinema" tvg-name="Nil Cinema" tvg-language="Arabic" tvg-logo="http://www.niletc.tv/images/cinema/cinema.png" tvg-country="EG" tvg-url="" group-title="Fujika",Nil Cinema
+http://178.132.3.162:88/Nile_cinema/video.m3u8?token=test
+#EXTINF:-1 tvg-id="ATV" tvg-name="ATV" tvg-language="Turkish" tvg-logo="https://www.logovector.org/wp-content/uploads/logos/png/a/atv_logo.png" tvg-country="TR" tvg-url="" group-title="Ulusal",ATV
+http://mdn.mvp.tivibu.com.tr/MVP/TTG/NPVR/shls/LIVE$ATV_HD/index.m3u8?start=LIVE&end=END&device=HLS
+#EXTINF:-1 tvg-id="BBC One HD" tvg-name="BBC One HD" tvg-language="English" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/BBC_One_%282002%29.svg/220px-BBC_One_%282002%29.svg.png" tvg-country="GB" tvg-url="" group-title="Haber",BBC One HD
+http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8
+#EXTINF:-1 tvg-id="Kemal Sunal" tvg-name="Kemal Sunal" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/f/f8/Kemal_Sunal.gif/220px-Kemal_Sunal.gif" tvg-country="TR" tvg-url="" group-title="KemalSunal",Kemal Sunal
+http://rv.therevenge.co:80/691616211141151/691616211141151/80400
+#EXTINF:-1 tvg-id="TRT 1 HD" tvg-name="TRT 1 HD" tvg-language="Turkish" tvg-logo="https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-10.50.19/17ddfc2658604509a952019f6ce55452.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TRT 1 HD
+http://tv-trt1.live.trt.com.tr/master_720.m3u8
+#EXTINF:-1 tvg-id="Animal Planet" tvg-name="Animal Planet" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Animal_Planet.png/1280px-Animal_Planet.png" tvg-country="TR" tvg-url="" group-title="Belgesel",Animal Planet
+http://rv.therevenge.co:80/691616211141151/691616211141151/80655
+#EXTINF:-1 tvg-id="360 TV" tvg-name="360 TV" tvg-language="Turkish" tvg-logo="https://imgs.turkmedya.com.tr/gorseller/YazarFotos/program/default.png" tvg-country="TR" tvg-url="" group-title="Haber",360 TV
+https://mn-nl.mncdn.com/360tv_live/smil:360tv.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="EL BILAD" tvg-name="EL BILAD" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/126_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL BILAD
+https://cdn.hta.dz/live/EL_BILAD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Beur TV" tvg-name="Beur TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/3_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Beur TV
+https://cdn.hta.dz/live/Beur_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Echorouk TV" tvg-name="Echorouk TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/6_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Echorouk TV
+https://cdn.hta.dz/live/Echorouk_TV_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="El Djazairia One" tvg-name="El Djazairia One" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/7_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Djazairia One
+https://cdn.hta.dz/live/EL_DJAZAIRIA_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Ennahar TV" tvg-name="Ennahar TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/8_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Ennahar TV
+https://cdn.hta.dz/live/ENNAHAR_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Echorouk NEWS" tvg-name="Echorouk NEWS" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/18_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Echorouk NEWS
+https://cdn.hta.dz/live/ECHOROUK_NEWS/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="BAHIA TV" tvg-name="BAHIA TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/123_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",BAHIA TV
+https://cdn.hta.dz/live/Bahia_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="EL HAYAT TV" tvg-name="EL HAYAT TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/129_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL HAYAT TV
+https://cdn.hta.dz/live/EL_HAYAT_TV_ALGERIE/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="El Heddaf TV" tvg-name="El Heddaf TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/15_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Heddaf TV
+https://cdn.hta.dz/live/EL_HEDDAF_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Lina TV" tvg-name="Lina TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/140_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Lina TV
+https://cdn.hta.dz/live/Lina_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Samira TV" tvg-name="Samira TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/10_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Samira TV
+https://cdn.hta.dz/live/SamiraTV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="NUMIDIA" tvg-name="NUMIDIA" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/127_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",NUMIDIA
+https://cdn.hta.dz/live/NUMIDIA_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="El Djazair N1" tvg-name="El Djazair N1" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/139_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Djazair N1
+https://cdn.hta.dz/live/El_Djazair_N1/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="EL FADJR TV" tvg-name="EL FADJR TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/130_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL FADJR TV
+https://cdn.hta.dz/live/EL_FADJR_TV_DZ/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="ALANIS TV" tvg-name="ALANIS TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/132_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",ALANIS TV
+https://cdn.hta.dz/live/El_Fhama_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjYvMjAyMCAwNzozNDo0OSBQTSZoYXNoX3ZhbHVlPWFEZ2dEcmljc29zekJLbDQzU2dITVE9PSZ2YWxpZG1pbnV0ZXM9MTA=
+

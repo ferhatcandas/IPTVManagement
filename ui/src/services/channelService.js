@@ -1,14 +1,19 @@
 import axios from 'axios';
-
+import config from '../config.json';
 export default class ChannelService {
 
-    delete(channel, callback) {
-        axios.delete(this.RequestURL(channel.id)).then(res => {
+    delete(channelId, callback) {
+        axios.delete(this.RequestURL(channelId)).then(res => {
             callback(res)
         })
     }
     put(channel, callback) {
         axios.put(this.RequestURL(channel.id), channel).then(res => {
+            callback(res)
+        })
+    }
+    putStatus(channelId, callback) {
+        axios.put(this.RequestURL(channelId) + "/status",null).then(res => {
             callback(res)
         })
     }
@@ -36,6 +41,6 @@ export default class ChannelService {
         return this.endpoint + "/" + value;
     }
     constructor() {
-        this.endpoint = "http://localhost:5000/channels"
+        this.endpoint = config.Api.EndPoint + "/channels"
     }
 }

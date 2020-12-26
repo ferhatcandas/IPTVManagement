@@ -14,10 +14,11 @@ namespace Model
         public string Logo { get; set; }
         public string Url { get; set; }
         public string CategoryName { get; set; }
+        public bool IsAddList { get; set; }
 
-        public TVChannel ToTVChannel()
+        public TVChannel ToTVChannel(bool isActive = false)
         {
-            return new TVChannel(ChannelName, null, StreamLink, CategoryName, Language, Logo, Country);
+            return new TVChannel(ChannelName, null, isActive, StreamLink, CategoryName, Language, Logo, Country);
         }
     }
 

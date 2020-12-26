@@ -1,0 +1,54 @@
+﻿[
+  {
+    "Integration": "dailyiptvlist",
+    "Settings": {
+      "Periods": [
+        "yesterday",
+        "today"
+      ],
+      "Scheme": "https://dailyiptvlist.com/dl/tr-m3uplaylist-{date}-{part}.m3u",
+      "LastPartIndex": 8,
+      "SchemeType": "date",
+      "DateFormat": "yyyy-MM-dd"
+    }
+  },
+  {
+    "Integration": "htatv",
+    "Settings": {
+      "Link": "https://hta.backoffice.easybroadcast.fr/grids/tv",
+      "AuthToken": "https://token.kube.easybroadcast.fr/authtoken?url=http://apphta.easybroadcast.fr/apphta"
+    },
+    "Addional": true
+  },
+  {
+    "Integration": "freeiptvlists",
+    "Settings": {
+      "Periods": [
+        "yesterday",
+        "today"
+      ],
+      "Scheme": "https://freeiptvlists.com/website_lists/Turkey/tr{date}.php",
+      "LastPartIndex": null,
+      "SchemeType": "date",
+      "DateFormat": "dd_MM_yy"
+    }
+  },
+  {
+    "Integration": "none",
+    "Settings": {
+      "Link": "https://iptv-org.github.io/iptv/countries/tr.m3u"
+    }
+  },
+  {
+    "Integration": "none",
+    "Settings": {
+      "Link": "https://iptv-org.github.io/iptv/countries/dz.m3u"
+    }
+  },
+  {
+    "Integration": "none",
+    "Settings": {
+      "Link": "https://hlscat.com/my_list/b4c060805a74c33a6b4662f23298671f.m3u8"
+    }
+  }
+]

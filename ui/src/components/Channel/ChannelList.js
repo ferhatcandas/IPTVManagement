@@ -12,21 +12,35 @@ export default class ChannelList extends React.Component {
         }
         this.channelApi = new ChannelService();
         this.fetchRows = this.fetchRows.bind(this)
+        this.removeChannel = this.removeChannel.bind(this);
+        this.editChannel = this.editChannel.bind(this);
+        this.changeStatus = this.changeStatus.bind(this);
+        this.newChannelModal = this.newChannelModal.bind(this);
     }
     removeChannel(channelId) {
-        console.log(channelId);
+        this.channelApi.delete(channelId, () => {
+            this.fetchRows();
+        })
+    }
+    changeStatus(channelId) {
+        if (channelId)
+            this.channelApi.putStatus(channelId, () => {
+                this.fetchRows();
+            })
     }
     editChannel(channelId) {
         this.setState({ selectedChannelId: channelId })
     }
-
+    newChannelModal() {
+        this.setState({ selectedChannelId: null })
+    }
     GenerateRow = (props) => {
         const row = (
             <tr key={props.id} style={{ display: props.show }}>
                 <td>{props.channelName}</td>
                 <td>
                     <div className="icheck-primary d-inline">
-                        <input type="radio" id={"isActive_" + props.id}   disabled={!props.isActive} defaultChecked={props.isActive}></input>
+                        <input type="radio" id={"isActive_" + props.id} onClick={this.changeStatus.bind(this, props.id)} onChange={this.changeStatus.bind(this, null)} checked={props.isActive}></input>
                         <label htmlFor={"isActive_" + props.id}></label>
                     </div>
                 </td>
@@ -34,7 +48,9 @@ export default class ChannelList extends React.Component {
                 <td>{props.language}</td>
                 <td>{props.category}</td>
                 <td>{props.country}</td>
-                <td><a href={props.streamUrl}>link</a></td>
+                <td>
+                    <a href={props.streamUrl} target="blank">link</a>
+                </td>
                 <td>
                     <div className="icheck-primary d-inline">
                         <input type="radio" id={"isFound_" + props.id} disabled={!props.isFound} defaultChecked={props.isFound}></input>
@@ -61,11 +77,11 @@ export default class ChannelList extends React.Component {
             let value = event.target.value.toLowerCase();
 
             let filter = this.state.channels.map((data, index) => {
-                if (data.channelName.toLowerCase().includes(value) ||
-                    data.language.toLowerCase().includes(value) ||
-                    data.category.toLowerCase().includes(value) ||
-                    data.country.toLowerCase().includes(value) ||
-                    data.streamUrl.toLowerCase().includes(value)) {
+                if (data.channelName?.toLowerCase().includes(value) ||
+                    data.language?.toLowerCase().includes(value) ||
+                    data.category?.toLowerCase().includes(value) ||
+                    data.country?.toLowerCase().includes(value) ||
+                    data.streamUrl?.toLowerCase().includes(value)) {
                     data.show = 'table-row'
                 }
                 else {
@@ -122,15 +138,17 @@ export default class ChannelList extends React.Component {
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">TV Channels</h3>
-
-                        <div className="card-tools">
-                            <div className="input-group input-group-sm" style={{ width: '150px' }}>
-                                <input type="text" name="table_search" className="form-control float-right" onChange={this.filterRows.bind(this)} placeholder="Search" />
-
-                                <div className="input-group-append">
-                                    <button type="submit" className="btn btn-default">
-                                        <i className="fas fa-search"></i>
-                                    </button>
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-10">
+                                    <button type="button" className="btn btn-primary float-right" data-toggle="modal" data-target="#modal-primary" onClick={this.newChannelModal.bind(this)} ><i className="fa fa-plus"></i></button>
+                                </div>
+                                <div className="col-2">
+                                    <div className="card-tools">
+                                        <div className="input-group input-group-sm">
+                                            <input type="text" name="table_search" className="form-control float-right" onChange={this.filterRows.bind(this)} placeholder="Search" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

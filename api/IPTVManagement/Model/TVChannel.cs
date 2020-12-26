@@ -7,12 +7,12 @@ namespace Model
 {
     public class TVChannel
     {
-        public TVChannel(string name, string[] tags, string link = null, string category = "", string language = "", string logo = "", string country = "")
+        public TVChannel(string name, string[] tags, bool isActive = false, string link = null, string category = "", string language = "", string logo = "", string country = "")
         {
             Id = Guid.NewGuid().ToString();
             ShowChannelName = name;
             ChannelTags = tags;
-            IsActive = true;
+            IsActive = isActive;
             Logo = logo;
             Language = language;
             Category = category;
@@ -56,7 +56,6 @@ namespace Model
                 Logo = Logo,
                 Category = Category,
                 IsActive = IsActive,
-                IsFound = Found,
                 Country = Country,
                 Language = Language,
                 Name = ShowChannelName,

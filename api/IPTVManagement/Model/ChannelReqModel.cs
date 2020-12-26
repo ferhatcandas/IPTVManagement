@@ -11,10 +11,9 @@ namespace Model
         public string Category { get; set; }
         public string Country { get; set; }
         public string StreamLink { get; set; }
-        public bool IsFound { get; set; }
-        public TVChannel  ToTvChannel(string channelId)
+        public TVChannel ToTvChannel(string channelId)
         {
-            var channel = new TVChannel(Name, Tags.Split('|'), StreamLink, Category, Language, Logo, Country);
+            var channel = new TVChannel(Name, Tags?.Split('|'), IsActive, StreamLink, Category, Language, Logo, Country);
             channel.Id = channelId;
             return channel;
         }

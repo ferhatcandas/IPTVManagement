@@ -15,7 +15,7 @@ namespace IPTV.WebApi
 {
     public class Startup
     {
-      public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -38,7 +38,7 @@ namespace IPTV.WebApi
 
         private void RegisterServices(IServiceCollection services)
         {
-            Manager manager = new Manager(new M3UManager(new System.Net.Http.HttpClient(), new DataLayer.FetchRepository()), new TVChannelManager(new DataLayer.TVChannelRepository()));
+            Manager manager = new Manager(new M3UManager(new System.Net.Http.HttpClient()), new TVChannelManager(new DataLayer.TVChannelRepository()), new IntegrationManager(new System.Net.Http.HttpClient(), new DataLayer.IntegrationRepository()));
 
             services.AddSingleton<Manager>(manager);
         }

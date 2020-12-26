@@ -1,0 +1,12 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  iptvwebapi:
+    image: iptvwebapi
+    build:
+      context: .
+      dockerfile: IPTV.WebApi/Dockerfile
+    ports:
+      - 8080

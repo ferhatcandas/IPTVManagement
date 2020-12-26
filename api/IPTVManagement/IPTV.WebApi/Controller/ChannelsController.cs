@@ -19,6 +19,13 @@ namespace IPTV.WebApi.Controller
         {
             this.manager = manager;
         }
+        [HttpGet("stream")]
+        [Produces("audio/x-mpegurl")]
+        public async Task<IActionResult> Stream()
+        {
+            var stream = manager.GetStream();
+            return File(stream, "audio/x-mpegurl");
+        }
         [HttpGet()]
         public async Task<IActionResult> GetChannels()
         {
@@ -37,7 +44,7 @@ namespace IPTV.WebApi.Controller
             ).OrderByDescending(x => x.IsFound).ThenBy(x => x.ChannelName).ToList());
         }
         [HttpPost()]
-        public async Task<IActionResult> AddChannel(TVChannelModel request)
+        public async Task<IActionResult> AddChannel([FromBody] TVChannelModel request)
         {
             manager.AddChannel(request.ToTvChannel(Guid.NewGuid().ToString()));
             return Ok();
@@ -51,6 +58,12 @@ namespace IPTV.WebApi.Controller
         public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] TVChannelModel request)
         {
             manager.UpdateChannel(channelId, request.ToTvChannel(channelId));
+            return Ok();
+        }
+        [HttpPut("{channelId}/status")]
+        public async Task<IActionResult> UpdateStatus([FromRoute] string channelId)
+        {
+            manager.UpdateStatus(channelId);
             return Ok();
         }
         [HttpDelete("{channelId}")]

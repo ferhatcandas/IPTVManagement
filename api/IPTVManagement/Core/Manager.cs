@@ -14,21 +14,20 @@ namespace Core
     {
         private readonly M3UManager M3UManager;
         private readonly TVChannelManager channelManager;
-
-        public Manager(M3UManager M3UManager, TVChannelManager channelManager)
+        private readonly IntegrationManager integrationManager;
+        public Manager(M3UManager M3UManager, TVChannelManager channelManager, IntegrationManager integrationManager)
         {
             this.M3UManager = M3UManager;
             this.channelManager = channelManager;
+            this.integrationManager = integrationManager;
         }
 
-
-
-        public void FetchList()
+        public byte[] FetchList()
         {
-            var channels = M3UManager.FetchChannels();
+            var channels = integrationManager.FetchChannels();
 
             var existChannels = channelManager.GetChannels().Where(x => x.IsActive).ToList();
-
+            existChannels.AddRange(channels.Where(x => x.IsAddList).Select(x => x.ToTVChannel()));
             List<M3U8Channel> filteredChannels = new List<M3U8Channel>();
 
             foreach (var channel in channels)
@@ -73,29 +72,37 @@ namespace Core
                 newChannels.Add(existChannel.ToM3U());
             }
 
-            M3UManager.Export(newChannels);
+            return M3UManager.Export(newChannels);
 
 
         }
 
-        public List<M3U8Channel> GetSources() => M3UManager.FetchChannels();
+        public void UpdateStatus(string channelId)
+        {
+            var channels = GetTVChannels();
+            var channel = channels.FirstOrDefault(x => x.Id == channelId);
+            channel.IsActive = !channel.IsActive;
+            channelManager.SaveChannels(channels);
+        }
 
-        public List<M3U8Channel> DownloadAndGet(string v) => M3UManager.DownloadAndGet(v);
+        public Stream GetStream()
+        {
+            var bytes = FetchList();
+            Stream stream = new MemoryStream(bytes);
+            return stream;
+        }
 
-        public void RemoveFromList(List<string> ids) => channelManager.RemoveChannels(ids);
+        public List<TVChannel> GetTVChannels()
+        {
+            var list =  channelManager.GetChannels();
+            list.AddRange(integrationManager.GetAddionalList());
 
-        public void SaveChannels(List<TVChannel> channels) => channelManager.SaveChannels(channels);
+            return list;
+        }
 
-        public (bool status, string message) SaveChannel(M3U8Channel existData) => channelManager.SaveChannel(existData.ToTVChannel());
-
-
-        public void ChangeStatus(List<string> ids) => channelManager.ChangeStatus(ids);
-
-        public (bool status, string message) UpdateChannel(M3U8Channel existData) => channelManager.UpdateChannel(existData);
-        public List<TVChannel> GetTVChannels() => channelManager.GetChannels();
         public TVChannelModel GetTVChannel(string channelId) => channelManager.GetChannel(channelId).ToTVChannelModel();
         public void AddChannel(TVChannel channel) => channelManager.SaveChannel(channel);
         public void RemoveChannel(string channelId) => channelManager.RemoveChannels(new List<string> { channelId });
-        public void UpdateChannel(string channelId, TVChannel channel) => channelManager.UpdateChannel(channelId,channel);
+        public void UpdateChannel(string channelId, TVChannel channel) => channelManager.UpdateChannel(channelId, channel);
     }
 }

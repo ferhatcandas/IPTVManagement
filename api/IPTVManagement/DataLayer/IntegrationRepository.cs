@@ -6,9 +6,9 @@ using System.Text;
 
 namespace DataLayer
 {
-    public class FetchRepository : FileRepository<FetchLink>
+    public class IntegrationRepository : FileRepository<IntegrationSettings>
     {
-        public FetchRepository():base("fetchlinks")
+        public IntegrationRepository():base("integration")
         {
         }
     }
