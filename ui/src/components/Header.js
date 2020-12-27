@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
-export default class Header extends Component {
+import { Component } from 'react';
+import { connect } from 'react-redux'
+
+class Header extends Component {
     render() {
         return (
-            <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+            <nav className="main-header navbar navbar-expand navbar-white navbar-light" >
                 <ul className="navbar-nav">
                     {/* <li className="nav-item">
                         <a href="#" className="nav-link" data-widget="pushmenu" role="button"><i className="fas fa-bars"></i></a>
                     </li> */}
                     <li className="nav-item d-none d-sm-inline-block">
-                        <a href="#" className="nav-link">Home</a>
+                        <a href="#" onClick={() => this.props.changeTab("tvChannels")} className="nav-link">TV Channels</a>
                     </li>
                     <li className="nav-item d-none d-sm-inline-block">
-                        <a href="#" className="nav-link">Contact</a>
+                        <a href="#" onClick={() => this.props.changeTab("integrations")} className="nav-link">Integrations</a>
                     </li>
                 </ul>
 
@@ -99,7 +101,15 @@ export default class Header extends Component {
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav >
         )
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeTab: (tabName) => {
+            dispatch({ type: "changeTab", tab: tabName })
+        }
+    }
+}
+export default connect(null, mapDispatchToProps)(Header)

@@ -134,16 +134,16 @@ export default class ChannelList extends React.Component {
     }
     render() {
         const element = (
-            <div className="col-12" style={{paddingLeft:"none", paddingRight:"none"}}>
+            <div className="col-12" style={{ paddingLeft: "0px", paddingRight: "0px" }}>
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">TV Channels</h3>
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-10">
+                                <div className="col-8">
                                     <button type="button" className="btn btn-primary float-right" data-toggle="modal" data-target="#modal-primary" onClick={this.newChannelModal.bind(this)} ><i className="fa fa-plus"></i></button>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-4">
                                     <div className="card-tools">
                                         <div className="input-group input-group-sm">
                                             <input type="text" name="table_search" className="form-control float-right" onChange={this.filterRows.bind(this)} placeholder="Search" />

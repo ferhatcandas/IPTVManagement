@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import TvChannels from './Channel/ChannelList'
+import Integrations from './Integration/IntegrationList'
+import { connect } from 'react-redux'
 
-export default class Content extends Component {
+class Content extends Component {
     render() {
         return (
             <div className="content-wrapper">
-
-                <TvChannels />
-
+                { this.props.tab == "tvChannels" ? <TvChannels /> : null}
+                { this.props.tab == "integrations" ? <Integrations /> : null}
                 {/* <section className="content-header">
                     <div className="container-fluid">
                         <div className="row mb-2">
@@ -51,3 +51,7 @@ export default class Content extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return state
+}
+export default connect(mapStateToProps)(Content)
