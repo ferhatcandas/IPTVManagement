@@ -16,9 +16,9 @@ namespace Model
         public string CategoryName { get; set; }
         public bool IsAddList { get; set; }
 
-        public TVChannel ToTVChannel(bool isActive = false)
+        public TVChannel ToTVChannel(bool isActive = false, bool editable = true)
         {
-            return new TVChannel(ChannelName, null, isActive, StreamLink, CategoryName, Language, Logo, Country);
+            return new TVChannel(ChannelName, null, isActive, StreamLink, CategoryName, Language, Logo, Country, editable);
         }
     }
 

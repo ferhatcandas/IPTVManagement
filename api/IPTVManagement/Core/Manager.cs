@@ -92,11 +92,13 @@ namespace Core
             return stream;
         }
 
-        public List<TVChannel> GetTVChannels()
+        public List<TVChannel> GetTVChannels(bool addional = false)
         {
             var list =  channelManager.GetChannels();
-            list.AddRange(integrationManager.GetAddionalList());
-
+            if (addional)
+            {
+                list.AddRange(integrationManager.GetAddionalList());
+            }
             return list;
         }
 

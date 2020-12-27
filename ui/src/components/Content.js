@@ -7,7 +7,9 @@ export default class Content extends Component {
         return (
             <div className="content-wrapper">
 
-                <section className="content-header">
+                <TvChannels />
+
+                {/* <section className="content-header">
                     <div className="container-fluid">
                         <div className="row mb-2">
                             <div className="col-sm-6">
@@ -38,14 +40,13 @@ export default class Content extends Component {
                             </div>
                         </div>
                         <div className="card-body" >
-                            <TvChannels />
                         </div>
                         <div className="card-footer">
                             Footer
-    </div>
+                        </div>
                     </div>
 
-                </section>
+                </section> */}
             </div>
         )
     }

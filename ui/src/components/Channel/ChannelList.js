@@ -40,7 +40,7 @@ export default class ChannelList extends React.Component {
                 <td>{props.channelName}</td>
                 <td>
                     <div className="icheck-primary d-inline">
-                        <input type="radio" id={"isActive_" + props.id} onClick={this.changeStatus.bind(this, props.id)} onChange={this.changeStatus.bind(this, null)} checked={props.isActive}></input>
+                        <input type="radio" id={"isActive_" + props.id} onClick={this.changeStatus.bind(this, props.id)} disabled={!props.editable} onChange={this.changeStatus.bind(this, null)} checked={props.isActive}></input>
                         <label htmlFor={"isActive_" + props.id}></label>
                     </div>
                 </td>
@@ -57,8 +57,8 @@ export default class ChannelList extends React.Component {
                         <label htmlFor={"isFound_" + props.id}></label>
                     </div>
                 </td>
-                <td><button type="button" onClick={this.editChannel.bind(this, props.id)} data-toggle="modal" data-target="#modal-primary" className="btn btn-warning"><i className="fas fa-pen-square"></i></button></td>
-                <td><button type="button" onClick={this.removeChannel.bind(this, props.id)} className="btn btn-danger"><i className="fas fa-eraser"></i></button></td>
+                <td>{props.editable ? <button type="button" onClick={this.editChannel.bind(this, props.id)} data-toggle="modal" data-target="#modal-primary" className="btn btn-warning"><i className="fas fa-pen-square"></i></button> : null}</td>
+                <td>{props.editable ? <button type="button" onClick={this.removeChannel.bind(this, props.id)} className="btn btn-danger"><i className="fas fa-eraser"></i></button> : null}</td>
             </tr>
         )
         return row;
@@ -134,7 +134,7 @@ export default class ChannelList extends React.Component {
     }
     render() {
         const element = (
-            <div className="col-12">
+            <div className="col-12" style={{paddingLeft:"none", paddingRight:"none"}}>
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">TV Channels</h3>

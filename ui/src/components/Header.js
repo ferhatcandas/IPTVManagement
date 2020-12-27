@@ -4,9 +4,9 @@ export default class Header extends Component {
         return (
             <nav className="main-header navbar navbar-expand navbar-white navbar-light">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a href="#" className="nav-link" data-widget="pushmenu" role="button"><i className="fas fa-bars"></i></a>
-                    </li>
+                    </li> */}
                     <li className="nav-item d-none d-sm-inline-block">
                         <a href="#" className="nav-link">Home</a>
                     </li>
@@ -16,7 +16,7 @@ export default class Header extends Component {
                 </ul>
 
                 <ul className="navbar-nav ml-auto">
-                    <li className="nav-item dropdown">
+                    {/* <li className="nav-item dropdown">
                         <a href="#" className="nav-link" data-toggle="dropdown">
                             <i className="far fa-comments"></i>
                             <span className="badge badge-danger navbar-badge">3</span>
@@ -66,8 +66,8 @@ export default class Header extends Component {
                             <div className="dropdown-divider"></div>
                             <a href="#" className="dropdown-item dropdown-footer">See All Messages</a>
                         </div>
-                    </li>
-                    <li className="nav-item dropdown">
+                    </li> */}
+                    {/* <li className="nav-item dropdown">
                         <a href="#" className="nav-link" data-toggle="dropdown">
                             <i className="far fa-bell"></i>
                             <span className="badge badge-warning navbar-badge">15</span>
@@ -92,7 +92,7 @@ export default class Header extends Component {
                             <div className="dropdown-divider"></div>
                             <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
                         </div>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <a href="#" className="nav-link" data-widget="fullscreen" role="button">
                             <i className="fas fa-expand-arrows-alt"></i>

@@ -36,7 +36,9 @@ namespace Core
 
         public List<TVChannel> GetChannels()
         {
-            return channelRepository.Get();
+            var list = channelRepository.Get();
+            list.ForEach(x => x.Editable = true);
+            return list;
         }
 
         public (bool status, string message) UpdateChannel(M3U8Channel channel)

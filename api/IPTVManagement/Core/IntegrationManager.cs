@@ -135,7 +135,7 @@ namespace Core
             {
                 channels.AddRange(setting.GetLinksModelled());
             }
-            return channels.Select(x => x.ToTVChannel(true));
+            return channels.Select(x => x.ToTVChannel(true, false));
         }
     }
 }

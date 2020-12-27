@@ -29,7 +29,7 @@ namespace IPTV.WebApi.Controller
         [HttpGet()]
         public async Task<IActionResult> GetChannels()
         {
-            return Ok(manager.GetTVChannels().Select(x => new
+            return Ok(manager.GetTVChannels(true).Select(x => new
             {
                 Id = x.Id,
                 ChannelName = x.ShowChannelName,
@@ -39,7 +39,8 @@ namespace IPTV.WebApi.Controller
                 Category = x.Category,
                 Country = x.Country,
                 StreamUrl = x.StreamLink,
-                IsFound = x.Found
+                IsFound = x.Found,
+                Editable = x.Editable
             }
             ).OrderByDescending(x => x.IsFound).ThenBy(x => x.ChannelName).ToList());
         }

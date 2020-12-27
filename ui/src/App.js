@@ -12,7 +12,7 @@ export default class App extends Component {
     return (
       <div className="wrapper">
         <Header />
-        <SideBar />
+        {/* <SideBar /> */}
         <Content />
         <Footer />
       </div>

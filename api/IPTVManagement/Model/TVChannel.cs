@@ -7,7 +7,7 @@ namespace Model
 {
     public class TVChannel
     {
-        public TVChannel(string name, string[] tags, bool isActive = false, string link = null, string category = "", string language = "", string logo = "", string country = "")
+        public TVChannel(string name, string[] tags, bool isActive = false, string link = null, string category = "", string language = "", string logo = "", string country = "", bool editable = true)
         {
             Id = Guid.NewGuid().ToString();
             ShowChannelName = name;
@@ -19,6 +19,7 @@ namespace Model
             Country = country;
             StreamLink = link;
             Found = !string.IsNullOrEmpty(link);
+            Editable = editable;
 
         }
         public TVChannel()
@@ -35,6 +36,7 @@ namespace Model
         public string Country { get; set; }
         public string StreamLink { get; set; }
         public bool Found { get; set; }
+        public bool Editable { get; set; }
         public M3U8Channel ToM3U()
         {
             return new M3U8Channel
