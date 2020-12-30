@@ -30,19 +30,19 @@ namespace Core
                 var links = setting.GetLinks();
                 foreach (var item in links)
                 {
-                    channels.AddRange(DownloadAndGet(item));
+                    channels.AddRange(DownloadAndGet(item, setting.Integration));
                 }
                 channels.AddRange(setting.GetLinksModelled());
             }
             return channels;
         }
-        public List<M3U8Channel> DownloadAndGet(string url)
+        public List<M3U8Channel> DownloadAndGet(string url, string integration)
         {
             string output = "";
             DownloadPlayList(url, out output);
             if (output != null)
             {
-                return GetFromText(output);
+                return GetFromText(output,integration);
             }
             return new List<M3U8Channel>();
 
@@ -64,7 +64,7 @@ namespace Core
             outPutText = null;
             return false;
         }
-        private List<M3U8Channel> GetFromText(string text)
+        private List<M3U8Channel> GetFromText(string text, string integration)
         {
             List<M3U8Channel> list = new List<M3U8Channel>();
 
@@ -76,7 +76,7 @@ namespace Core
                 {
                     for (int i = 0; i < matchCollection.Count; i = i + 2)
                     {
-                        M3U8Channel mu8Channel = GetM3U(matchCollection[i].Groups, matchCollection[i + 1].Value);
+                        M3U8Channel mu8Channel = GetM3U(matchCollection[i].Groups, matchCollection[i + 1].Value, integration);
                         list.Add(mu8Channel);
                     }
                 }
@@ -88,7 +88,7 @@ namespace Core
 
             return list;
         }
-        private M3U8Channel GetM3U(GroupCollection groups, string link)
+        private M3U8Channel GetM3U(GroupCollection groups, string link, string integration)
         {
             string GetValue(MatchCollection matches, string paramet)
             {
@@ -113,16 +113,7 @@ namespace Core
             string channelName = splittedText[splittedText.Length - 1].Trim();
             var matchCollection = Regex.Matches(firstLine, "(([\\w|-]*|)=\"[\\S]*|(\"))");
 
-
-            M3U8Channel channel = new M3U8Channel
-            {
-                ChannelName = channelName,
-                Country = GetValue(matchCollection, "tvg-country").Trim(),
-                Language = GetValue(matchCollection, "tvg-language").Trim(),
-                Logo = GetValue(matchCollection, "tvg-logo").Trim(),
-                Url = GetValue(matchCollection, "tvg-url").Trim(),
-                StreamLink = link.Trim()
-            };
+            M3U8Channel channel = new M3U8Channel(channelName, GetValue(matchCollection, "tvg-language").Trim(), GetValue(matchCollection, "tvg-country").Trim(), integration, GetValue(matchCollection, "tvg-logo").Trim());
             return channel;
         }
 
@@ -135,7 +126,7 @@ namespace Core
             {
                 channels.AddRange(setting.GetLinksModelled());
             }
-            return channels.Select(x => x.ToTVChannel(true, false));
+            return channels.Select(x => x.ToTVChannel(true, x.Integration));
         }
     }
 }

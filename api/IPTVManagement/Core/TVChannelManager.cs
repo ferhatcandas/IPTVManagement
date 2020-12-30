@@ -18,10 +18,10 @@ namespace Core
         public (bool status, string message) SaveChannel(TVChannel channel)
         {
             var existChannels = GetChannels();
-            var existChannel = existChannels.FirstOrDefault(x => x.StreamLink.Contains(channel.StreamLink));
+            var existChannel = existChannels.FirstOrDefault(x => x.Stream.Contains(channel.Stream));
             if (existChannels == null)
             {
-                return (false, "channel already exists with name " + existChannel.ShowChannelName);
+                return (false, "channel already exists with name " + existChannel.Name);
             }
             else
             {
@@ -29,30 +29,9 @@ namespace Core
                 return (true, "channel saved");
             }
         }
-        public void SaveChannels(List<TVChannel> tVChannels)
-        {
-            channelRepository.Save(tVChannels);
-        }
+        public void SaveChannels(List<TVChannel> tVChannels) => channelRepository.Save(tVChannels);
 
-        public List<TVChannel> GetChannels()
-        {
-            var list = channelRepository.Get();
-            list.ForEach(x => x.Editable = true);
-            return list;
-        }
-
-        public (bool status, string message) UpdateChannel(M3U8Channel channel)
-        {
-            var existChannels = GetChannels();
-            var existChannel = existChannels.FirstOrDefault(x => x.StreamLink.Contains(channel.StreamLink));
-            if (existChannels != null && existChannel.StreamLink != channel.StreamLink)
-            {
-                existChannel.StreamLink = channel.StreamLink;
-                channelRepository.Save(existChannels);
-                return (true, "channel updated");
-            }
-            return (false, "channel already update");
-        }
+        public List<TVChannel> GetChannels() => channelRepository.Get();
 
         internal void RemoveChannels(List<string> ids)
         {
@@ -75,11 +54,13 @@ namespace Core
             }
         }
 
-        internal TVChannel GetChannel(string channelId)
-        {
-            var existChannels = GetChannels();
+        internal TVChannel GetChannel(string channelId) => GetChannels().FirstOrDefault(x => x.Id == channelId);
 
-            return existChannels.FirstOrDefault(x => x.Id == channelId);
+        internal void UpdateStatus(string channelId)
+        {
+            var channel = GetChannel(channelId);
+            channel.IsActive = !channel.IsActive;
+            UpdateChannel(channelId, channel);
         }
     }
 }

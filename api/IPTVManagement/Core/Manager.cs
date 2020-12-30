@@ -1,12 +1,7 @@
-﻿using DataLayer;
-using Model;
-using System;
+﻿using Model;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Core
 {
@@ -24,17 +19,17 @@ namespace Core
 
         public byte[] FetchList()
         {
-            var channels = integrationManager.FetchChannels();
+            List<M3U8Channel> channels = integrationManager.FetchChannels();
 
-            var existChannels = channelManager.GetChannels().Where(x => x.IsActive).ToList();
-            existChannels.AddRange(channels.Where(x => x.IsAddList).Select(x => x.ToTVChannel()));
+            List<TVChannel> existChannels = channelManager.GetChannels().Where(x => x.IsActive).ToList();
+            existChannels.AddRange(channels.Where(x => x.HasIntegration).Select(x => x.ToTVChannel(true, x.Integration)));
             List<M3U8Channel> filteredChannels = new List<M3U8Channel>();
 
-            foreach (var channel in channels)
+            foreach (M3U8Channel channel in channels)
             {
-                foreach (var existChannel in existChannels.Where(x => !x.Found))
+                foreach (TVChannel existChannel in existChannels.Where(x => !x.Found))
                 {
-                    foreach (var tag in existChannel.ChannelTags)
+                    foreach (string tag in existChannel.Tags)
                     {
                         if (channel.ChannelName.ToLower().Contains(tag.ToLower()))
                         {
@@ -46,19 +41,19 @@ namespace Core
                     }
                 }
             }
-            var activeChannels = M3UManager.ControlAndGetActiveChannels(filteredChannels);
+            List<M3U8Channel> activeChannels = M3UManager.ControlAndGetActiveChannels(filteredChannels);
 
             List<M3U8Channel> newChannels = new List<M3U8Channel>();
 
-            foreach (var channel in activeChannels)
+            foreach (M3U8Channel channel in activeChannels)
             {
-                foreach (var existChannel in existChannels.Where(x => !x.Found))
+                foreach (TVChannel existChannel in existChannels.Where(x => !x.Found))
                 {
-                    foreach (var tag in existChannel.ChannelTags)
+                    foreach (string tag in existChannel.Tags)
                     {
                         if (channel.ChannelName.Contains(tag))
                         {
-                            var newChannel = existChannel.ToM3U();
+                            M3U8Channel newChannel = existChannel.ToM3U();
                             newChannel.ChannelName = channel.ChannelName;
                             newChannel.StreamLink = channel.StreamLink;
                             newChannels.Add(newChannel);
@@ -67,7 +62,7 @@ namespace Core
                 }
             }
 
-            foreach (var existChannel in existChannels.Where(x => x.Found))
+            foreach (TVChannel existChannel in existChannels.Where(x => x.Found))
             {
                 newChannels.Add(existChannel.ToM3U());
             }
@@ -79,22 +74,20 @@ namespace Core
 
         public void UpdateStatus(string channelId)
         {
-            var channels = GetTVChannels();
-            var channel = channels.FirstOrDefault(x => x.Id == channelId);
-            channel.IsActive = !channel.IsActive;
-            channelManager.SaveChannels(channels);
+            channelManager.UpdateStatus(channelId);
+
         }
 
         public Stream GetStream()
         {
-            var bytes = FetchList();
+            byte[] bytes = FetchList();
             Stream stream = new MemoryStream(bytes);
             return stream;
         }
 
         public List<TVChannel> GetTVChannels(bool addional = false)
         {
-            var list =  channelManager.GetChannels();
+            List<TVChannel> list = channelManager.GetChannels();
             if (addional)
             {
                 list.AddRange(integrationManager.GetAddionalList());
@@ -102,9 +95,24 @@ namespace Core
             return list;
         }
 
-        public TVChannelModel GetTVChannel(string channelId) => channelManager.GetChannel(channelId).ToTVChannelModel();
-        public void AddChannel(TVChannel channel) => channelManager.SaveChannel(channel);
-        public void RemoveChannel(string channelId) => channelManager.RemoveChannels(new List<string> { channelId });
-        public void UpdateChannel(string channelId, TVChannel channel) => channelManager.UpdateChannel(channelId, channel);
+        public TVChannel GetTVChannel(string channelId)
+        {
+            return channelManager.GetChannel(channelId);
+        }
+
+        public void AddChannel(TVChannel channel)
+        {
+            channelManager.SaveChannel(channel);
+        }
+
+        public void RemoveChannel(string channelId)
+        {
+            channelManager.RemoveChannels(new List<string> { channelId });
+        }
+
+        public void UpdateChannel(string channelId, TVChannel channel)
+        {
+            channelManager.UpdateChannel(channelId, channel);
+        }
     }
 }

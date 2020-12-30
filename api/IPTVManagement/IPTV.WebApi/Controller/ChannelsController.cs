@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Core;
-using Microsoft.AspNetCore.Http;
+﻿using Core;
 using Microsoft.AspNetCore.Mvc;
 using Model;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace IPTV.WebApi.Controller
 {
@@ -23,7 +20,7 @@ namespace IPTV.WebApi.Controller
         [Produces("audio/x-mpegurl")]
         public async Task<IActionResult> Stream()
         {
-            var stream = manager.GetStream();
+            System.IO.Stream stream = manager.GetStream();
             return File(stream, "audio/x-mpegurl");
         }
         [HttpGet()]
@@ -32,33 +29,33 @@ namespace IPTV.WebApi.Controller
             return Ok(manager.GetTVChannels(true).Select(x => new
             {
                 Id = x.Id,
-                ChannelName = x.ShowChannelName,
+                ChannelName = x.Name,
                 IsActive = x.IsActive,
                 Logo = x.Logo,
                 Language = x.Language,
                 Category = x.Category,
                 Country = x.Country,
-                StreamUrl = x.StreamLink,
+                StreamUrl = x.Stream,
                 IsFound = x.Found,
                 Editable = x.Editable
             }
             ).OrderByDescending(x => x.IsFound).ThenBy(x => x.ChannelName).ToList());
         }
         [HttpPost()]
-        public async Task<IActionResult> AddChannel([FromBody] TVChannelModel request)
+        public async Task<IActionResult> AddChannel([FromBody] TVChannel request)
         {
-            manager.AddChannel(request.ToTvChannel(Guid.NewGuid().ToString()));
+            manager.AddChannel(request);
             return Ok();
         }
         [HttpGet("{channelId}")]
         public async Task<IActionResult> GetChannel([FromRoute] string channelId)
         {
             return Ok(manager.GetTVChannel(channelId));
-        }
+        } 
         [HttpPut("{channelId}")]
-        public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] TVChannelModel request)
+        public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] TVChannel request)
         {
-            manager.UpdateChannel(channelId, request.ToTvChannel(channelId));
+            manager.UpdateChannel(channelId, request);
             return Ok();
         }
         [HttpPut("{channelId}/status")]

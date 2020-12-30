@@ -49,17 +49,7 @@ namespace Core
 
                 foreach (var item in list.Where(x => x.channel != null))
                 {
-                    channels.Add(new M3U8Channel
-                    {
-                        CategoryName = "HTA TV",
-                        ChannelName = item.channel.Name,
-                        Country = "DZ",
-                        Language = "Arabic",
-                        Logo = item.channel.Picture,
-                        StreamLink = item.channel.Url + token,
-                        Url = item.channel.Url,
-                        IsAddList = true
-                    });
+                    channels.Add(new M3U8Channel(item, token));
 
                 }
             }

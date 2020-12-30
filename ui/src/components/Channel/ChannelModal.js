@@ -4,14 +4,14 @@ import ChannelService from '../../services/channelService'
 export default class ChannelModal extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            id: props.channelId,
-            channel: this.DefaultChannelValue()
-        }
         this.ChannelApi = new ChannelService();
         this.changeField = this.changeField.bind(this)
         this.updateChannel = this.updateChannel.bind(this)
         this.addNewChannel = this.addNewChannel.bind(this)
+    }
+    state = {
+        id: this.props.channelId,
+        channel: this.DefaultChannelValue()
     }
     DefaultChannelValue() {
         return {
@@ -21,8 +21,8 @@ export default class ChannelModal extends Component {
             language: "",
             country: "",
             category: "",
-            streamLink: "",
-            tags: "",
+            stream: "",
+            tags: [],
             isFound: false
         }
     }
@@ -32,7 +32,7 @@ export default class ChannelModal extends Component {
                 this.ChannelApi.get(this.props.channelId, (data) => {
 
                     let defaultChannel = data;
-                    defaultChannel.isFound = data.streamLink != null;
+                    defaultChannel.isFound = data.stream != null;
                     this.setState({ channel: defaultChannel })
                 })
             }
@@ -43,9 +43,14 @@ export default class ChannelModal extends Component {
         })
     }
     changeField(e) {
-        debugger
         const name = e.target.name;
-        const value = e.target.type == "checkbox" ? e.target.checked : e.target.value
+        let value = null;
+        if (name === "tags") {
+            value = e.target.value.split('|')
+            console.log(value)
+        }
+        else
+            value = e.target.type === "checkbox" ? e.target.checked : e.target.value
         let copyObject = this.state;
 
         copyObject["channel"][name] = value
@@ -69,17 +74,24 @@ export default class ChannelModal extends Component {
         })
     }
     componentDidUpdate() {
-        if (this.props.channelId != this.state.id) {
+        if (this.props.channelId !== this.state.id) {
             this.FetchChannel()
         }
     }
     render() {
+        function renderTags(state) {
+            let tags = state?.channel?.tags;
+            if (tags && tags.length > 0 && typeof (tags) === "object") {
+                return tags.join('|')
+            }
+            return tags;
+        }
         return (
             <div className="modal fade" id="modal-primary" data={this.props.channelId} style={{ display: 'none' }} aria-modal="true" role="dialog" >
                 <div className="modal-dialog">
                     <div className="modal-content bg-primary">
                         <div className="modal-header">
-                            <h4 className="modal-title">{(this.state.id != '' ? 'Update Channel' : 'Add New Channel')}</h4>
+                            <h4 className="modal-title">{(this.state.id !== '' ? 'Update Channel' : 'Add New Channel')}</h4>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -91,7 +103,7 @@ export default class ChannelModal extends Component {
                             </div>
                             <div className="form-group row">
                                 <div className="col-md-2">
-                                    <img src={this.state.channel.logo} width={80} height={70} />
+                                    <img src={this.state.channel.logo} width={80} height={70} alt="" />
                                 </div>
                                 <div className="col-md-10">
                                     <label htmlFor="logo">Logo</label>
@@ -112,7 +124,7 @@ export default class ChannelModal extends Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="tags">Tags</label>
-                                <input type="text" className="form-control" id="tags" name="tags" onChange={this.changeField} placeholder="X,Y,Z" value={this.state.channel.tags ?? ""} />
+                                <input type="text" className="form-control" id="tags" name="tags" onChange={this.changeField} placeholder="X|Y|Z" value={renderTags(this.state)} />
                             </div>
                             <div className="form-check">
                                 <input type="checkbox" className="form-check-input" id="isActive" name="isActive" onChange={this.changeField} checked={this.state.channel.isActive} />
@@ -123,8 +135,8 @@ export default class ChannelModal extends Component {
                                 <label className="form-check-label" htmlFor="isFound">Has Stream Link ? </label>
                             </div>
                             <div className="form-group" style={{ display: (this.state.channel.isFound ? "inline" : "none") }} >
-                                <label htmlFor="streamLink">Stream Link</label>
-                                <input type="text" className="form-control" id="streamLink" name="streamLink" onChange={this.changeField} placeholder="m3u8 link" value={this.state.channel.streamLink ?? ""} />
+                                <label htmlFor="stream">Stream Link</label>
+                                <input type="text" className="form-control" id="stream" name="stream" onChange={this.changeField} placeholder="m3u8 link" value={this.state.channel.stream ?? ""} />
                             </div>
                         </div>
                         <div className="modal-footer justify-content-between">
