@@ -15,8 +15,18 @@
   {
     "Integration": "htatv",
     "Settings": {
-      "Link": "https://hta.backoffice.easybroadcast.fr/grids/tv",
+      "Links": [ "https://hta.backoffice.easybroadcast.fr/grids/tv" ],
       "AuthToken": "https://token.kube.easybroadcast.fr/authtoken?url=http://apphta.easybroadcast.fr/apphta"
+    },
+    "Addional": true
+  },
+  {
+    "Integration": "elahmad",
+    "Settings": {
+      "Links": [
+        "http://www.elahmad.com/tv/arabic-tv-online.php?id=canalalgerie",
+        "http://www.elahmad.com/tv/arabic-tv-online.php?id=cima"
+      ]
     },
     "Addional": true
   },
@@ -36,19 +46,19 @@
   {
     "Integration": "none",
     "Settings": {
-      "Link": "https://iptv-org.github.io/iptv/countries/tr.m3u"
+      "Links": [ "https://iptv-org.github.io/iptv/countries/tr.m3u" ]
     }
   },
   {
     "Integration": "none",
     "Settings": {
-      "Link": "https://iptv-org.github.io/iptv/countries/dz.m3u"
+      "Links": [ "https://iptv-org.github.io/iptv/countries/dz.m3u" ]
     }
   },
   {
     "Integration": "none",
     "Settings": {
-      "Link": "https://hlscat.com/my_list/b4c060805a74c33a6b4662f23298671f.m3u8"
+      "Links": [ "https://hlscat.com/my_list/b4c060805a74c33a6b4662f23298671f.m3u8" ]
     }
   }
 ]

@@ -17,6 +17,16 @@ namespace Model
             Url = url;
             Integration = integration;
         }
+        public M3U8Channel(HTAModel htaModel, string codec, string token)
+        {
+            CategoryName = "HTA TV" + codec;
+            ChannelName = htaModel.channel.Name + codec;
+            Country = "DZ";
+            Language = "Arabic";
+            Logo = htaModel.channel.Picture;
+            StreamLink = htaModel.channel.Url.Replace(@"/playlist", @"/htatv/" + htaModel.channel.Name.Replace(" ", "_") + codec + @"/chunks") + token;
+            Integration = "HTA";
+        }
         public M3U8Channel(HTAModel htaModel, string token)
         {
             CategoryName = "HTA TV";
@@ -37,6 +47,12 @@ namespace Model
             Url = null;
             CategoryName = tVChannel.Category;
             Integration = null;
+        }
+        public M3U8Channel(string name, string link)
+        {
+            ChannelName = name;
+            StreamLink = link;
+            CategoryName = "Elahmad";
         }
         public string ChannelName { get; set; }
         public string Language { get; set; }

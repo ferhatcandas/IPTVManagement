@@ -12,7 +12,7 @@ namespace Model
     }
     public class Settings
     {
-        public string Link { get; set; }
+        public List<string> Links { get; set; }
         public List<string> Periods { get; set; }
         public string Scheme { get; set; }
         public int? LastPartIndex { get; set; }
