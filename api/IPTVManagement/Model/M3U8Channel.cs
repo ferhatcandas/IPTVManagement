@@ -7,7 +7,7 @@ namespace Model
 {
     public class M3U8Channel
     {
-        public M3U8Channel(string name, string language, string country, string category, string logo = "https://www.kindpng.com/picc/m/463-4636269_television-png-transparent-images-transparent-background-tv-logo.png", string url = null, string integration = null)
+        public M3U8Channel(string name, string stramLink, string language, string country, string category, string logo = "https://www.kindpng.com/picc/m/463-4636269_television-png-transparent-images-transparent-background-tv-logo.png", string url = null, string integration = null)
         {
             ChannelName = name;
             Language = language;
@@ -16,6 +16,7 @@ namespace Model
             Logo = logo;
             Url = url;
             Integration = integration;
+            StreamLink = stramLink;
         }
         public M3U8Channel(HTAModel htaModel, string codec, string token)
         {
@@ -48,11 +49,16 @@ namespace Model
             CategoryName = tVChannel.Category;
             Integration = null;
         }
-        public M3U8Channel(string name, string link)
+        public M3U8Channel(ChannelLink channelLink, string category, string streamLink = null)
         {
-            ChannelName = name;
-            StreamLink = link;
-            CategoryName = "Elahmad";
+            ChannelName = channelLink.Name;
+            Logo = channelLink.Logo;
+            StreamLink = streamLink ?? channelLink.Link;
+            CategoryName = category;
+            Country = "DZ";
+            Language = "Arabic";
+            Integration = "Elahmad";
+
         }
         public string ChannelName { get; set; }
         public string Language { get; set; }

@@ -51,7 +51,7 @@ namespace Core
                 {
                     foreach (string tag in existChannel.Tags)
                     {
-                        if (channel.ChannelName.Contains(tag))
+                        if (channel.ChannelName.ToLower().Contains(tag.ToLower()))
                         {
                             M3U8Channel newChannel = existChannel.ToM3U();
                             newChannel.ChannelName = channel.ChannelName;

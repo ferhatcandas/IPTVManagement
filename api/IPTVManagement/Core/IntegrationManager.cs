@@ -42,7 +42,7 @@ namespace Core
             DownloadPlayList(url, out output);
             if (output != null)
             {
-                return GetFromText(output,integration);
+                return GetFromText(output, integration);
             }
             return new List<M3U8Channel>();
 
@@ -113,7 +113,7 @@ namespace Core
             string channelName = splittedText[splittedText.Length - 1].Trim();
             var matchCollection = Regex.Matches(firstLine, "(([\\w|-]*|)=\"[\\S]*|(\"))");
 
-            M3U8Channel channel = new M3U8Channel(channelName, GetValue(matchCollection, "tvg-language").Trim(), GetValue(matchCollection, "tvg-country").Trim(), integration, GetValue(matchCollection, "tvg-logo").Trim());
+            M3U8Channel channel = new M3U8Channel(channelName, link, GetValue(matchCollection, "tvg-language").Trim(), GetValue(matchCollection, "tvg-country").Trim(), integration, GetValue(matchCollection, "tvg-logo").Trim(), null);
             return channel;
         }
 
