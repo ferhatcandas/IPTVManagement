@@ -8,5 +8,7 @@ namespace Model
     {
         public string Integration { get; set; }
         public bool IsEditable { get; set; }
+
+        public bool IsHalfIntegrated => !string.IsNullOrEmpty(Tags) && !string.IsNullOrEmpty(Stream);
     }
 }

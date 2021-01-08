@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    public class HTAModel
+    public class HTASettingModel
     {
         public HTAChannel channel { get; set; }
     }

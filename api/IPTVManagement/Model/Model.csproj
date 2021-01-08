@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="HTAModel.cs" />
     <Compile Remove="IntegrationSettings.cs" />
     <Compile Remove="M3U8Channel.cs" />
     <Compile Remove="TVChannel.cs" />

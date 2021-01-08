@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Core.Abstract
 {
-    public interface IFixedChannelService : IChannelIntegration
+    public interface IFixedChannelService
     {
+        List<CommonChannelModel> Get();
+
         void Add(Channel channel);
     }
 }

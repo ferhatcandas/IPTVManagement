@@ -3,6 +3,7 @@ using Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Core
@@ -43,7 +44,17 @@ namespace Core
         {
             var fixedChannels = fixedChannel.Get();
 
-            var genericChannels = genericChannel.Get();
+            bool includeHalfIntegrated = fixedChannels.Any(x => x.IsHalfIntegrated);
+
+            if (includeHalfIntegrated)
+            {
+                var halfIntegratedChannels = genericChannel.GetHalfIntegratedChannels();
+            }
+
+            if (additional)
+            {
+                var fullIntegratedChannels = genericChannel.GetFullIntegratedChannels();
+            }
 
 
             return fixedChannels;
