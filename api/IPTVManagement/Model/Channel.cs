@@ -11,7 +11,6 @@ namespace Model
         public string Category { get; set; }
         public string Language { get; set; }
         public string Country { get; set; }
-        public string Integration { get; set; }
         public bool IsActive { get; set; }
     }
 }

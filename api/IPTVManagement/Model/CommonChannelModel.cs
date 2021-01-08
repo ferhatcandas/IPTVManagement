@@ -6,6 +6,7 @@ namespace Model
 {
     public class CommonChannelModel : Channel
     {
+        public string Integration { get; set; }
         public bool IsEditable { get; set; }
     }
 }

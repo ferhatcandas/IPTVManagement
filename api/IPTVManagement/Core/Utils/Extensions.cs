@@ -9,8 +9,16 @@ namespace Core.Utils
     {
         public static List<CommonChannelModel> GetCommonChannels(this GenericChannelIntegration integration)
         {
-            switch (integration.IntegrationType)
+            switch (integration.IntegrationType.ToLower())
             {
+                case "hta":
+                    break;
+                case "elahmad":
+                    break;
+                case "dailyiptvlist":
+                    break;
+                case "freeiptvlists":
+                    break;
                 default:
                     break;
             }

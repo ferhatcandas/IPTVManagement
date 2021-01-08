@@ -16,7 +16,6 @@ namespace Core.Concrete
             this.channelRepository = channelRepository;
         }
 
-
         public List<Channel> Get() => channelRepository.Get();
     }
 }

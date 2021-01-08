@@ -10,4 +10,10 @@ namespace Model
         public string Name { get; set; }
         public object Settings { get; set; }
     }
+    public enum IntegrationType
+    {
+        Fixed,
+        Half,
+        Full
+    }
 }
