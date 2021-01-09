@@ -6,7 +6,12 @@ namespace Model
 {
     public class HTASettingModel
     {
-        public HTAChannel channel { get; set; }
+        public string Link { get; set; }
+        public string AuthToken { get; set; }
+    }
+    public class HTAModel
+    {
+        public  HTAChannel channel { get; set; }
     }
     public class HTAChannel
     {

@@ -7,10 +7,10 @@ namespace DataLayer.Cache
 {
     public class CacheManager
     {
-        private static ObjectCache cache = MemoryCache.Default;
-        public void Add<T>(string key, T model)
+        private static readonly ObjectCache cache = MemoryCache.Default;
+        public void Add<T>(string key, T model, int minutes = 20)
         {
-            cache.Add(key, model, DateTime.Now.AddMinutes(20));
+            cache.Add(key, model, DateTime.Now.AddMinutes(minutes));
         }
         
         public void Delete(string key)

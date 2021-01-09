@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    public class GenericChannelIntegration : BaseClass
+    public class GenericChannelIntegration
     {
         public string IntegrationType { get; set; }
         public string Name { get; set; }

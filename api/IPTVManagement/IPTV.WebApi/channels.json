@@ -1,1 +1,464 @@
-[{"Id":"7b12d007-5fd3-4db9-963c-054c113e6c81","Name":"TRT Haber","Logo":"https://i.ibb.co/3pKN9gx/BYsl7Nc.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"http://tv-trthaber.live.trt.com.tr/master_720.m3u8","Tags":["TRT Haber"],"IsActive":true,"Found":true,"Editable":true},{"Id":"2bb5f53b-8e54-4900-861b-dadd2c70a77f","Name":"TRT World","Logo":"https://i.ibb.co/phw4pjP/mjTjJ1N.png","Language":"English","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"http://tv-trtworld.live.trt.com.tr/master_720.m3u8","Tags":["TRT World"],"IsActive":true,"Found":true,"Editable":true},{"Id":"51f35b4e-5859-4dee-be82-7b9e785910b5","Name":"TLC","Logo":"https://i.ibb.co/rp1rtsC/Mp1BWwp.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/tlc/index.m3u8","Tags":["TLC"],"IsActive":true,"Found":true,"Editable":true},{"Id":"2dc6f500-bb8e-40c2-87cb-c340f954c369","Name":"NTV HD","Logo":"https://i.ibb.co/4Jv1LRS/QP18ELE.png","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://nt4p9nef.rocketcdn.com/ntvhd.stream_720p/chunklist.m3u8","Tags":["NTV"],"IsActive":true,"Found":true,"Editable":true},{"Id":"6bedbbaf-4e73-456d-bab3-af866b376714","Name":"Power Türk HD","Logo":"https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_35.png","Language":"Turkish","Category":"Müzik","Country":"TR","Integration":null,"Stream":"https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_b2650000_sltur.m3u8","Tags":["Power Türk","Powertürk","Power Turk","Powerturk"],"IsActive":true,"Found":true,"Editable":true},{"Id":"e5451931-e5dc-41ef-9ed1-ce9bcc840726","Name":"Kral Pop HD","Logo":"https://i.ibb.co/7v8wmsb/7H8WKei.png","Language":"Turkish","Category":"Müzik","Country":"TR","Integration":null,"Stream":"https://0ajuu84p.rocketcdn.com/kralpop_720/chunklist.m3u8","Tags":["Kral"],"IsActive":true,"Found":true,"Editable":true},{"Id":"226049ee-14e1-41f7-a46f-b8dfecde3799","Name":"Halk TV HD","Logo":"https://i.imgur.com/vYEnfbj.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_halktv/smil:halktv_sd.smil/chunklist_b2064000.m3u8","Tags":["Halk"],"IsActive":true,"Found":true,"Editable":true},{"Id":"02c6341c-dded-458d-9ee4-25349862ae90","Name":"CNN Türk HD","Logo":"https://img1.pnghut.com/21/16/23/MD6acbsVcq/vecteur-area-cnnmoney-trademark-text.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_cnnturk/smil:cnnturk_sd.smil/chunklist_b2064000.m3u8","Tags":["CNN"],"IsActive":true,"Found":true,"Editable":true},{"Id":"1619d3ec-99d0-401c-8b3a-7073eb8151e8","Name":"Habertürk","Logo":"https://i.pinimg.com/originals/b4/14/77/b41477a961468b99b51db1e3905ece45.png","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/haberturk/index.m3u8","Tags":["Habertürk","Haber Türk","Haberturk","Haber Turk"],"IsActive":true,"Found":true,"Editable":true},{"Id":"46b8b209-703a-47a3-a2ff-95cf5445a10f","Name":"Beyaz Tv","Logo":"https://upload.wikimedia.org/wikipedia/tr/8/8d/Beyaz_TV_logo.jpeg","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_beyaztv/smil:beyaztv_sd.smil/chunklist_b2064000.m3u8","Tags":["Beyaz"],"IsActive":true,"Found":true,"Editable":true},{"Id":"57ad2b9c-5823-4a2f-a967-73b2379ed620","Name":"Kanal 7","Logo":"https://izle7-image.kanal7-cdn.com/assets/img/kanal7-logo_new.jpg","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_kanal7/kanal7_sd.smil/chunklist_b2064000.m3u8","Tags":[""],"IsActive":true,"Found":true,"Editable":true},{"Id":"6b11df4d-74e0-41a1-a647-a1aadd06ef00","Name":"TV 8","Logo":"https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_tv8/smil:tv8_sd.smil/chunklist_b2064000.m3u8","Tags":["TV 8","TV8"],"IsActive":true,"Found":true,"Editable":true},{"Id":"d5bf78bb-8e98-4961-9fb9-86135210bdef","Name":"TV 8.5","Logo":"https://upload.wikimedia.org/wikipedia/tr/1/1f/TV8.5_Logosu.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_tv8_5/smil:tv8_5_sd.smil/chunklist_b2064000.m3u8","Tags":["TV8.5","TV 8.5","TV8.5","TV 8.5"],"IsActive":true,"Found":true,"Editable":true},{"Id":"755a747f-b2ef-4663-8516-beb113c51de5","Name":"Haber Global","Logo":"https://yt3.ggpht.com/ytc/AAUvwnh8naTgb5DIRa_TRtTfeP4o_Cr2bclSmUPNgNYX_w=s900-c-k-c0x00ffffff-no-rj","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/haberglobal/index.m3u8","Tags":["HABER GLOBAL","HABERGLOBAL"],"IsActive":true,"Found":true,"Editable":true},{"Id":"78ba95bd-9b67-45bd-8968-3cca5356e9ea","Name":"TV NET","Logo":"https://upload.wikimedia.org/wikipedia/commons/3/34/Tvnet_Logo.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8","Tags":["TVNET","TV NET"],"IsActive":true,"Found":true,"Editable":true},{"Id":"e85afb9e-b6cf-489a-b8a8-66795e6e4de7","Name":"Bloomberg HT","Logo":"https://im.haberturk.com/2018/01/27/ver1517064135/1813956_620x410.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8","Tags":["Bloomberg"],"IsActive":true,"Found":true,"Editable":true},{"Id":"389b2e2f-d708-44af-8f48-943a39945c47","Name":"TRT Belgesel","Logo":"https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-11.19.01/69a03b09fca64ae0b1503a05729cdf22.png","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"http://tv-trtbelgesel.live.trt.com.tr/master_720.m3u8","Tags":["TRT Belgesel"],"IsActive":true,"Found":true,"Editable":true},{"Id":"b3e861b8-a0d1-4d29-9cf9-47d904a586fd","Name":"Fox TV HD","Logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/1200px-FOX_wordmark-red.svg.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://stream.hdtvizlecanli.com/fox.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"e16e6cd1-7b1a-4be4-aa74-9dcccb92dcd5","Name":"Star Tv","Logo":"https://2.bp.blogspot.com/-OWN79xICnxc/TxSKSwDI8hI/AAAAAAAAB3M/TKFq7LS2yCI/s1600/star_logo_3.jpg","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/blutv_star/smil:star_sd.smil/chunklist_b2064000.m3u8","Tags":[""],"IsActive":true,"Found":true,"Editable":true},{"Id":"864335d7-a395-4ca8-bd92-d3e91f666af7","Name":"Show TV HD","Logo":"https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/showtv/index.m3u8","Tags":[""],"IsActive":true,"Found":true,"Editable":true},{"Id":"5bf7a06c-d727-4330-b63a-d566e495c092","Name":"TGRT Haber","Logo":"https://upload.wikimedia.org/wikipedia/tr/e/e1/TGRT_Haber_logosu.png","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/tgrthaber/index.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"51af2a30-2237-469a-8ccd-f0c3a6903f88","Name":"TGRT Belgesel","Logo":"https://yt3.ggpht.com/ytc/AAUvwnh_FcCI9aOoOAsC2ZcHxvnk7qOaEKkpi4j6Ct4w=s900-c-k-c0x00ffffff-no-rj","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/tgrtbelgesel/index.m3u8","Tags":[""],"IsActive":true,"Found":true,"Editable":true},{"Id":"4a32c8c8-aca6-498f-8b4a-cbe497a3151d","Name":"Power TV","Logo":"https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_44.png","Language":"English","Category":"Müzik","Country":"TR","Integration":null,"Stream":"https://livetv.powerapp.com.tr/powerTV/powerhd.smil/chunklist_b1428000_sltur.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"2cc3d078-93af-4d0f-8e9e-df276f507a90","Name":"IBB TV","Logo":"http://ibb.tv/img/logos/ibb-tv-logo-white.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/chunklist_w2088558683.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"69598c92-d7c2-4a6a-8ff3-a9ede6c3271f","Name":"TV 100","Logo":"https://s.tv100.com/assets/web/images/default.jpg","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"https://stream.hdtvizlecanli.com/t1.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"bc2e7dfc-84f1-4f26-bd58-8d38d5659af2","Name":"Cartoon Network","Logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/1200px-Cartoon_Network_2010_logo.svg.png","Language":"Turkish","Category":"Cartoon","Country":"TR","Integration":null,"Stream":"http://str01.antensiz.tv:25461/live/tv/tv/325.m3u8","Tags":null,"IsActive":false,"Found":true,"Editable":true},{"Id":"15c83607-3316-4423-9be9-6143be67ac56","Name":"ATV","Logo":"https://www.logovector.org/wp-content/uploads/logos/png/a/atv_logo.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"http://mdn.mvp.tivibu.com.tr/MVP/TTG/NPVR/shls/LIVE$ATV_HD/index.m3u8?start=LIVE&end=END&device=HLS","Tags":["ATV"],"IsActive":true,"Found":true,"Editable":true},{"Id":"39eba5c2-6c8b-451a-831b-43eea3d8e2a8","Name":"BBC One HD","Logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/BBC_One_%282002%29.svg/220px-BBC_One_%282002%29.svg.png","Language":"English","Category":"Haber","Country":"GB","Integration":null,"Stream":"http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8","Tags":["BBC,bbc one"],"IsActive":true,"Found":true,"Editable":true},{"Id":"f80842ef-981d-4dea-a8bd-4affa9f8de96","Name":"Kemal Sunal","Logo":"https://upload.wikimedia.org/wikipedia/tr/thumb/f/f8/Kemal_Sunal.gif/220px-Kemal_Sunal.gif","Language":"Turkish","Category":"KemalSunal","Country":"TR","Integration":null,"Stream":"http://rv.therevenge.co:80/691616211141151/691616211141151/80400\r","Tags":["Kemal Sunal"],"IsActive":false,"Found":true,"Editable":true},{"Id":"83ab6b9d-c164-4b40-8b33-56602b6de01e","Name":"TRT 1 HD","Logo":"https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-10.50.19/17ddfc2658604509a952019f6ce55452.png","Language":"Turkish","Category":"Ulusal","Country":"TR","Integration":null,"Stream":"http://tv-trt1.live.trt.com.tr/master_720.m3u8","Tags":["TRT 1,TRT1"],"IsActive":true,"Found":true,"Editable":true},{"Id":"9cf0c205-80c0-4ad8-a646-3c60b1f32ef9","Name":"Bengütürk TV","Logo":"https://img.gazetevatan.com/vatanmediafile/Haber598x362/2016/03/01/benguturk-tv-de-turksat-tarafindan-karartildi-2026678.Jpeg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://canli.ensonhaber.com/tr/benguturk/index.m3u8","Tags":["Bengütürk"],"IsActive":true,"Found":true,"Editable":true},{"Id":"5eb28b7c-bacc-4ba3-ae50-188e7229b4db","Name":"360 TV","Logo":"https://imgs.turkmedya.com.tr/gorseller/YazarFotos/program/default.png","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://mn-nl.mncdn.com/360tv_live/smil:360tv.smil/playlist.m3u8","Tags":["360"],"IsActive":true,"Found":true,"Editable":true},{"Id":"23c8aa2e-29e3-4c2b-9436-04acd60f002c","Name":"Bein Sport","Logo":"https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png","Language":"Turkish","Category":"Spor","Country":"TR","Integration":null,"Stream":"http://vip.teos-iptv.com:8080/mert2020/2020mert/77\r","Tags":["Bein Sport","LIG TV","BEIN SPORT","LİG TV","Lig TV"],"IsActive":false,"Found":true,"Editable":true},{"Id":"c3a0f468-cff6-475c-8213-92fabd69f40c","Name":"Cima 1 TV","Logo":"https://media.elcinema.com/tvguide/1176_1.png","Language":"Arabic","Category":"Fujika","Country":"EG","Integration":null,"Stream":"http://178.132.3.162:88/Cima/video.m3u8?token=test","Tags":null,"IsActive":false,"Found":true,"Editable":true},{"Id":"9be9c560-00c7-420a-98d7-c532cdf26ead","Name":"Bahia TV","Logo":"https://hta.backoffice.easybroadcast.fr/channel/123_picture.png","Language":"Arabic","Category":"Fujika","Country":"DZ","Integration":null,"Stream":"https://cdn.hta.dz/live/Bahia_TV/htatv/Bahia_TV_720p/chunks.m3u8?nimblesessionid=12765011&wmsAuthSign=c2VydmVyX3RpbWU9MDEvMDEvMjAyMSAxMToxNDoxMSBBTSZoYXNoX3ZhbHVlPXMvcVppOEdXRzVWWHhXb2E2bjNZdVE9PSZ2YWxpZG1pbnV0ZXM9MTA=","Tags":["bahia"],"IsActive":false,"Found":true,"Editable":true},{"Id":"a6be6d72-ec63-4290-9b31-78644d058c02","Name":"Cima 2 TV","Logo":"https://media.elcinema.com/tvguide/1176_1.png","Language":"Arabic","Category":"Fujika","Country":"EG","Integration":null,"Stream":"http://channelsstream.xyz:8080/live/streeem/streeem/99.m3u8","Tags":null,"IsActive":false,"Found":true,"Editable":true},{"Id":"04efc8b4-925d-4e0c-8808-aa309e6f4a1e","Name":"Cima 3 TV","Logo":"https://media.elcinema.com/tvguide/1176_1.png","Language":"Arabic","Category":"Fujika","Country":"EG","Integration":null,"Stream":"http://192.34.153.37:7777/Cima_HD/Cima_High.m3u8?user=sgls540839&session=4c01ccb422fa1795f2b529615435435444e85e9ce4e1d4169a3b393936b0f5bcb34ee7ed63b31e6f&hlsid=HTTP_ID_4&starttime=20200717T070353.783882","Tags":["Cima"],"IsActive":false,"Found":true,"Editable":true},{"Id":"b8a4543f-20aa-4542-9bd7-51841f8ad6d3","Name":"Ennahar TV","Logo":"https://hta.backoffice.easybroadcast.fr/channel/8_picture.png","Language":"Arabic","Category":"Fujika","Country":"DZ","Integration":null,"Stream":"https://cdn.hta.dz/live/ENNAHAR_TV/htatv/ENNAHAR_TV_720p/chunks.m3u8?nimblesessionid=12765041&wmsAuthSign=c2VydmVyX3RpbWU9MDEvMDEvMjAyMSAxMToxNDo1NSBBTSZoYXNoX3ZhbHVlPUFxT3JlSWJ0REkvdU45bjNzLzEzL2c9PSZ2YWxpZG1pbnV0ZXM9MTA=","Tags":["ennahhar"],"IsActive":false,"Found":true,"Editable":true},{"Id":"f0cc5a49-26f8-4dfe-9173-4527d2c5b476","Name":"Nil Cinema","Logo":"http://www.niletc.tv/images/cinema/cinema.png","Language":"Arabic","Category":"Fujika","Country":"EG","Integration":null,"Stream":"http://178.132.3.162:88/Nile_cinema/video.m3u8?token=test","Tags":null,"IsActive":false,"Found":true,"Editable":true},{"Id":"e283e7f9-4dfb-4d6a-a38d-c1af5a00bab2","Name":"Nil Drama","Logo":"https://media.elcinema.com/tvguide/1156_1.png","Language":"Arabic","Category":"Fujika","Country":"EG","Integration":null,"Stream":"http://178.132.3.162:88/Nile_Drama/video.m3u8?token=test","Tags":null,"IsActive":false,"Found":true,"Editable":true},{"Id":"b6ed9f37-9ec0-4e39-9075-5d49a23cb161","Name":"TF1","Logo":"https://upload.wikimedia.org/wikipedia/commons/d/dc/TF1_logo_2013.png","Language":"Français","Category":"Ulusal","Country":"FR","Integration":null,"Stream":"https://tf1-hls-live-ssl.tf1.fr/tf1/1/hls/live_2328.m3u8","Tags":null,"IsActive":true,"Found":true,"Editable":true},{"Id":"6b027077-48fd-417a-a1bd-1f09c3c1a176","Name":"Ulke TV","Logo":"https://cdn.kanal7.com/ulketv/wp-content/uploads/2015/12/29112014172109.jpg","Language":"Turkish","Category":"Haber","Country":"TR","Integration":null,"Stream":"https://stream-07.ix7.dailymotion.com/sec(8lOMYwOWJB0kD-8STcdDUIo-E3pTnK599aoePcrQaEs)/dm/3/x7yb4xm/s/stream-3-1609942260.ts","Tags":["ULKE","ÜLKE"],"IsActive":true,"Found":true,"Editable":true},{"Id":"659d6412-8827-4b93-867f-fbe03aa8ce86","Name":"Animal Planet","Logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Animal_Planet.png/1280px-Animal_Planet.png","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"","Tags":["Animal,ANIMAL"],"IsActive":true,"Found":false,"Editable":true},{"Id":"2d5b0168-2b0c-4643-ad44-1fa209ecfd09","Name":"National Geographic","Logo":"https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"","Tags":["National","NGC","Nat Geo"],"IsActive":true,"Found":false,"Editable":true},{"Id":"3426404d-4ce0-422e-91df-644e9988f27d","Name":"History","Logo":"https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"","Tags":["History","HISTORY"],"IsActive":true,"Found":false,"Editable":true},{"Id":"17fd3dc0-af41-4205-80ba-31681e7fdf15","Name":"TEST","Logo":"","Language":"Turkish","Category":"Belgesel","Country":"TR","Integration":null,"Stream":"http://185.245.187.159:8080/NationalGeographic/mono.m3u8","Tags":["test"],"IsActive":true,"Found":true,"Editable":true}]
+[
+  {
+    "Id": "7b12d007-5fd3-4db9-963c-054c113e6c81",
+    "Name": "TRT Haber",
+    "Logo": "https://i.ibb.co/3pKN9gx/BYsl7Nc.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "http://tv-trthaber.live.trt.com.tr/master_720.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "2bb5f53b-8e54-4900-861b-dadd2c70a77f",
+    "Name": "TRT World",
+    "Logo": "https://i.ibb.co/phw4pjP/mjTjJ1N.png",
+    "Language": "English",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "http://tv-trtworld.live.trt.com.tr/master_720.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "51f35b4e-5859-4dee-be82-7b9e785910b5",
+    "Name": "TLC",
+    "Logo": "https://i.ibb.co/rp1rtsC/Mp1BWwp.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/tlc/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "2dc6f500-bb8e-40c2-87cb-c340f954c369",
+    "Name": "NTV",
+    "Logo": "https://i.ibb.co/4Jv1LRS/QP18ELE.png",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://nt4p9nef.rocketcdn.com/ntvhd.stream_720p/chunklist.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "6bedbbaf-4e73-456d-bab3-af866b376714",
+    "Name": "Power Türk",
+    "Logo": "https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_35.png",
+    "Language": "Turkish",
+    "Category": "Müzik",
+    "Country": "TR",
+    "Stream": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_b2650000_sltur.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "e5451931-e5dc-41ef-9ed1-ce9bcc840726",
+    "Name": "Kral Pop",
+    "Logo": "https://i.ibb.co/7v8wmsb/7H8WKei.png",
+    "Language": "Turkish",
+    "Category": "Müzik",
+    "Country": "TR",
+    "Stream": "https://0ajuu84p.rocketcdn.com/kralpop_720/chunklist.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "226049ee-14e1-41f7-a46f-b8dfecde3799",
+    "Name": "Halk TV HD",
+    "Logo": "https://i.imgur.com/vYEnfbj.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_halktv/smil:halktv_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "02c6341c-dded-458d-9ee4-25349862ae90",
+    "Name": "CNN Türk HD",
+    "Logo": "https://img1.pnghut.com/21/16/23/MD6acbsVcq/vecteur-area-cnnmoney-trademark-text.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_cnnturk/smil:cnnturk_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "1619d3ec-99d0-401c-8b3a-7073eb8151e8",
+    "Name": "Habertürk",
+    "Logo": "https://i.pinimg.com/originals/b4/14/77/b41477a961468b99b51db1e3905ece45.png",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/haberturk/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "46b8b209-703a-47a3-a2ff-95cf5445a10f",
+    "Name": "Beyaz Tv",
+    "Logo": "https://upload.wikimedia.org/wikipedia/tr/8/8d/Beyaz_TV_logo.jpeg",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_beyaztv/smil:beyaztv_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "57ad2b9c-5823-4a2f-a967-73b2379ed620",
+    "Name": "Kanal 7",
+    "Logo": "https://izle7-image.kanal7-cdn.com/assets/img/kanal7-logo_new.jpg",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_kanal7/kanal7_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "6b11df4d-74e0-41a1-a647-a1aadd06ef00",
+    "Name": "TV 8",
+    "Logo": "https://upload.wikimedia.org/wikipedia/tr/6/68/Tv8_Yeni_Logo.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_tv8/smil:tv8_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "d5bf78bb-8e98-4961-9fb9-86135210bdef",
+    "Name": "TV 8.5",
+    "Logo": "https://upload.wikimedia.org/wikipedia/tr/1/1f/TV8.5_Logosu.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_tv8_5/smil:tv8_5_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "755a747f-b2ef-4663-8516-beb113c51de5",
+    "Name": "Haber Global",
+    "Logo": "https://yt3.ggpht.com/ytc/AAUvwnh8naTgb5DIRa_TRtTfeP4o_Cr2bclSmUPNgNYX_w=s900-c-k-c0x00ffffff-no-rj",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/haberglobal/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "78ba95bd-9b67-45bd-8968-3cca5356e9ea",
+    "Name": "TV NET",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/3/34/Tvnet_Logo.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "e85afb9e-b6cf-489a-b8a8-66795e6e4de7",
+    "Name": "Bloomberg HT",
+    "Logo": "https://im.haberturk.com/2018/01/27/ver1517064135/1813956_620x410.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "389b2e2f-d708-44af-8f48-943a39945c47",
+    "Name": "TRT Belgesel",
+    "Logo": "https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-11.19.01/69a03b09fca64ae0b1503a05729cdf22.png",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "http://tv-trtbelgesel.live.trt.com.tr/master_720.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "b3e861b8-a0d1-4d29-9cf9-47d904a586fd",
+    "Name": "Fox TV ",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/1200px-FOX_wordmark-red.svg.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://stream.hdtvizlecanli.com/fox.m3u8",
+    "Tags": null,
+    "IsActive": true
+  },
+  {
+    "Id": "e16e6cd1-7b1a-4be4-aa74-9dcccb92dcd5",
+    "Name": "Star Tv",
+    "Logo": "https://2.bp.blogspot.com/-OWN79xICnxc/TxSKSwDI8hI/AAAAAAAAB3M/TKFq7LS2yCI/s1600/star_logo_3.jpg",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/blutv_star/smil:star_sd.smil/chunklist_b2064000.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "864335d7-a395-4ca8-bd92-d3e91f666af7",
+    "Name": "Show TV HD",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/showtv/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "5bf7a06c-d727-4330-b63a-d566e495c092",
+    "Name": "TGRT Haber",
+    "Logo": "https://upload.wikimedia.org/wikipedia/tr/e/e1/TGRT_Haber_logosu.png",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/tgrthaber/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "51af2a30-2237-469a-8ccd-f0c3a6903f88",
+    "Name": "TGRT Belgesel",
+    "Logo": "https://yt3.ggpht.com/ytc/AAUvwnh_FcCI9aOoOAsC2ZcHxvnk7qOaEKkpi4j6Ct4w=s900-c-k-c0x00ffffff-no-rj",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/tgrtbelgesel/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "4a32c8c8-aca6-498f-8b4a-cbe497a3151d",
+    "Name": "Power TV",
+    "Logo": "https://cdn.powergroup.com.tr/image/360x360/powerapp/channels/v3/logo_44.png",
+    "Language": "English",
+    "Category": "Müzik",
+    "Country": "TR",
+    "Stream": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/chunklist_b1428000_sltur.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "2cc3d078-93af-4d0f-8e9e-df276f507a90",
+    "Name": "IBB TV",
+    "Logo": "http://ibb.tv/img/logos/ibb-tv-logo-white.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://npserver1.ibb.gov.tr/webtv/webtv_wowza1/chunklist_w2088558683.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "69598c92-d7c2-4a6a-8ff3-a9ede6c3271f",
+    "Name": "TV 100",
+    "Logo": "https://s.tv100.com/assets/web/images/default.jpg",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "https://stream.hdtvizlecanli.com/t1.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "bc2e7dfc-84f1-4f26-bd58-8d38d5659af2",
+    "Name": "Cartoon Network",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/1200px-Cartoon_Network_2010_logo.svg.png",
+    "Language": "Turkish",
+    "Category": "Cartoon",
+    "Country": "TR",
+    "Stream": "http://str01.antensiz.tv:25461/live/tv/tv/325.m3u8",
+    "IsActive": false
+  },
+  {
+    "Id": "15c83607-3316-4423-9be9-6143be67ac56",
+    "Name": "ATV",
+    "Logo": "https://www.logovector.org/wp-content/uploads/logos/png/a/atv_logo.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "http://mdn.mvp.tivibu.com.tr/MVP/TTG/NPVR/shls/LIVE$ATV_HD/index.m3u8?start=LIVE&end=END&device=HLS",
+    "IsActive": true
+  },
+  {
+    "Id": "39eba5c2-6c8b-451a-831b-43eea3d8e2a8",
+    "Name": "BBC One HD",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/BBC_One_%282002%29.svg/220px-BBC_One_%282002%29.svg.png",
+    "Language": "English",
+    "Category": "Haber",
+    "Country": "GB",
+    "Stream": "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "f80842ef-981d-4dea-a8bd-4affa9f8de96",
+    "Name": "Kemal Sunal",
+    "Logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/f/f8/Kemal_Sunal.gif/220px-Kemal_Sunal.gif",
+    "Language": "Turkish",
+    "Category": "KemalSunal",
+    "Country": "TR",
+    "Stream": "http://rv.therevenge.co:80/691616211141151/691616211141151/80400\r",
+    "IsActive": false
+  },
+  {
+    "Id": "83ab6b9d-c164-4b40-8b33-56602b6de01e",
+    "Name": "TRT 1 HD",
+    "Logo": "https://trtkurumsal.trt.net.tr/Uploads/image/png/2019-03-20-10.50.19/17ddfc2658604509a952019f6ce55452.png",
+    "Language": "Turkish",
+    "Category": "Ulusal",
+    "Country": "TR",
+    "Stream": "http://tv-trt1.live.trt.com.tr/master_720.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "9cf0c205-80c0-4ad8-a646-3c60b1f32ef9",
+    "Name": "Bengütürk TV",
+    "Logo": "https://img.gazetevatan.com/vatanmediafile/Haber598x362/2016/03/01/benguturk-tv-de-turksat-tarafindan-karartildi-2026678.Jpeg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://canli.ensonhaber.com/tr/benguturk/index.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "5eb28b7c-bacc-4ba3-ae50-188e7229b4db",
+    "Name": "360 TV",
+    "Logo": "https://imgs.turkmedya.com.tr/gorseller/YazarFotos/program/default.png",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://mn-nl.mncdn.com/360tv_live/smil:360tv.smil/playlist.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "23c8aa2e-29e3-4c2b-9436-04acd60f002c",
+    "Name": "Bein Sport",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png",
+    "Language": "Turkish",
+    "Category": "Spor",
+    "Country": "TR",
+    "Stream": "http://vip.teos-iptv.com:8080/mert2020/2020mert/77\r",
+    "IsActive": false
+  },
+  {
+    "Id": "c3a0f468-cff6-475c-8213-92fabd69f40c",
+    "Name": "Cima 1 TV",
+    "Logo": "https://media.elcinema.com/tvguide/1176_1.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "EG",
+    "Stream": "http://178.132.3.162:88/Cima/video.m3u8?token=test",
+    "IsActive": false
+  },
+  {
+    "Id": "9be9c560-00c7-420a-98d7-c532cdf26ead",
+    "Name": "Bahia TV",
+    "Logo": "https://hta.backoffice.easybroadcast.fr/channel/123_picture.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "DZ",
+    "Stream": "https://cdn.hta.dz/live/Bahia_TV/htatv/Bahia_TV_720p/chunks.m3u8?nimblesessionid=12765011&wmsAuthSign=c2VydmVyX3RpbWU9MDEvMDEvMjAyMSAxMToxNDoxMSBBTSZoYXNoX3ZhbHVlPXMvcVppOEdXRzVWWHhXb2E2bjNZdVE9PSZ2YWxpZG1pbnV0ZXM9MTA=",
+    "IsActive": false
+  },
+  {
+    "Id": "a6be6d72-ec63-4290-9b31-78644d058c02",
+    "Name": "Cima 2 TV",
+    "Logo": "https://media.elcinema.com/tvguide/1176_1.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "EG",
+    "Stream": "http://channelsstream.xyz:8080/live/streeem/streeem/99.m3u8",
+    "IsActive": false
+  },
+  {
+    "Id": "04efc8b4-925d-4e0c-8808-aa309e6f4a1e",
+    "Name": "Cima 3 TV",
+    "Logo": "https://media.elcinema.com/tvguide/1176_1.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "EG",
+    "Stream": "http://192.34.153.37:7777/Cima_HD/Cima_High.m3u8?user=sgls540839&session=4c01ccb422fa1795f2b529615435435444e85e9ce4e1d4169a3b393936b0f5bcb34ee7ed63b31e6f&hlsid=HTTP_ID_4&starttime=20200717T070353.783882",
+    "IsActive": false
+  },
+  {
+    "Id": "b8a4543f-20aa-4542-9bd7-51841f8ad6d3",
+    "Name": "Ennahar TV",
+    "Logo": "https://hta.backoffice.easybroadcast.fr/channel/8_picture.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "DZ",
+    "Stream": "https://cdn.hta.dz/live/ENNAHAR_TV/htatv/ENNAHAR_TV_720p/chunks.m3u8?nimblesessionid=12765041&wmsAuthSign=c2VydmVyX3RpbWU9MDEvMDEvMjAyMSAxMToxNDo1NSBBTSZoYXNoX3ZhbHVlPUFxT3JlSWJ0REkvdU45bjNzLzEzL2c9PSZ2YWxpZG1pbnV0ZXM9MTA=",
+    "IsActive": false
+  },
+  {
+    "Id": "f0cc5a49-26f8-4dfe-9173-4527d2c5b476",
+    "Name": "Nil Cinema",
+    "Logo": "http://www.niletc.tv/images/cinema/cinema.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "EG",
+    "Stream": "http://178.132.3.162:88/Nile_cinema/video.m3u8?token=test",
+    "IsActive": false
+  },
+  {
+    "Id": "e283e7f9-4dfb-4d6a-a38d-c1af5a00bab2",
+    "Name": "Nil Drama",
+    "Logo": "https://media.elcinema.com/tvguide/1156_1.png",
+    "Language": "Arabic",
+    "Category": "Fujika",
+    "Country": "EG",
+    "Stream": "http://178.132.3.162:88/Nile_Drama/video.m3u8?token=test",
+    "IsActive": false
+  },
+  {
+    "Id": "b6ed9f37-9ec0-4e39-9075-5d49a23cb161",
+    "Name": "TF1",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/d/dc/TF1_logo_2013.png",
+    "Language": "Français",
+    "Category": "Ulusal",
+    "Country": "FR",
+    "Stream": "https://tf1-hls-live-ssl.tf1.fr/tf1/1/hls/live_2328.m3u8",
+    "IsActive": true
+  },
+  {
+    "Id": "6b027077-48fd-417a-a1bd-1f09c3c1a176",
+    "Name": "Ulke TV",
+    "Logo": "https://cdn.kanal7.com/ulketv/wp-content/uploads/2015/12/29112014172109.jpg",
+    "Language": "Turkish",
+    "Category": "Haber",
+    "Country": "TR",
+    "Stream": "https://stream-07.ix7.dailymotion.com/sec(8lOMYwOWJB0kD-8STcdDUIo-E3pTnK599aoePcrQaEs)/dm/3/x7yb4xm/s/stream-3-1609942260.ts",
+    "IsActive": true
+  },
+  {
+    "Id": "659d6412-8827-4b93-867f-fbe03aa8ce86",
+    "Name": "Animal Planet",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Animal_Planet.png/1280px-Animal_Planet.png",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "",
+    "IsActive": true
+  },
+  {
+    "Id": "2d5b0168-2b0c-4643-ad44-1fa209ecfd09",
+    "Name": "National Geographic",
+    "Logo": "https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "",
+    "IsActive": true
+  },
+  {
+    "Id": "3426404d-4ce0-422e-91df-644e9988f27d",
+    "Name": "History",
+    "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "",
+    "Tags": "History,HISTORY",
+    "IsActive": true
+  },
+  {
+    "Id": "17fd3dc0-af41-4205-80ba-31681e7fdf15",
+    "Name": "TEST",
+    "Logo": "",
+    "Language": "Turkish",
+    "Category": "Belgesel",
+    "Country": "TR",
+    "Stream": "http://185.245.187.159:8080/NationalGeographic/mono.m3u8",
+    "IsActive": true
+  }
+]

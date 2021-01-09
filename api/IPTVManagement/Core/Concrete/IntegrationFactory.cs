@@ -1,8 +1,10 @@
 ﻿using Core.Integrations;
+using DataLayer.Cache;
 using Model;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Core.Concrete
 {
@@ -11,32 +13,62 @@ namespace Core.Concrete
         private readonly HTAManager htaManager;
         private readonly ElahmadManager elahmadManager;
         private readonly HalfIntegrateManager halfIntegrateManager;
+        private readonly ChannelController channelController;
+        private readonly CacheManager cacheManager;
 
-        public IntegrationFactory(HTAManager hTAManager, ElahmadManager elahmadManager, HalfIntegrateManager halfIntegrateManager)
+        public IntegrationFactory(HTAManager hTAManager, ElahmadManager elahmadManager, HalfIntegrateManager halfIntegrateManager, ChannelController channelController, CacheManager cacheManager)
         {
             this.htaManager = hTAManager;
             this.elahmadManager = elahmadManager;
             this.halfIntegrateManager = halfIntegrateManager;
+            this.channelController = channelController;
+            this.cacheManager = cacheManager;
         }
 
 
-        internal List<CommonChannelModel> Execute<T>(string name, T setting)
-            where T : class, new()
+        internal List<CommonChannelModel> Execute(string name, object setting)
         {
+            List<CommonChannelModel> channels = GetFromCache(name);
+            if (channels?.Count > 0)
+            {
+                return channels;
+            }
+
             switch (name)
             {
                 case "hta":
-                    return htaManager.Get((HTASettingModel)Convert.ChangeType(setting, typeof(HTASettingModel)));
+                    channels = htaManager.Get(JObject.FromObject(setting).ToObject<HTASettingModel>());
+                    Task.Run(() =>
+                    {
+                        channelController.ControlAndGet(channels);
+                        cacheManager.Delete(name);
+                        cacheManager.Add(name, channels);
+                    });
+                    break;
                 case "elahmad":
-                    return elahmadManager.Get((ElahmadSettingModel)Convert.ChangeType(setting, typeof(ElahmadSettingModel)));
+                    channels = elahmadManager.Get(JObject.FromObject(setting).ToObject<ElahmadSettingModel>());
+                    Task.Run(() =>
+                    {
+                        channelController.ControlAndGet(channels);
+                        cacheManager.Delete(name);
+                        cacheManager.Add(name, channels);
+                    });
+                    break;
                 case "freeiptvlists":
-                    return halfIntegrateManager.Get((HalfIntegrateSettingModel)Convert.ChangeType(setting, typeof(HalfIntegrateSettingModel)));
                 case "dailyiptvlist":
-                    return halfIntegrateManager.Get((HalfIntegrateSettingModel)Convert.ChangeType(setting, typeof(HalfIntegrateSettingModel)));
+                    channels = halfIntegrateManager.Get(JObject.FromObject(setting).ToObject<HalfIntegrateSettingModel>());
+                    break;
                 default:
                     break;
             }
-            return null;
+
+            cacheManager.Add(name, channels, 60);
+           
+            return channels;
+        }
+        private List<CommonChannelModel> GetFromCache(string name)
+        {
+            return cacheManager.Get<List<CommonChannelModel>>(name);
         }
     }
 }

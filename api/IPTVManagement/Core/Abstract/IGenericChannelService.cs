@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Model;
 using System.Collections.Generic;
-using System.Text;
-using Model;
 
 namespace Core.Abstract
 {
     public interface IGenericChannelService
     {
-        List<CommonChannelModel> GetHalfIntegratedChannels();
+        List<CommonChannelModel> GetHalfIntegratedChannels(IEnumerable<CommonChannelModel> includeHalfIntegrated);
         List<CommonChannelModel> GetFullIntegratedChannels();
 
     }

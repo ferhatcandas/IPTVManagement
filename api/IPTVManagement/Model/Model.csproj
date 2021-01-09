@@ -4,10 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="IntegrationSettings.cs" />
-    <Compile Remove="M3U8Channel.cs" />
-    <Compile Remove="TVChannel.cs" />
-  </ItemGroup>
-
 </Project>

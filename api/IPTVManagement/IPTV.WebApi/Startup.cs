@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core;
+using Core.Abstract;
+using Core.Concrete;
+using Core.Integrations;
+using DataLayer;
+using DataLayer.Cache;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,22 +30,40 @@ namespace IPTV.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddOptions();
+            services.AddHttpClient();
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+            services.AddMemoryCache();
+            services.AddMvc();
+            services.AddControllers().AddControllersAsServices();
             RegisterServices(services);
         }
 
         private void RegisterServices(IServiceCollection services)
         {
-            Manager manager = new Manager(new M3UManager(new System.Net.Http.HttpClient()), new TVChannelManager(new DataLayer.TVChannelRepository()), new IntegrationManager(new System.Net.Http.HttpClient(), new DataLayer.IntegrationRepository()));
+            services.AddHttpClient<M3UManager>(x =>
+            {
+                x.Timeout = new TimeSpan(0, 0, 15);
+            });
+            services.AddScoped<GenericChannelRepository>();
+            services.AddScoped<IntegrationFactory>();
+            services.AddScoped<Service>();
+            services.AddScoped<ChannelController>();
+            services.AddScoped<StreamManager>();
+            services.AddScoped<ChannelRepository>();
+            services.AddScoped<CacheManager>();
+            services.AddScoped<M3UManager>();
+            services.AddScoped<ElahmadManager>();
+            services.AddScoped<HTAManager>();
+            services.AddScoped<HalfIntegrateManager>();
+            services.AddScoped<IFixedChannelService, FixedChannelManager>();
+            services.AddScoped<IGenericChannelService, GenericChannelManager>();
 
-            services.AddSingleton<Manager>(manager);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

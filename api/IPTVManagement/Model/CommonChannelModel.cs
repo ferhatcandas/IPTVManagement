@@ -8,7 +8,14 @@ namespace Model
     {
         public string Integration { get; set; }
         public bool IsEditable { get; set; }
+        public bool HasStream { get; set; }
+        public bool IsHalfIntegrated() => !string.IsNullOrEmpty(Tags) && string.IsNullOrEmpty(Stream) && IsActive;
 
-        public bool IsHalfIntegrated => !string.IsNullOrEmpty(Tags) && !string.IsNullOrEmpty(Stream);
+        public CommonChannelModel Clone()
+        {
+            var clonedObject = (CommonChannelModel)this.MemberwiseClone();
+            clonedObject.Id = null;
+            return clonedObject;
+        }
     }
 }

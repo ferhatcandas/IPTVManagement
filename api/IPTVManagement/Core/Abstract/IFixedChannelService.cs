@@ -1,14 +1,15 @@
 ﻿using Model;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Abstract
 {
     public interface IFixedChannelService
     {
         List<CommonChannelModel> Get();
-
         void Add(Channel channel);
+        void UpdateChannel(string channelId, Channel channel);
+        void Delete(string channelId);
+        void UpdateStatus(string channelId);
+        CommonChannelModel Get(string channelId);
     }
 }

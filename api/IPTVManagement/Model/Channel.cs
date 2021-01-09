@@ -4,14 +4,29 @@ using System.Text;
 
 namespace Model
 {
-    public class Channel : BaseClass
+    public class Channel : BaseChannel
     {
-        public string Name { get; set; }
-        public string Stream { get; set; }
-        public string Category { get; set; }
-        public string Language { get; set; }
-        public string Country { get; set; }
+        public string Id { get; set; }
         public string Tags { get; set; }
         public bool IsActive { get; set; }
+
+        public CommonChannelModel ToCommonChannel()
+        {
+            return new CommonChannelModel
+            {
+                Category = Category,
+                Country = Country,
+                Id = Id,
+                Integration = IntegrationType.Fixed.ToString(),
+                IsActive = IsActive,
+                HasStream = true,
+                IsEditable = true,
+                Language = Language,
+                Logo = Logo,
+                Name = Name,
+                Stream = Stream,
+                Tags = Tags
+            };
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace DataLayer.Repository
     {
 
         private static readonly string folderPath = Directory.GetCurrentDirectory() + @"\";
-        private string fileName = "";
+        private readonly string fileName = "";
         public FileRepository()
         {
             fileName = $"{typeof(T).Name}.json";
