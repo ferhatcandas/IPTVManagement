@@ -115,6 +115,12 @@
           "Name": "Rotana Classic",
           "Logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Rotana_Classic_New_Logo.png",
           "Link": "http://www.elahmad.com/tv/filmo.php?file=2609"
+        },
+
+        {
+          "Name": "Ennahar Tv",
+          "Logo": "https://hta.backoffice.easybroadcast.fr/channel/8_picture.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=alnahartvnews"
         }
       ]
     }

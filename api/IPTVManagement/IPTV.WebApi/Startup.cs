@@ -8,6 +8,8 @@ using Core.Concrete;
 using Core.Integrations;
 using DataLayer;
 using DataLayer.Cache;
+using Hangfire;
+using Hangfire.MemoryStorage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -41,6 +43,12 @@ namespace IPTV.WebApi
             services.AddMemoryCache();
             services.AddMvc();
             services.AddControllers().AddControllersAsServices();
+            services.AddHangfire(config =>
+config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+.UseSimpleAssemblyNameTypeSerializer()
+.UseDefaultTypeSerializer().UseMemoryStorage());
+            services.AddHangfireServer();
+
             RegisterServices(services);
         }
 
@@ -63,17 +71,19 @@ namespace IPTV.WebApi
             services.AddScoped<HalfIntegrateManager>();
             services.AddScoped<IFixedChannelService, FixedChannelManager>();
             services.AddScoped<IGenericChannelService, GenericChannelManager>();
-
+ 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            IBackgroundJobClient backgroundJobClient,
+            IRecurringJobManager recurringJobManager,
+            IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseRouting();
             app.UseCors();
             app.UseAuthorization();
@@ -82,6 +92,13 @@ namespace IPTV.WebApi
             {
                 endpoints.MapControllers();
             });
+            app.UseHangfireDashboard();
+            recurringJobManager.AddOrUpdate(
+                "Run every minute",
+                () => serviceProvider.GetService<Service>().ReCache(),
+                "0 */18 * ? * *"
+                );
+
         }
     }
 }

@@ -26,9 +26,9 @@ namespace Core.Concrete
         }
 
 
-        internal List<CommonChannelModel> Execute(string name, object setting)
+        internal List<CommonChannelModel> Execute(string name, object setting, bool reCache = false)
         {
-            List<CommonChannelModel> channels = GetFromCache(name);
+            List<CommonChannelModel> channels = reCache ? null : GetFromCache(name);
             if (channels?.Count > 0)
             {
                 return channels;
@@ -63,7 +63,7 @@ namespace Core.Concrete
             }
 
             cacheManager.Add(name, channels, 60);
-           
+
             return channels;
         }
         private List<CommonChannelModel> GetFromCache(string name)

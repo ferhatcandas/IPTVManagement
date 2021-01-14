@@ -22,7 +22,7 @@ namespace Core.Concrete
             this.cacheManager = cacheManager;
             this.channelController = channelController;
         }
-        public List<CommonChannelModel> GetFullIntegratedChannels()
+        public List<CommonChannelModel> GetFullIntegratedChannels(bool reCache = false)
         {
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
@@ -30,19 +30,20 @@ namespace Core.Concrete
 
             foreach (GenericChannelIntegration integration in genericSettings)
             {
-                channels.AddRange(integrationFactory.Execute(integration.Name, integration.Settings));
+                channels.AddRange(integrationFactory.Execute(integration.Name, integration.Settings, reCache));
             }
             return channels;
         }
 
-        public List<CommonChannelModel> GetHalfIntegratedChannels(IEnumerable<CommonChannelModel> includeHalfIntegrated)
+        public List<CommonChannelModel> GetHalfIntegratedChannels(IEnumerable<CommonChannelModel> includeHalfIntegrated, bool reCache = false)
         {
-            List<CommonChannelModel> channels = cacheManager.Get<List<CommonChannelModel>>(IntegrationType.Half.ToString());
+            List<CommonChannelModel> channels = reCache ? null : cacheManager.Get<List<CommonChannelModel>>(IntegrationType.Half.ToString());
 
             List<GenericChannelIntegration> genericSettings = genericRepository.Get().Where(x => x.IsHalfIntegrated).ToList();
             List<CommonChannelModel> filt = null;
-            if (channels?.Count == 0)
+            if (channels == null || channels?.Count == 0)
             {
+                channels = new List<CommonChannelModel>();
                 foreach (GenericChannelIntegration integration in genericSettings)
                 {
                     var list = integrationFactory.Execute(integration.Name, integration.Settings);
@@ -103,38 +104,6 @@ namespace Core.Concrete
             return channels;
 
         }
-        private void SprayChannels(List<CommonChannelModel> fixedChannels, List<CommonChannelModel> halfIntegratedChannels)
-        {
-            List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
-            var filtredChannels = fixedChannels.Where(x => x.IsHalfIntegrated());
-
-            foreach (var halfIntegrated in halfIntegratedChannels)
-            {
-                foreach (var filter in filtredChannels)
-                {
-                    var tags = filter.Tags.Split(',');
-                    foreach (var tag in tags)
-                    {
-                        if (halfIntegrated.Name.Contains(tag))
-                        {
-                            if (string.IsNullOrEmpty(filter.Stream))
-                            {
-                                filter.Stream = halfIntegrated.Stream;
-                            }
-                            else
-                            {
-                                var clonedChannel = filter.Clone();
-                                clonedChannel.Stream = halfIntegrated.Stream;
-                                clonedChannel.Integration = IntegrationType.Half.ToString();
-                                channels.Add(clonedChannel);
-                            }
-
-                        }
-                    }
-                }
-            }
-            fixedChannels.AddRange(channels);
-        }
     }
 }
