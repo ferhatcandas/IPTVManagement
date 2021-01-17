@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="IntegrationFactory.cs" />
+    <Compile Remove="IntegrationManager.cs" />
+    <Compile Remove="M3UManager.cs" />
+    <Compile Remove="Manager.cs" />
+    <Compile Remove="TVChannelManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.29" />
     <PackageReference Include="Jurassic" Version="3.1.0" />
   </ItemGroup>

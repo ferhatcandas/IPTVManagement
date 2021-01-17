@@ -1,0 +1,128 @@
+[
+  {
+    "IntegrationType": "half",
+    "Name": "dailyiptvlist",
+    "Settings": {
+      "Periods": [
+        "yesterday",
+        "today"
+      ],
+      "Scheme": "https://dailyiptvlist.com/dl/tr-m3uplaylist-{date}-{part}.m3u",
+      "LastPartIndex": 8,
+      "SchemeType": "date",
+      "DateFormat": "yyyy-MM-dd"
+    }
+  },
+  {
+    "IntegrationType": "half",
+    "Name": "freeiptvlists",
+    "Settings": {
+      "Periods": [
+        "yesterday",
+        "today"
+      ],
+      "Scheme": "https://freeiptvlists.com/website_lists/Turkey/tr{date}.php",
+      "LastPartIndex": null,
+      "SchemeType": "date",
+      "DateFormat": "dd_MM_yy"
+    }
+  },
+  {
+    "IntegrationType": "full",
+    "Name": "hta",
+    "Settings": {
+      "Link": "https://hta.backoffice.easybroadcast.fr/grids/tv",
+      "AuthToken": "https://token.kube.easybroadcast.fr/authtoken?url=http://apphta.easybroadcast.fr/apphta"
+    }
+  },
+  {
+    "IntegrationType": "full",
+    "Name": "elahmad",
+    "Settings": {
+      "ChannelLinks": [
+        {
+          "Name": "Canal Algerie 2",
+          "Logo": "https://myaramedia.com/uploads/chanels/logos/canal-algerie.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=canalalgerie"
+        },
+        {
+          "Name": "Cima",
+          "Logo": "https://media.elcinema.com/tvguide/1176_1.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=cima"
+        },
+        {
+          "Name": "Thalitha",
+          "Logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/A3_Logo_2020.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=thalitha"
+        },
+        {
+          "Name": "Samira TV",
+          "Logo": "https://hta.backoffice.easybroadcast.fr/channel/10_picture.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=samiratv"
+        },
+        {
+          "Name": "Echorouk TV",
+          "Logo": "https://hta.backoffice.easybroadcast.fr/channel/6_picture.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=echorouk"
+        },
+        {
+          "Name": "Nile Comedy",
+          "Logo": "https://media.elcinema.com/tvguide/1158_1.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=nilecomedy"
+        },
+        {
+          "Name": "Nile Cinema",
+          "Logo": "https://television-planet.tv/uploads/posts/2019-08/1566729991_nazvaniya-32.jpg",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=nilecinema"
+        },
+        {
+          "Name": "Nile Drama",
+          "Logo": "https://media.elcinema.com/tvguide/1156_1.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=niledrama"
+        },
+        {
+          "Name": "Nessma TV",
+          "Logo": "http://www.elahmad.com/tv/mobiletv/images/ar/cim_303455.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=nessma"
+        },
+        {
+          "Name": "2M Morocco",
+          "Logo": "http://www.elahmad.com/tv/mobiletv/images/ar/cim_302029.png",
+          //"Logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Rotana_Classic_New_Logo.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=m2morocco"
+        },
+        {
+          "Name": "Tamazight",
+          "Logo": "http://www.elahmad.com/tv/mobiletv/images/ar/cim_302775.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=tamazight"
+        },
+        {
+          "Name": "Panaroma Drama",
+          "Logo": "http://www.elahmad.com/tv/mobiletv/images/ar/cim_302814.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=panoramadrama"
+        },
+        {
+          "Name": "Panaroma Drama 2",
+          "Logo": "http://www.elahmad.com/tv/mobiletv/images/ar/cim_302818.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=panoramadrama2"
+        },
+        {
+          "Name": "Rotana Cinema",
+          "Logo": "https://static.filmon.com/assets/channels/2615/extra_big_logo.png",
+          "Link": "http://www.elahmad.com/tv/filmo.php?file=2615"
+        },
+        {
+          "Name": "Rotana Classic",
+          "Logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Rotana_Classic_New_Logo.png",
+          "Link": "http://www.elahmad.com/tv/filmo.php?file=2609"
+        },
+
+        {
+          "Name": "Ennahar Tv",
+          "Logo": "https://hta.backoffice.easybroadcast.fr/channel/8_picture.png",
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=alnahartvnews"
+        }
+      ]
+    }
+  }
+]

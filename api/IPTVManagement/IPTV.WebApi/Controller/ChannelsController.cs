@@ -10,9 +10,9 @@ namespace IPTV.WebApi.Controller
     [ApiController]
     public class ChannelsController : ControllerBase
     {
-        private readonly Manager manager;
+        private readonly Service manager;
 
-        public ChannelsController(Manager manager)
+        public ChannelsController(Service manager)
         {
             this.manager = manager;
         }
@@ -26,23 +26,10 @@ namespace IPTV.WebApi.Controller
         [HttpGet()]
         public async Task<IActionResult> GetChannels()
         {
-            return Ok(manager.GetTVChannels(true).Select(x => new
-            {
-                Id = x.Id,
-                ChannelName = x.Name,
-                IsActive = x.IsActive,
-                Logo = x.Logo,
-                Language = x.Language,
-                Category = x.Category,
-                Country = x.Country,
-                StreamUrl = x.Stream,
-                IsFound = x.Found,
-                Editable = x.Editable
-            }
-            ).OrderByDescending(x => x.IsFound).ThenBy(x => x.ChannelName).ToList());
+            return Ok(manager.GetChannels(true));
         }
         [HttpPost()]
-        public async Task<IActionResult> AddChannel([FromBody] TVChannel request)
+        public async Task<IActionResult> AddChannel([FromBody] Channel request)
         {
             manager.AddChannel(request);
             return Ok();
@@ -50,10 +37,10 @@ namespace IPTV.WebApi.Controller
         [HttpGet("{channelId}")]
         public async Task<IActionResult> GetChannel([FromRoute] string channelId)
         {
-            return Ok(manager.GetTVChannel(channelId));
+            return Ok(manager.GetChannel(channelId));
         } 
         [HttpPut("{channelId}")]
-        public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] TVChannel request)
+        public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] Channel request)
         {
             manager.UpdateChannel(channelId, request);
             return Ok();
@@ -67,7 +54,7 @@ namespace IPTV.WebApi.Controller
         [HttpDelete("{channelId}")]
         public async Task<IActionResult> DeleteChannel([FromRoute] string channelId)
         {
-            manager.RemoveChannel(channelId);
+            manager.DeleteChannel(channelId);
             return Ok();
         }
         [HttpGet("/fetch")]
