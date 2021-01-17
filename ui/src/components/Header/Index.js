@@ -15,11 +15,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import useStyles from "./styles";
 import { Directions } from "../../config/Routes/Index";
+import { useLocation } from 'react-router-dom'
+
 
 export default function Header(props) {
     const { drawerClose, drawerOpen, open } = props;
     const classes = useStyles()
-
+    const pathName = useLocation().pathname.replace("/", "");
+    const [pageTitle, setPageTitle] = React.useState(pathName === "" ? "Dashboard" : pathName)
     return (
         <>
             <AppBar
@@ -39,8 +42,8 @@ export default function Header(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Dashboard
-                     </Typography>
+                        {pageTitle}
+                    </Typography>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -60,9 +63,9 @@ export default function Header(props) {
                 <Divider />
                 <List>
                     {Directions.map((d, index) => (
-                        <RouterLink key={index} className={classes.routerLink} to={d.Path}>
+                        <RouterLink key={index} className={classes.routerLink} onClick={() => setPageTitle(d.Text)} to={d.Path}>
                             <ListItem button >
-                                <ListItemIcon> {d.Icon} </ListItemIcon>
+                                <ListItemIcon> {d.Icon}</ListItemIcon>
                                 <ListItemText primary={d.Text} />
                             </ListItem>
                         </RouterLink>

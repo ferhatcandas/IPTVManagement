@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell, Paper, TablePagination, IconButton, TextField } from "@material-ui/core";
-import CastConnectedSharpIcon from "@material-ui/icons/CastConnectedSharp";
 import EditIcon from "@material-ui/icons/Edit";
 import SearchIcon from "@material-ui/icons/Search";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -138,15 +137,12 @@ function TvChannels() {
                     <TableBody>
                         {filtredChannels.slice(page * pageRows, page * pageRows + pageRows).map((element, index) => (
                             <TableRow key={index}>
-                                <TableCell align="center"><img alt={element.name} src={element.logo} width={40} height={40} /></TableCell>
+                                <TableCell align="center"><img style={{ cursor: "pointer" }} onClick={() => streamPopup(element.name, element.stream)} alt={element.name} src={element.logo} width={40} height={40} /></TableCell>
                                 <TableCell align="center">{element.name}</TableCell>
                                 <TableCell align="center">{element.category}</TableCell>
                                 <TableCell align="center">{element.country}</TableCell>
                                 <TableCell align="center">{element.language}</TableCell>
                                 <TableCell align="center">
-                                    <IconButton onClick={() => streamPopup(element.name, element.stream)}>
-                                        <CastConnectedSharpIcon color="secondary" />
-                                    </IconButton>
                                     {(element.isEditable ?
                                         <>
                                             <IconButton onClick={() => handleOpenEditModal(element.name, element.id)}>
