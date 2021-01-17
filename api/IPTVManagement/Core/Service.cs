@@ -52,7 +52,7 @@ namespace Core
         }
         public List<CommonChannelModel> GetChannels(bool additional = true, bool reCache = false)
         {
-            List<CommonChannelModel> fixedChannels = fixedChannel.Get();
+            List<CommonChannelModel> fixedChannels = fixedChannel.Get().OrderByDescending(x => x.Id).ToList();
 
             var includeHalfIntegrated = fixedChannels.Where(x => x.IsHalfIntegrated());
 

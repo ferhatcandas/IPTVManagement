@@ -5,6 +5,8 @@ export default makeStyles((theme) => ({
         ...theme.mixins.toolbar,
     },
     content: {
+        display: "inline",
+        overflowX: "auto",
         flexGrow: 1,
         padding: theme.spacing(3),
         transition: theme.transitions.create('margin', {
@@ -19,6 +21,11 @@ export default makeStyles((theme) => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
+    },
+    loading: {
+        position: "fixed", /* or absolute */
+        top: "50%",
+        left: "50%"
     }
 }))
 

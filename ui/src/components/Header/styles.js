@@ -36,6 +36,10 @@ export default makeStyles((theme) => ({
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
+    },
+    routerLink: {
+        textDecoration: "none",
+        color: theme.palette.text.primary
     }
 }))
 

@@ -6,15 +6,15 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography"
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import MailIcon from '@material-ui/icons/Mail';
 import Divider from '@material-ui/core/Divider';
 import clsx from 'clsx';
 import List from '@material-ui/core/List';
+import { Link as RouterLink } from "react-router-dom";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import useStyles from "./styles";
+import { Directions } from "../../config/Routes/Index";
 
 export default function Header(props) {
     const { drawerClose, drawerOpen, open } = props;
@@ -59,20 +59,13 @@ export default function Header(props) {
                 </div>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                    {Directions.map((d, index) => (
+                        <RouterLink key={index} className={classes.routerLink} to={d.Path}>
+                            <ListItem button >
+                                <ListItemIcon> {d.Icon} </ListItemIcon>
+                                <ListItemText primary={d.Text} />
+                            </ListItem>
+                        </RouterLink>
                     ))}
                 </List>
             </Drawer>
