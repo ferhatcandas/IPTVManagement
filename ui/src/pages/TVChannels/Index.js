@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell, Paper, TablePagination, IconButton, TextField } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
+import CopyIcon from "@material-ui/icons/FileCopy";
 import SearchIcon from "@material-ui/icons/Search";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { ChannelService } from "../../services/ChannelService";
@@ -17,16 +18,17 @@ function TvChannels() {
     const [channels, setChannels] = useState([]);
     const [filtredChannels, setFiltredChannels] = useState([]);
     const [page, setPage] = useState(0);
+    const [filterText, setFilterText] = useState("");
     const [pageRows, setRows] = useState(10);
     const [openPopup, setOpenPopup] = useState(false)
     const [popupTitle, setPopupTitle] = useState("")
     const [PopupContent, setPopupContent] = useState(<><h1>test</h1></>);
 
     const loadChannels = (refresh) => {
-        if (filtredChannels.length === 0 || refresh) {
+        if (channels.length === 0 || refresh) {
             ChannelService.getAll((data) => {
                 setChannels(data)
-                setFiltredChannels(data)
+                filterResultSet(data);
             })
         }
 
@@ -42,17 +44,24 @@ function TvChannels() {
     const handleOpenEditModal = (title, id) => {
         setPopupTitle(title);
         ChannelService.get(id, (data) => {
-            setPopupContent(<ChannelForm data={data} callback={AddOrUpdateChannel} />)
+            setPopupContent(<ChannelForm close={setOpenPopup} data={data} callback={AddOrUpdateChannel} />)
             setOpenPopup(true);
         })
     }
+    const handleDuplicatePopup = (element) => {
+        let copyOfChannel = Object.assign({}, element);
+        copyOfChannel.id = null;
+        setPopupTitle("Copy channel")
+        copyOfChannel.name = "Copy of " + copyOfChannel.name
+        setPopupContent(<YesNoPopup buttonText="Yes" content="Kanalı kopyalamak istediğinize emin misiniz ?" callback={(response) => response ? AddOrUpdateChannel(copyOfChannel) : null} />)
+        setOpenPopup(true);
+    }
     const handleDeleteAlertPopup = (title, id) => {
         setPopupTitle(title);
-        setPopupContent(<YesNoPopup content="Kanalı silmek istediğiniz emin misiniz ?" callback={(response) => response ? DeleteChannel(id) : null} />)
+        setPopupContent(<YesNoPopup buttonText="Delete" content="Kanalı silmek istediğinize emin misiniz ?" callback={(response) => response ? DeleteChannel(id) : null} />)
         setOpenPopup(true);
     }
     const AddOrUpdateChannel = (channel) => {
-
         if (channel.id) {
             ChannelService.put(channel, () => {
                 setOpenPopup(false);
@@ -87,17 +96,30 @@ function TvChannels() {
         )
         setOpenPopup(true);
     }
-    const filterResultSet = (value) => {
-        console.log(value)
-        value = value.toLowerCase();
-        if (value) {
-            let newFiltredChannels = channels.filter(x =>
-                x?.name.toLowerCase().includes(value) ||
-                x?.category.toLowerCase().includes(value) ||
-                x?.language.toLowerCase().includes(value) ||
-                x?.country.toLowerCase().includes(value)
+    const filterHandle = (event) => {
+        if (event.target.value) {
+            setFilterText(event.target.value.toLowerCase());
+            filterResultSet(channels);
+        }
+        else {
+            setFiltredChannels(channels)
+        }
+        event.preventDefault();
+
+    }
+    const filterResultSet = (data) => {
+        if (filterText.length > 0) {
+            let newFiltredChannels = data.filter(x =>
+                x?.name.toLowerCase().includes(filterText) ||
+                x?.category.toLowerCase().includes(filterText) ||
+                x?.language.toLowerCase().includes(filterText) ||
+                x?.country.toLowerCase().includes(filterText) ||
+                x?.statusCode?.toLowerCase().includes(filterText)
             )
             setFiltredChannels(newFiltredChannels)
+        }
+        else {
+            setFiltredChannels(data)
         }
 
     }
@@ -118,7 +140,7 @@ function TvChannels() {
                     <TableHead>
                         <TableRow>
                             <TableCell align="right">
-                                <TextField placeholder="Search.." onChange={(e) => filterResultSet(e.target.value)} InputProps={{ startAdornment: (<SearchIcon />) }} />
+                                <TextField placeholder="Search.." onChange={(e) => filterHandle(e)} InputProps={{ startAdornment: (<SearchIcon />) }} />
                             </TableCell>
                         </TableRow>
                     </TableHead>
@@ -131,6 +153,7 @@ function TvChannels() {
                             <TableCell align="center">Category</TableCell>
                             <TableCell align="center">Country</TableCell>
                             <TableCell align="center">Language</TableCell>
+                            <TableCell align="center">Status</TableCell>
                             <TableCell align="center">Actions</TableCell>
                         </TableRow>
                     </TableHead>
@@ -142,18 +165,20 @@ function TvChannels() {
                                 <TableCell align="center">{element.category}</TableCell>
                                 <TableCell align="center">{element.country}</TableCell>
                                 <TableCell align="center">{element.language}</TableCell>
+                                <TableCell align="center">{element.statusCode}</TableCell>
                                 <TableCell align="center">
                                     {(element.isEditable ?
                                         <>
-                                            <IconButton onClick={() => handleOpenEditModal(element.name, element.id)}>
-                                                <EditIcon />
-                                            </IconButton>
+                                            <IconButton onClick={() => handleOpenEditModal(element.name, element.id)}><EditIcon /></IconButton>
                                             <IconButton onClick={() => handleDeleteAlertPopup(element.name, element.id)}>
                                                 <DeleteIcon />
                                             </IconButton>
                                         </>
                                         : null
                                     )}
+                                    <IconButton onClick={() => handleDuplicatePopup(element)}>
+                                        <CopyIcon />
+                                    </IconButton>
                                 </TableCell>
                             </TableRow>
                         ))}

@@ -5,7 +5,7 @@ namespace Core.Abstract
 {
     public interface IGenericChannelService
     {
-        List<CommonChannelModel> GetHalfIntegratedChannels(IEnumerable<CommonChannelModel> includeHalfIntegrated, bool reCache = false);
+        List<CommonChannelModel> GetHalfIntegratedChannels(List<CommonChannelModel> includeHalfIntegrated, bool reCache = false);
         List<CommonChannelModel> GetFullIntegratedChannels(bool reCache=false);
     }
 }

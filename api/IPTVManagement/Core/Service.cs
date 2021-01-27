@@ -25,12 +25,21 @@ namespace Core
 
         public void AddChannel(Channel channel)
         {
+            channel.Id = Guid.NewGuid().ToString();
             fixedChannel.Add(channel);
+            if (channel.Tags != null)
+            {
+                ReCache();
+            }
         }
 
         public void UpdateChannel(string channelId, Channel channel)
         {
             fixedChannel.UpdateChannel(channelId, channel);
+            if (channel.Tags != null)
+            {
+                ReCache();
+            }
         }
 
         public void DeleteChannel(string channelId)
@@ -45,7 +54,7 @@ namespace Core
 
         public Stream GetStream()
         {
-            var channels = GetChannels(true);
+            var channels = GetChannels(true).Where(x=>!string.IsNullOrEmpty(x.Stream)).ToList();
             var bytes = streamManager.Export(channels);
 
             return new MemoryStream(bytes);
@@ -54,12 +63,12 @@ namespace Core
         {
             List<CommonChannelModel> fixedChannels = fixedChannel.Get().OrderByDescending(x => x.Id).ToList();
 
-            var includeHalfIntegrated = fixedChannels.Where(x => x.IsHalfIntegrated());
+            var includeHalfIntegrated = fixedChannels.Where(x => x.IsHalfIntegrated()).ToList();
 
             if (includeHalfIntegrated.Count() > 0)
             {
                 List<CommonChannelModel> halfIntegratedChannels = genericChannel.GetHalfIntegratedChannels(includeHalfIntegrated, reCache);
-                SprayChannels(fixedChannels, halfIntegratedChannels);
+                fixedChannels.AddRange(halfIntegratedChannels);
             }
 
             if (additional)
@@ -69,39 +78,6 @@ namespace Core
 
             }
             return fixedChannels;
-        }
-        private void SprayChannels(List<CommonChannelModel> fixedChannels, List<CommonChannelModel> halfIntegratedChannels)
-        {
-            List<CommonChannelModel> channels = new List<CommonChannelModel>();
-
-            var filtredChannels = fixedChannels.Where(x => x.IsHalfIntegrated());
-
-            foreach (var halfIntegrated in halfIntegratedChannels)
-            {
-                foreach (var filter in filtredChannels)
-                {
-                    var tags = filter.Tags.Split(',');
-                    foreach (var tag in tags)
-                    {
-                        if (halfIntegrated.Name.Contains(tag))
-                        {
-                            if (string.IsNullOrEmpty(filter.Stream))
-                            {
-                                filter.Stream = halfIntegrated.Stream;
-                            }
-                            else
-                            {
-                                var clonedChannel = filter.Clone();
-                                clonedChannel.Stream = halfIntegrated.Stream;
-                                clonedChannel.Integration = IntegrationType.Half.ToString();
-                                channels.Add(clonedChannel);
-                            }
-
-                        }
-                    }
-                }
-            }
-            fixedChannels.AddRange(channels);
         }
 
         public void ReCache()

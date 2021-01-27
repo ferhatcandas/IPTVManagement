@@ -31,7 +31,7 @@ export default function ChannelForm(props) {
                         "type": "textbox",
                         "xs": 11,
                         "fullWidth": true,
-                        onChange: onChange,
+                        "onChange": onChange,
                         "name": "logo",
                         "placeHolder": "logo",
                         "value": channel?.logo
@@ -43,7 +43,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "name",
                 "placeHolder": "Channel Name",
                 "value": channel?.name
@@ -52,7 +52,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "category",
                 "placeHolder": "News,Comic,Tv Shows",
                 "value": channel?.category
@@ -61,7 +61,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "country",
                 "placeHolder": "TR,DZ,FR,EN...",
                 "value": channel?.country
@@ -70,7 +70,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "language",
                 "placeHolder": "Turkish,Arabic,English...",
                 "value": channel?.language
@@ -79,7 +79,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "stream",
                 "placeHolder": "....m3u8",
                 "value": channel?.stream
@@ -89,7 +89,7 @@ export default function ChannelForm(props) {
                 "type": "textbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "tags",
                 "placeHolder": "channel,channel2...",
                 "value": channel?.tags ?? ""
@@ -98,7 +98,7 @@ export default function ChannelForm(props) {
                 "type": "checkbox",
                 "xs": 12,
                 "fullWidth": true,
-                onChange: onChange,
+                "onChange": onChange,
                 "name": "isActive",
                 "text": "Is Active",
                 "value": channel?.isActive

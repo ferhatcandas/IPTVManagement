@@ -35,7 +35,7 @@ namespace Core.Concrete
             return channels;
         }
 
-        public List<CommonChannelModel> GetHalfIntegratedChannels(IEnumerable<CommonChannelModel> includeHalfIntegrated, bool reCache = false)
+        public List<CommonChannelModel> GetHalfIntegratedChannels(List<CommonChannelModel> includeHalfIntegrated, bool reCache = false)
         {
             List<CommonChannelModel> channels = reCache ? null : cacheManager.Get<List<CommonChannelModel>>(IntegrationType.Half.ToString());
 
@@ -79,7 +79,7 @@ namespace Core.Concrete
                 cacheManager.Add(IntegrationType.Half.ToString(), existChannels);
             });
         }
-        public List<CommonChannelModel> Filter(IEnumerable<CommonChannelModel> filtredChannels, IEnumerable<CommonChannelModel> existChannels)
+        public List<CommonChannelModel> Filter(List<CommonChannelModel> filtredChannels, List<CommonChannelModel> existChannels)
         {
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
@@ -90,13 +90,17 @@ namespace Core.Concrete
                     var tags = filter.Tags.Split(',');
                     foreach (var tag in tags)
                     {
-                        if (halfIntegrated.Name.Contains(tag))
+                        if (halfIntegrated.Name.ToLower().Contains(tag.ToLower()))
                         {
-                            filter.Stream = halfIntegrated.Stream;
                             var clonedChannel = filter.Clone();
                             clonedChannel.Stream = halfIntegrated.Stream;
                             clonedChannel.Integration = IntegrationType.Half.ToString();
-                            channels.Add(clonedChannel);
+                            clonedChannel.Name = halfIntegrated.Name;
+                            clonedChannel.IsEditable = false;
+                            if (channels.Count == 0 || channels.Count(x => x.Stream == clonedChannel.Stream) == 0)
+                            {
+                                channels.Add(clonedChannel);
+                            }
                         }
                     }
                 }

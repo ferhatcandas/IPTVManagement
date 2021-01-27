@@ -9,23 +9,50 @@ namespace Core.Concrete
 {
     public class ChannelController
     {
-        internal void ControlAndGet(List<CommonChannelModel> filteredChannels)
+        private readonly HttpClient httpClient;
+        public ChannelController()
         {
             HttpClientHandler httpClientHandler = new HttpClientHandler()
             {
                 AllowAutoRedirect = false
             };
-            HttpClient httpClient2 = new HttpClient(httpClientHandler);
+            this.httpClient = new HttpClient(httpClientHandler);
+        }
+
+        private HttpResponseMessage GetResponse(string url)
+        {
+            return httpClient.GetAsync(url).Result;
+        }
+        private void GetLastUrl(CommonChannelModel channelModel)
+        {
+            var response = GetResponse(channelModel.Stream);
+            if ((response.StatusCode == HttpStatusCode.Moved || response.StatusCode == HttpStatusCode.MovedPermanently || response.StatusCode == HttpStatusCode.Found) && !string.IsNullOrEmpty(response.Headers?.Location?.AbsoluteUri))
+            {
+                channelModel.Stream = response.Headers.Location.AbsoluteUri;
+                GetLastUrl(channelModel);
+            }
+            else
+            {
+                response = GetResponse(channelModel.Stream);
+                channelModel.StatusCode = response.StatusCode.ToString();
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    channelModel.Stream = "";
+                }
+            }
+
+        }
+        internal void ControlAndGet(List<CommonChannelModel> filteredChannels)
+        {
+
             foreach (CommonChannelModel channel in filteredChannels)
             {
                 channel.HasStream = false;
                 int count = 0;
-                HttpResponseMessage response = null;
                 again:
                 try
                 {
-
-                    response = httpClient2.GetAsync(channel.Stream).Result;
+                    GetLastUrl(channel);
                     count++;
                 }
                 catch (Exception)
@@ -33,7 +60,7 @@ namespace Core.Concrete
                     count++;
                 }
                 bool success = false;
-                if (response != null && (response.StatusCode == HttpStatusCode.Found || response.StatusCode == HttpStatusCode.MovedPermanently || response.StatusCode == HttpStatusCode.Moved || response.StatusCode == HttpStatusCode.OK))
+                if (!string.IsNullOrEmpty(channel.Stream))
                 {
 
                     success = true;
