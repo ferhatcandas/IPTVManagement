@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    public class Channel : BaseChannel
+    public class Channel : BaseChannel, IMongoEntity
     {
         public string Id { get; set; }
         public string Tags { get; set; }

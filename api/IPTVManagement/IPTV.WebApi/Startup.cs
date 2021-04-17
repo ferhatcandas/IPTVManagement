@@ -58,6 +58,7 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             {
                 x.Timeout = new TimeSpan(0, 0, 15);
             });
+            services.AddScoped<IChannelService, ChannelService>();
             services.AddScoped<GenericChannelRepository>();
             services.AddScoped<IntegrationFactory>();
             services.AddScoped<Service>();
@@ -71,6 +72,7 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             services.AddScoped<HalfIntegrateManager>();
             services.AddScoped<IFixedChannelService, FixedChannelManager>();
             services.AddScoped<IGenericChannelService, GenericChannelManager>();
+
  
         }
 
