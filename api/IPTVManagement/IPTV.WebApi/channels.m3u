@@ -1,12 +1,12 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Bloomberg HT" tvg-name="Bloomberg HT" tvg-language="Turkish" tvg-logo="https://im.haberturk.com/2018/01/27/ver1517064135/1813956_620x410.jpg" tvg-country="TR" tvg-url="" group-title="Haber",Bloomberg HT
-https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8
 #EXTINF:-1 tvg-id="Kral Pop" tvg-name="Kral Pop" tvg-language="Turkish" tvg-logo="https://i.ibb.co/7v8wmsb/7H8WKei.png" tvg-country="TR" tvg-url="" group-title="Müzik",Kral Pop
 https://0ajuu84p.rocketcdn.com/kralpop_720/chunklist.m3u8
 #EXTINF:-1 tvg-id="Star Tv" tvg-name="Star Tv" tvg-language="Turkish" tvg-logo="https://2.bp.blogspot.com/-OWN79xICnxc/TxSKSwDI8hI/AAAAAAAAB3M/TKFq7LS2yCI/s1600/star_logo_3.jpg" tvg-country="TR" tvg-url="" group-title="Ulusal",Star Tv
 https://mn-nl.mncdn.com/blutv_star/smil:star_sd.smil/chunklist_b2064000.m3u8
 #EXTINF:-1 tvg-id="TV 8.5" tvg-name="TV 8.5" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/1/1f/TV8.5_Logosu.png" tvg-country="TR" tvg-url="" group-title="Ulusal",TV 8.5
 https://mn-nl.mncdn.com/blutv_tv8_5/smil:tv8_5_sd.smil/chunklist_b2064000.m3u8
+#EXTINF:-1 tvg-id="Copy of Bloomberg HT" tvg-name="Copy of Bloomberg HT" tvg-language="Turkish" tvg-logo="https://im.haberturk.com/2018/01/27/ver1517064135/1813956_620x410.jpg" tvg-country="TR" tvg-url="" group-title="Haber",Copy of Bloomberg HT
+https://ciner.daioncdn.net/bloomberght/bloomberght_720p.m3u8
 #EXTINF:-1 tvg-id="Cartoon Network" tvg-name="Cartoon Network" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/1200px-Cartoon_Network_2010_logo.svg.png" tvg-country="TR" tvg-url="" group-title="Cartoon",Cartoon Network
 http://str01.antensiz.tv:25461/live/tv/tv/325.m3u8
 #EXTINF:-1 tvg-id="TF1" tvg-name="TF1" tvg-language="Français" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/dc/TF1_logo_2013.png" tvg-country="FR" tvg-url="" group-title="Ulusal",TF1
@@ -67,138 +67,143 @@ https://canli.ensonhaber.com/tr/haberturk/index.m3u8
 http://mdn.mvp.tivibu.com.tr/MVP/TTG/NPVR/shls/LIVE$ATV_HD/index.m3u8?start=LIVE&end=END&device=HLS
 #EXTINF:-1 tvg-id="CNN Türk HD" tvg-name="CNN Türk HD" tvg-language="Turkish" tvg-logo="https://img1.pnghut.com/21/16/23/MD6acbsVcq/vecteur-area-cnnmoney-trademark-text.jpg" tvg-country="TR" tvg-url="" group-title="Haber",CNN Türk HD
 https://mn-nl.mncdn.com/blutv_cnnturk/smil:cnnturk_sd.smil/chunklist_b2064000.m3u8
-#EXTINF:-1 tvg-id="HISTORY CHANNEL HD" tvg-name="HISTORY CHANNEL HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",HISTORY CHANNEL HD
-http://hahaiptvpro.com:8880/SuoryoTV/IUcjYKOgKy/84000
+#EXTINF:-1 tvg-id="TR:FANATIK TV" tvg-name="TR:FANATIK TV" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:FANATIK TV
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/33003
+#EXTINF:-1 tvg-id="TR:National Geographic HD" tvg-name="TR:National Geographic HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:National Geographic HD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/33038
+#EXTINF:-1 tvg-id="TR:Nat Geo Wild HD" tvg-name="TR:Nat Geo Wild HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:Nat Geo Wild HD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/33037
+#EXTINF:-1 tvg-id="TR:History HD" tvg-name="TR:History HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:History HD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/33011
+#EXTINF:-1 tvg-id="TR:History FHD" tvg-name="TR:History FHD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:History FHD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32810
+#EXTINF:-1 tvg-id="TR:National Geographic FHD" tvg-name="TR:National Geographic FHD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:National Geographic FHD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32746
+#EXTINF:-1 tvg-id="TR:Nat Geo People FHD" tvg-name="TR:Nat Geo People FHD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:Nat Geo People FHD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32745
+#EXTINF:-1 tvg-id="TR:Nat Geo Wild FHD" tvg-name="TR:Nat Geo Wild FHD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:Nat Geo Wild FHD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32744
+#EXTINF:-1 tvg-id="TR:VIASAT HISTORY HD" tvg-name="TR:VIASAT HISTORY HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:VIASAT HISTORY HD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32952
+#EXTINF:-1 tvg-id="TR:VIASAT HISTORY & NATURE HD" tvg-name="TR:VIASAT HISTORY & NATURE HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR:VIASAT HISTORY & NATURE HD
+http://mu02.cularu.com:8880/sch12m2n040/4t6tf7y73r/32782
+#EXTINF:-1 tvg-id="TR| NAT GEO HD" tvg-name="TR| NAT GEO HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| NAT GEO HD
+http://localhd.tv:8081/abtaria0206/LWwNyUDslN/9986
+#EXTINF:-1 tvg-id="TR| NAT GEO PEOPLE HD" tvg-name="TR| NAT GEO PEOPLE HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| NAT GEO PEOPLE HD
+http://localhd.tv:8081/abtaria0206/LWwNyUDslN/9985
+#EXTINF:-1 tvg-id="TR| NAT GEO WILD HD" tvg-name="TR| NAT GEO WILD HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| NAT GEO WILD HD
+http://localhd.tv:8081/abtaria0206/LWwNyUDslN/9983
+#EXTINF:-1 tvg-id="TR| NATGEO PEOPLE FHD" tvg-name="TR| NATGEO PEOPLE FHD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| NATGEO PEOPLE FHD
+http://localhd.tv:8081/abtaria0206/LWwNyUDslN/9984
+#EXTINF:-1 tvg-id="TR| HISTORY HD" tvg-name="TR| HISTORY HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| HISTORY HD
+http://localhd.tv:8081/abtaria0206/LWwNyUDslN/10111
+#EXTINF:-1 tvg-id="TR: NATIONAL GEOGRAPHIC" tvg-name="TR: NATIONAL GEOGRAPHIC" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: NATIONAL GEOGRAPHIC
+http://zero2.site:8080/zero/zero/22
+#EXTINF:-1 tvg-id="NATİONAL GEOGRAPHİC HD" tvg-name="NATİONAL GEOGRAPHİC HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",NATİONAL GEOGRAPHİC HD
+https://srvccc.buneamkya.xyz/kaynakstreamradarco/56/naxi/caxi.m3u8
 #EXTINF:-1 tvg-id="NAT GEO WILD HD" tvg-name="NAT GEO WILD HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",NAT GEO WILD HD
-http://hahaiptvpro.com:8880/SuoryoTV/IUcjYKOgKy/84002
-#EXTINF:-1 tvg-id="NAT GEO HD" tvg-name="NAT GEO HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",NAT GEO HD
-http://hahaiptvpro.com:8880/SuoryoTV/IUcjYKOgKy/84003
-#EXTINF:-1 tvg-id="VIASAT NATURE/HISTORY  HD" tvg-name="VIASAT NATURE/HISTORY  HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",VIASAT NATURE/HISTORY  HD
-http://hahaiptvpro.com:8880/SuoryoTV/IUcjYKOgKy/84005
-#EXTINF:-1 tvg-id="TR | FANATIK TV" tvg-name="TR | FANATIK TV" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | FANATIK TV
-http://51.222.82.89:22829/1212/1212/333729
-#EXTINF:-1 tvg-id="TR | HISTORY HD" tvg-name="TR | HISTORY HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | HISTORY HD
-http://51.222.82.89:22829/1212/1212/333737
-#EXTINF:-1 tvg-id="TR | Nat Geo People HD" tvg-name="TR | Nat Geo People HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | Nat Geo People HD
-http://51.222.82.89:22829/1212/1212/333769
-#EXTINF:-1 tvg-id="TR | NATIONAL GEO WILD" tvg-name="TR | NATIONAL GEO WILD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | NATIONAL GEO WILD
-http://51.222.82.89:22829/1212/1212/333770
-#EXTINF:-1 tvg-id="TR | NATIONAL GEOGRAPHIC HD" tvg-name="TR | NATIONAL GEOGRAPHIC HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | NATIONAL GEOGRAPHIC HD
-http://51.222.82.89:22829/1212/1212/333771
-#EXTINF:-1 tvg-id="TR | VIASAT NATURA & VIASAT HISTORY" tvg-name="TR | VIASAT NATURA & VIASAT HISTORY" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | VIASAT NATURA & VIASAT HISTORY
-http://51.222.82.89:22829/1212/1212/333823
-#EXTINF:-1 tvg-id="TR| HISTORY CHANNEL HD" tvg-name="TR| HISTORY CHANNEL HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| HISTORY CHANNEL HD
-http://185.71.64.167:80/AO0RKgAr3S/XEJ7yJaA2a/80656
-#EXTINF:-1 tvg-id="TR| VIASAT HISTORY HD" tvg-name="TR| VIASAT HISTORY HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR| VIASAT HISTORY HD
-http://185.71.64.167:80/AO0RKgAr3S/XEJ7yJaA2a/80650
-#EXTINF:-1 tvg-id="National Geographic TR" tvg-name="National Geographic TR" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",National Geographic TR
-http://tv.hero.iptv.uno:80/mjkhj4etGfT88447/0wThaL7570/5165
-#EXTINF:-1 tvg-id="National Geographic People TR" tvg-name="National Geographic People TR" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",National Geographic People TR
-http://tv.hero.iptv.uno:80/mjkhj4etGfT88447/0wThaL7570/5167
-#EXTINF:-1 tvg-id="National Geographic Wild HD TR" tvg-name="National Geographic Wild HD TR" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",National Geographic Wild HD TR
-http://tv.hero.iptv.uno:80/mjkhj4etGfT88447/0wThaL7570/12765
-#EXTINF:-1 tvg-id="National Geographic Wild TR" tvg-name="National Geographic Wild TR" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",National Geographic Wild TR
-http://tv.hero.iptv.uno:80/mjkhj4etGfT88447/0wThaL7570/5166
-#EXTINF:-1 tvg-id="History HD TR" tvg-name="History HD TR" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",History HD TR
-http://tv.hero.iptv.uno:80/mjkhj4etGfT88447/0wThaL7570/18329
-#EXTINF:-1 tvg-id="TR: HISTORY" tvg-name="TR: HISTORY" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: HISTORY
-http://iiiptv.live:8080/ODrHCu5i0i/qDrh1T7QLz/27108
-#EXTINF:-1 tvg-id="TR: NAT GEO" tvg-name="TR: NAT GEO" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: NAT GEO
-http://iiiptv.live:8080/ODrHCu5i0i/qDrh1T7QLz/27109
-#EXTINF:-1 tvg-id="TR: NAT GEO WILD" tvg-name="TR: NAT GEO WILD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: NAT GEO WILD
-http://iiiptv.live:8080/ODrHCu5i0i/qDrh1T7QLz/27110
-#EXTINF:-1 tvg-id="TR: Viasat History" tvg-name="TR: Viasat History" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: Viasat History
-http://iiiptv.live:8080/ODrHCu5i0i/qDrh1T7QLz/27195
-#EXTINF:-1 tvg-id="|TR| VIASAT HISTORY / NATURE FHD" tvg-name="|TR| VIASAT HISTORY / NATURE FHD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",|TR| VIASAT HISTORY / NATURE FHD
-http://146.59.145.53:80/anna/anna/169130
-#EXTINF:-1 tvg-id="|TR| NATIONAL GEOGRAPHIC FHD/HD" tvg-name="|TR| NATIONAL GEOGRAPHIC FHD/HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",|TR| NATIONAL GEOGRAPHIC FHD/HD
-http://146.59.145.53:80/anna/anna/169129
-#EXTINF:-1 tvg-id="|TR| NATGEO WILD FHD/HD" tvg-name="|TR| NATGEO WILD FHD/HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",|TR| NATGEO WILD FHD/HD
-http://146.59.145.53:80/anna/anna/169128
-#EXTINF:-1 tvg-id="|TR| HISTORY CHANNEL FHD/HD" tvg-name="|TR| HISTORY CHANNEL FHD/HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",|TR| HISTORY CHANNEL FHD/HD
-http://146.59.145.53:80/anna/anna/169127
-#EXTINF:-1 tvg-id="TR: NAT GEO WILD HD" tvg-name="TR: NAT GEO WILD HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR: NAT GEO WILD HD
-http://live.iptv-ksa.com:80/beri/beri123/166952
-#EXTINF:-1 tvg-id="TR | NAT GEO PEOPLE HD" tvg-name="TR | NAT GEO PEOPLE HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | NAT GEO PEOPLE HD
-http://163.172.213.205:25461/d8e0e1e1e1fd/elamouri/79487?token=SRYNAxUNEV8UAFxaXABfBFYEBQcHBAJRAVcBAAlUVQZRDAZRX1AKBAMUSUEWQRRVAlpuCAdAW1MMAA4FHBQWQldGOgsCRwlHBAVXUFUCRBxBQ1gMBkBbVQMFBwUFA1ABBhhHEg8BEV8UBFZQUA1EHEFSSRUGEA8FWWtSV0ZfAFQQDgsXCgkfR1lYOgcAWAdeBxULQ1NATUZcR0YQChQ3REBfKwcSRXoJU0IMEAxYRngKTVwEFw4EFlwUdxxjGEEdEFYMFhQERwAUDEdXVwRUEk8VUg4WDBUWTBYMEGRkQR0QUR0WAwtADFlYR1lHQRUSTxVYEjwQBBdBRlNTXVMREwgWVUBKR14ETmkGDAtbA1MXXl4PEEBbRgQWGhBdWQ1YRlsXPRYMV0cMFFdXVgVETQ==
-#EXTINF:-1 tvg-id="TR | NAT GEO WILD HD" tvg-name="TR | NAT GEO WILD HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | NAT GEO WILD HD
-http://163.172.213.205:25461/d8e0e1e1e1fd/elamouri/79488?token=SRYNAxUNEV8UUlYCAwZXVgFWBwdVUAMBAlBVCgdSVAZRVVNXVAAHVlcUSUEWQRRVAlpuCAdAW1MMAA4KHBQWQldGOgsCRwlHBAVXUFUCRBxBQ1gMBkBbVQMFBwUFA1AABRhHEg8BEV8UB1JTXABEHEFSSRUGEA8FWWtSV0ZfAFQQDgsXCgkfR1lYOgcAWAdeBxULQ1NATUZcR0YQChQ3REBfKwcSRXoJU0IMEAxYRngKTVwEFw4EFlwUdxxjGEEdEFYMFhQERwAUDEdSVQdTEk8VUg4WDBUWTBYMEGRkQR0QUR0WAwtADFlYR1lHQRUSTxVYEjwQBBdBRlNTXVMREwgWVUBKR14ETmkGDAtbA1MXXl4PEEBbRgQWGhBdWQ1YRlsXPRYMV0cMFFdXUQBETQ==
-#EXTINF:-1 tvg-id="TR | NAT GEOGRAPHIC HD" tvg-name="TR | NAT GEOGRAPHIC HD" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | NAT GEOGRAPHIC HD
-http://163.172.213.205:25461/d8e0e1e1e1fd/elamouri/79489?token=SRYNAxUNEV8UAwBUVlNeAVcECAdSUVIHAVIBBgYFUFQKBFNRAFcCUFIUSUEWQRRVAlpuCAdAW1MMAA4LHBQWQldGOgsCRwlHBAVXUFUCRBxBQ1gMBkBbVQMFBwUFA1ADAxhHEg8BEV8UAFBSXBdKEgZPRQQRDAAIalBTRFlVBhMIWhAOCkkRClhpAQYIVAhUQQ0TUUFOQw1GRBQIEmIWQ1l6ABZGLF8AQl8WCggVLlkZWlQVDwcTDRV1GGEeFE8TUF0REAcRVkcMFFRRXAdEHEFUXhQNFhMdFw4UZmIUTxNXTBEHCBZaClgUX0ERRkQcQV5CPhEHEhBHUVdfVURBCxAER05ECFIdaVUKDQtQBUQKWF8SQVhDVRcYFF9fWApFXUY6Eg8BEV8UBFFWUBcb
-#EXTINF:-1 tvg-id="TR | HISTORY CHANNEL" tvg-name="TR | HISTORY CHANNEL" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",TR | HISTORY CHANNEL
-http://163.172.213.205:25461/d8e0e1e1e1fd/elamouri/79492?token=SRYNAxUNEV8UAVUGXFQCAVcFUwUBVwRQAAMOVgEGBQcKAFEAAwNWUwUUSUEWQRRVAlpuCAdAW1MMAA8AHBQWQldGOgsCRwlHBAVXUFUCRBxBQ1gMBkBbVQMFBwUFA1ADBBhHEg8BEV8UAlNWXRdKEgZPRQQRDAAIalBTRFlVBhMIWhAOCkkRClhpAQYIVAhUQQ0TUUFOQw1GRBQIEmIWQ1l6ABZGLF8AQl8WCggVLlkZWlQVDwcTDRV1GGEeFE8TUF0REAcRVkcMFFdWXQBEHEFUXhQNFhMdFw4UZmIUTxNXTBEHCBZaClgUX0ERRkQcQV5CPhEHEhBHUVdfVURBCxAER05ECFIdaVUKDQtQBUQKWF8SQVhDVRcYFF9fWApFXUY6Eg8BEV8UBFFaURcb
+https://srvccc.buneamkya.xyz/kaynakstreamradarco/55/naxi/caxi.m3u8
+#EXTINF:-1 tvg-id="HİSTORY CHANNEL HD" tvg-name="HİSTORY CHANNEL HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",HİSTORY CHANNEL HD
+https://srvccc.buneamkya.xyz/kaynakstreamradarco/40/naxi/caxi.m3u8
+#EXTINF:-1 tvg-id="VİASAT HİSTORY HD" tvg-name="VİASAT HİSTORY HD" tvg-language="Turkish" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg" tvg-country="TR" tvg-url="" group-title="Belgesel",VİASAT HİSTORY HD
+https://srvccc.buneamkya.xyz/kaynakstreamradarco/64/naxi/caxi.m3u8
+#EXTINF:-1 tvg-id="NATIONAL GEOGRAPHIC [HD]" tvg-name="NATIONAL GEOGRAPHIC [HD]" tvg-language="Turkish" tvg-logo="https://1000logos.net/wp-content/uploads/2017/04/National-Geographic-Logo.png" tvg-country="TR" tvg-url="" group-title="Belgesel",NATIONAL GEOGRAPHIC [HD]
+http-user-agent=exoplayer-codelab
+#EXTINF:-1 tvg-id="blue nile" tvg-name="blue nile" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_301846.png" tvg-country="AR" tvg-url="" group-title="Elahmad",blue nile
+http://192.34.153.36:7777/BlueNile_HD.m3u8?user=sgls540839&session=88de03701dc95f9a46ddbd672c6d2c58d4aee9432809a2c72bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="tamazight" tvg-name="tamazight" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302775.png" tvg-country="AR" tvg-url="" group-title="Elahmad",tamazight
+http://192.34.153.36:7777/Tamazight_HD.m3u8?user=sgls540839&session=88de03701dc95f9acf6eb5148b29946a8e505679b9200565a7c2706502f26d8d7c0f8772c4f2024f
+#EXTINF:-1 tvg-id="thalitha" tvg-name="thalitha" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302464.png" tvg-country="AR" tvg-url="" group-title="Elahmad",thalitha
+http://192.34.153.36:7777/Thalitha_HD.m3u8?user=sgls540839&session=88de03701dc95f9adc721cf3e35017aac93a3d420936d9902bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="samira tv" tvg-name="samira tv" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_304265.png" tvg-country="AR" tvg-url="" group-title="Elahmad",samira tv
+http://192.34.153.36:7777/SamiraTV_HD.m3u8?user=sgls540839&session=88de03701dc95f9aff9fb233cc0ce16b24c1da510445833c2bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="echorouk" tvg-name="echorouk" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_303965.png" tvg-country="AR" tvg-url="" group-title="Elahmad",echorouk
+http://192.34.153.36:7777/Echorouk_HD.m3u8?user=sgls540839&session=88de03701dc95f9a9b68f77c3ee78085016a643f68e8707a2bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="nessma tv" tvg-name="nessma tv" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_303455.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nessma tv
+http://192.34.153.36:7777/Nessma_HD.m3u8?user=sgls540839&session=88de03701dc95f9a52f2823f5d4064b50a23e6d8aed8ae08825112f14c0506c4384e97fef14771cc
+#EXTINF:-1 tvg-id="nile sport" tvg-name="nile sport" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302469.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile sport
+http://192.34.153.36:7777/NileSport_HD.m3u8?user=sgls540839&session=88de03701dc95f9a75614d4f658dfa52eb2f2e9154d0c50aa7c2706502f26d8d7c0f8772c4f2024f
+#EXTINF:-1 tvg-id="nile cinema" tvg-name="nile cinema" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302240.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile cinema
+http://192.34.153.36:7777/NileCinema_HD.m3u8?user=sgls540839&session=88de03701dc95f9a075d0bd855673eb16eb8f1ed1ff55ed70c06be39c6870a5f140b148cb6ec0d91
+#EXTINF:-1 tvg-id="nile comedy" tvg-name="nile comedy" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302434.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile comedy
+http://192.34.153.36:7777/NileComedy_HD.m3u8?user=sgls540839&session=4f64d1241ace880d15c270d33a0cdf74d88df255edf4a2b70c06be39c6870a5f140b148cb6ec0d91
+#EXTINF:-1 tvg-id="nile drama" tvg-name="nile drama" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302444.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile drama
+http://192.34.153.36:7777/NileDrama_HD.m3u8?user=sgls540839&session=25cfca00669d8f91c26c57e49e748dab3cc8c06ac0cf1b47a7c2706502f26d8d7c0f8772c4f2024f
+#EXTINF:-1 tvg-id="nile news" tvg-name="nile news" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302794.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile news
+http://192.34.153.36:7777/NileNews_HD.m3u8?user=sgls540839&session=25cfca00669d8f91c9ee46b6c26a00a5260d3ffaa90a61192bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="nile family" tvg-name="nile family" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302801.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile family
+http://192.34.153.36:7777/NileFamily_HD.m3u8?user=sgls540839&session=25cfca00669d8f91b55603e1bd688858712c33b0d691c25d0c06be39c6870a5f140b148cb6ec0d91
+#EXTINF:-1 tvg-id="nile life" tvg-name="nile life" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302787.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile life
+http://192.34.153.36:7777/NileLife_HD.m3u8?user=sgls540839&session=25cfca00669d8f91ce927454b27e5842a232602c5579799e2bcb00ceb2847d0d0412b8d55803f734
+#EXTINF:-1 tvg-id="nile culture" tvg-name="nile culture" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_303318.png" tvg-country="AR" tvg-url="" group-title="Elahmad",nile culture
+http://192.34.153.36:7777/NileCulture_HD.m3u8?user=sgls540839&session=25cfca00669d8f91c4a7e08e795e1cc20ab8cfcb18df7bde48e3995c299a4f364057ab36af950131de2a9a15d4e21705
+#EXTINF:-1 tvg-id="cima alibaba" tvg-name="cima alibaba" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_306272.png" tvg-country="AR" tvg-url="" group-title="Elahmad",cima alibaba
+http://192.34.153.36:7777/CimaAliBaba_HD.m3u8?user=sgls540839&session=25cfca00669d8f91265f4676c490d0d5f2cae8e0ec5f473b48e3995c299a4f364057ab36af950131de2a9a15d4e21705
+#EXTINF:-1 tvg-id="cima tv" tvg-name="cima tv" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_303322.png" tvg-country="AR" tvg-url="" group-title="Elahmad",cima tv
+http://192.34.153.36:7777/Cima_HD.m3u8?user=sgls540839&session=f3a2b5c6b6fb3f494fe9939ede472a99afa8012dc695edf25ef415061d3452aa579a5eb2e5be3bd7
+#EXTINF:-1 tvg-id="ENTV" tvg-name="ENTV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/9_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",ENTV
+https://cdn.hta.dz/live/PROGRAMME_NATIONAL/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Canal Algérie" tvg-name="Canal Algérie" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/4_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Canal Algérie
+https://cdn.hta.dz/live/CANAL_ALGERIE/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Algérie 3" tvg-name="Algérie 3" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/1_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Algérie 3
+https://cdn.hta.dz/live/A3_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Algerie TV 4" tvg-name="Algerie TV 4" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/124_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Algerie TV 4
+https://cdn.hta.dz/live/TV_4/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="Algerie TV 5" tvg-name="Algerie TV 5" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/73_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Algerie TV 5
+https://cdn.hta.dz/live/TV_5/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="ALGERIE TV 6" tvg-name="ALGERIE TV 6" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/137_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",ALGERIE TV 6
+https://cdn.hta.dz/live/TV_6_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="TV7 ELMAARIFA" tvg-name="TV7 ELMAARIFA" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/138_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",TV7 ELMAARIFA
+https://cdn.hta.dz/live/TV7_ELMAARIFA/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="TV8 EDHAKIRA" tvg-name="TV8 EDHAKIRA" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/141_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",TV8 EDHAKIRA
+https://cdn.hta.dz/live/TV8_EDHAKIRA/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
 #EXTINF:-1 tvg-id="EL BILAD" tvg-name="EL BILAD" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/126_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL BILAD
-https://cdn.hta.dz/live/EL_BILAD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/EL_BILAD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Beur TV" tvg-name="Beur TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/3_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Beur TV
-https://cdn.hta.dz/live/Beur_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/Beur_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Echorouk TV" tvg-name="Echorouk TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/6_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Echorouk TV
-https://cdn.hta.dz/live/Echorouk_TV_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/Echorouk_TV_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="El Djazairia One" tvg-name="El Djazairia One" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/7_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Djazairia One
-https://cdn.hta.dz/live/EL_DJAZAIRIA_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/EL_DJAZAIRIA_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Ennahar TV" tvg-name="Ennahar TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/8_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Ennahar TV
-https://cdn.hta.dz/live/ENNAHAR_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/ENNAHAR_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Echorouk NEWS" tvg-name="Echorouk NEWS" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/18_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Echorouk NEWS
-https://cdn.hta.dz/live/ECHOROUK_NEWS/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/ECHOROUK_NEWS/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="BAHIA TV" tvg-name="BAHIA TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/123_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",BAHIA TV
-https://cdn.hta.dz/live/Bahia_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/Bahia_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="EL HAYAT TV" tvg-name="EL HAYAT TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/129_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL HAYAT TV
-https://cdn.hta.dz/live/EL_HAYAT_TV_ALGERIE/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/EL_HAYAT_TV_ALGERIE/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="El Heddaf TV" tvg-name="El Heddaf TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/15_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Heddaf TV
-https://cdn.hta.dz/live/EL_HEDDAF_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/EL_HEDDAF_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Lina TV" tvg-name="Lina TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/140_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Lina TV
-https://cdn.hta.dz/live/Lina_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/Lina_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="Samira TV" tvg-name="Samira TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/10_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",Samira TV
-https://cdn.hta.dz/live/SamiraTV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
-
-#EXTINF:-1 tvg-id="NUMIDIA" tvg-name="NUMIDIA" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/127_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",NUMIDIA
-https://cdn.hta.dz/live/NUMIDIA_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
-
-#EXTINF:-1 tvg-id="El Djazair N1" tvg-name="El Djazair N1" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/139_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Djazair N1
-https://cdn.hta.dz/live/El_Djazair_N1/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
-
-#EXTINF:-1 tvg-id="EL FADJR TV" tvg-name="EL FADJR TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/130_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL FADJR TV
-https://cdn.hta.dz/live/EL_FADJR_TV_DZ/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/SamiraTV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
 #EXTINF:-1 tvg-id="ALANIS TV" tvg-name="ALANIS TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/132_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",ALANIS TV
-https://cdn.hta.dz/live/El_Fhama_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDEvMjcvMjAyMSAwMTo0ODoxNiBQTSZoYXNoX3ZhbHVlPVE0T0dVQXZSNVNHZkhQTVBnT3pJb3c9PSZ2YWxpZG1pbnV0ZXM9MTA=
+https://cdn.hta.dz/live/El_Fhama_TV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
 
-#EXTINF:-1 tvg-id="Canal Algerie 2" tvg-name="Canal Algerie 2" tvg-language="Arabic" tvg-logo="https://myaramedia.com/uploads/chanels/logos/canal-algerie.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Canal Algerie 2
-http://192.34.153.37:7777/CanalAlgerie_HD.m3u8?user=sgls540839&session=cb668f081bfad4ae5ea398c14bb5e57086486dd13b37d51ea46e7860aa4b64e15c09a635a4b284a9b34ee7ed63b31e6f
-#EXTINF:-1 tvg-id="Cima" tvg-name="Cima" tvg-language="Arabic" tvg-logo="https://media.elcinema.com/tvguide/1176_1.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Cima
-http://192.34.153.37:7777/Cima_HD.m3u8?user=sgls540839&session=cb668f081bfad4aef2b5296154354354a46e7860aa4b64e15c09a635a4b284a9b34ee7ed63b31e6f
-#EXTINF:-1 tvg-id="Thalitha" tvg-name="Thalitha" tvg-language="Arabic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/01/A3_Logo_2020.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Thalitha
-http://192.34.153.37:7777/Thalitha_HD.m3u8?user=sgls540839&session=cb668f081bfad4ae449e9b907adebd7fc93a3d420936d99015f0808fa106e84e7c0f8772c4f2024f
-#EXTINF:-1 tvg-id="Samira TV" tvg-name="Samira TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/10_picture.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Samira TV
-http://192.34.153.37:7777/SamiraTV_HD.m3u8?user=sgls540839&session=495903a0c6773a49addb53a1d5ce8f4124c1da510445833c15f0808fa106e84e7c0f8772c4f2024f
-#EXTINF:-1 tvg-id="Echorouk TV" tvg-name="Echorouk TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/6_picture.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Echorouk TV
-http://192.34.153.37:7777/Echorouk_HD.m3u8?user=sgls540839&session=495903a0c6773a49d85e6bc0e67d553d016a643f68e8707a15f0808fa106e84e7c0f8772c4f2024f
-#EXTINF:-1 tvg-id="Nile Comedy" tvg-name="Nile Comedy" tvg-language="Arabic" tvg-logo="https://media.elcinema.com/tvguide/1158_1.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Nile Comedy
-http://192.34.153.37:7777/NileComedy_HD.m3u8?user=sgls540839&session=495903a0c6773a4932f483caf3618e00d88df255edf4a2b7eaade2b7b1925d57b5750b9d563d903bde2a9a15d4e21705
-#EXTINF:-1 tvg-id="Nile Cinema" tvg-name="Nile Cinema" tvg-language="Arabic" tvg-logo="https://television-planet.tv/uploads/posts/2019-08/1566729991_nazvaniya-32.jpg" tvg-country="AR" tvg-url="" group-title="Elahmad",Nile Cinema
-http://192.34.153.37:7777/NileCinema_HD.m3u8?user=sgls540839&session=495903a0c6773a492298b2adb6cb8ef86eb8f1ed1ff55ed7eaade2b7b1925d57b5750b9d563d903bde2a9a15d4e21705
-#EXTINF:-1 tvg-id="Nile Drama" tvg-name="Nile Drama" tvg-language="Arabic" tvg-logo="https://media.elcinema.com/tvguide/1156_1.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Nile Drama
-http://192.34.153.37:7777/NileDrama_HD.m3u8?user=sgls540839&session=495903a0c6773a496cf57a5c1eb169623cc8c06ac0cf1b4755b349e0ccb0a627140b148cb6ec0d91
-#EXTINF:-1 tvg-id="Nessma TV" tvg-name="Nessma TV" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_303455.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Nessma TV
-http://192.34.153.37:7777/Nessma_HD.m3u8?user=sgls540839&session=495903a0c6773a496e077678ea6b14ef2f75d2327dc95fe0ed26b820700c233f79dad3d6b43fbae9
-#EXTINF:-1 tvg-id="2M Morocco" tvg-name="2M Morocco" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302029.png" tvg-country="AR" tvg-url="" group-title="Elahmad",2M Morocco
-http://192.34.153.37:7777/2MMorocco_HD.m3u8?user=sgls540839&session=495903a0c6773a4959ab0898a490fdb11d17d3842226e97355b349e0ccb0a627140b148cb6ec0d91
-#EXTINF:-1 tvg-id="Tamazight" tvg-name="Tamazight" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302775.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Tamazight
-http://192.34.153.37:7777/Tamazight_HD.m3u8?user=sgls540839&session=495903a0c6773a49c65738bb9c3120f18e505679b920056555b349e0ccb0a627140b148cb6ec0d91
-#EXTINF:-1 tvg-id="Panaroma Drama 2" tvg-name="Panaroma Drama 2" tvg-language="Arabic" tvg-logo="http://www.elahmad.com/tv/mobiletv/images/ar/cim_302818.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Panaroma Drama 2
-http://192.34.153.37:7777/PanoramaDrama2_HD.m3u8?user=sgls540839&session=495903a0c6773a49ef3ff3479ae10760bb76d7ebf6777ded2f75d2327dc95fe0ed26b820700c233f79dad3d6b43fbae9
-#EXTINF:-1 tvg-id="Rotana Cinema" tvg-name="Rotana Cinema" tvg-language="Arabic" tvg-logo="https://static.filmon.com/assets/channels/2615/extra_big_logo.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Rotana Cinema
-https://edge-1180-ch-gv.filmon.com/live/2615.high.stream/playlist.m3u8?id=035bca1a71b11fce016d28acd3dbea51cbc96ddfe5b9ed3f8fe3286df6a738d325eb4d9188b20a6e934be60c1610ab14fe228d479d5357ec02d8056c28fb60cd808a837ae26bba596de11222928cdd1b9f31ed8cc429befa808159207f86a3bd4be7b186d27e5130872421557a97e0ad9b5c32a8ff44d00fb9a9c02c8a103f495a85a5831cb85a541de311d275b5bd41ea3dfb5d7af9e14d
-#EXTINF:-1 tvg-id="Rotana Classic" tvg-name="Rotana Classic" tvg-language="Arabic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a8/Rotana_Classic_New_Logo.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Rotana Classic
-https://edge-1180-ch-gv.filmon.com/live/2609.high.stream/playlist.m3u8?id=035bca1a71b11fce016d28acd3dbea51cbc96ddfe5b9ed3f8fe3286df6a738d325eb4d9188b20a6e934be60c1610ab14fe228d479d5357ec02d8056c28fb60cd808a837ae26bba596de11222928cdd1b9f31ed8cc429befa808159207f86a3bd7295d8df23f3759b3f0764a70481ddc484e76867e6dc7db946b54231c20a97419fb2458d28b6a780f58e5a43ba443c32d78322bd8d8d64bc
-#EXTINF:-1 tvg-id="Ennahar Tv" tvg-name="Ennahar Tv" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/8_picture.png" tvg-country="AR" tvg-url="" group-title="Elahmad",Ennahar Tv
-http://192.34.153.37:7777/AlNaharTVNews_HD.m3u8?user=sgls540839&session=b685fc7d7679a13b54ade64605c0ca69cb488ce5c7f58abb41777c8c820e7b872cefc448da54dde2384e97fef14771cc
+#EXTINF:-1 tvg-id="El Djazair N1" tvg-name="El Djazair N1" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/139_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",El Djazair N1
+https://cdn.hta.dz/live/El_Djazair_N1/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+
+#EXTINF:-1 tvg-id="EL FADJR TV" tvg-name="EL FADJR TV" tvg-language="Arabic" tvg-logo="https://hta.backoffice.easybroadcast.fr/channel/130_picture.png" tvg-country="DZ" tvg-url="" group-title="HTA TV",EL FADJR TV
+https://cdn.hta.dz/live/EL_FADJR_TV_DZ/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MDQvMTgvMjAyMSAwNDoyNTo1OSBQTSZoYXNoX3ZhbHVlPUtWeGdsbERWZ2pKcGJSUyttRkwxeHc9PSZ2YWxpZG1pbnV0ZXM9MTA=
+

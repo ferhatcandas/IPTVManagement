@@ -14,4 +14,9 @@ namespace Model
         public string Link { get; set; }
         public string Logo { get; set; }
     }
+    public class ElahmadSettingModelV2
+    {
+        public string Link { get; set; }
+        public List<string> ChannelNames { get; set; }
+    }
 }

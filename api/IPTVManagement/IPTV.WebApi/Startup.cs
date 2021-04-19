@@ -66,12 +66,12 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             services.AddScoped<ChannelRepository>();
             services.AddScoped<CacheManager>();
             services.AddScoped<M3UManager>();
-            services.AddScoped<ElahmadManager>();
+            services.AddScoped<ElahmadManagerV2>();
             services.AddScoped<HTAManager>();
             services.AddScoped<HalfIntegrateManager>();
             services.AddScoped<IFixedChannelService, FixedChannelManager>();
             services.AddScoped<IGenericChannelService, GenericChannelManager>();
- 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,9 +93,11 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
                 endpoints.MapControllers();
             });
             app.UseHangfireDashboard();
+            var service = serviceProvider.GetService<Service>();
+            service.ReCache();
             recurringJobManager.AddOrUpdate(
                 "Run every minute",
-                () => serviceProvider.GetService<Service>().ReCache(),
+                () => service.ReCache(),
                 "0 */18 * ? * *"
                 );
 

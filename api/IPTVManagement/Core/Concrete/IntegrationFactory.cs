@@ -11,12 +11,13 @@ namespace Core.Concrete
     public class IntegrationFactory
     {
         private readonly HTAManager htaManager;
-        private readonly ElahmadManager elahmadManager;
+        private readonly ElahmadManagerV2 elahmadManager;
+        //private readonly ElahmadManager elahmadManager;
         private readonly HalfIntegrateManager halfIntegrateManager;
         private readonly ChannelController channelController;
         private readonly CacheManager cacheManager;
 
-        public IntegrationFactory(HTAManager hTAManager, ElahmadManager elahmadManager, HalfIntegrateManager halfIntegrateManager, ChannelController channelController, CacheManager cacheManager)
+        public IntegrationFactory(HTAManager hTAManager, ElahmadManagerV2 elahmadManager, HalfIntegrateManager halfIntegrateManager, ChannelController channelController, CacheManager cacheManager)
         {
             this.htaManager = hTAManager;
             this.elahmadManager = elahmadManager;
@@ -45,8 +46,9 @@ namespace Core.Concrete
                         cacheManager.Add(name, channels);
                     });
                     break;
-                case "elahmad":
-                    channels = elahmadManager.Get(JObject.FromObject(setting).ToObject<ElahmadSettingModel>());
+
+                case "elahmadv2":
+                    channels = elahmadManager.Get(JObject.FromObject(setting).ToObject<ElahmadSettingModelV2>());
                     Task.Run(() =>
                     {
                         channelController.ControlAndGet(channels);
@@ -54,6 +56,15 @@ namespace Core.Concrete
                         cacheManager.Add(name, channels);
                     });
                     break;
+                //case "elahmad":
+                //    channels = elahmadManager.Get(JObject.FromObject(setting).ToObject<ElahmadSettingModel>());
+                //    Task.Run(() =>
+                //    {
+                //        channelController.ControlAndGet(channels);
+                //        cacheManager.Delete(name);
+                //        cacheManager.Add(name, channels);
+                //    });
+                //    break;
                 case "freeiptvlists":
                 case "dailyiptvlist":
                     channels = halfIntegrateManager.Get(JObject.FromObject(setting).ToObject<HalfIntegrateSettingModel>());

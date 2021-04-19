@@ -21,6 +21,12 @@
     "Addional": true
   },
   {
+    "Integration": "elahmadv2",
+    "Settings": {
+      "ChannelNames": [ "algerie", "cima", "thalitha", "samira", "echorouk", "nile", "nessma", "tamazight", "panaroma" ]
+    }
+  },
+  {
     "Integration": "elahmad",
     "Settings": {
       "ChannelLinks": [
@@ -47,7 +53,7 @@
         {
           "Name": "Echorouk TV",
           "Logo": "https://hta.backoffice.easybroadcast.fr/channel/6_picture.png",
-          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=echorouk"
+          "Link": "http://www.elahmad.com/tv/arabic-tv-online.php?id=echorouk_tvhd"
         },
         {
           "Name": "Nile Comedy",
