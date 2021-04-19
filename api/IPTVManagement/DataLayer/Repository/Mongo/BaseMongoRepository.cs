@@ -2,27 +2,22 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 using Model;
 using MongoDB.Driver;
 
-namespace DataLayer.Repository.Mongo
+namespace DataLayer.Repository.Mongo.Concrete
 {
     public abstract class BaseMongoRepository<T> : IRepository<T>
         where T : class, IMongoEntity, new()
     {
         private readonly IMongoCollection<T> collection;
-        public BaseMongoRepository(IMongoCollection<T> collection)
-        {
-            this.collection = collection;
-        }
-
-        public void Delete(string id) => collection.DeleteOne(x => x.Id == id);
-
-        public List<T> Get() => collection.Find(null).ToList();
-
-        public List<T> Get(Expression<Func<T, bool>> predicate) => collection.Find(predicate).ToList();
-
-        public void Insert(T entity) => collection.InsertOne(entity);
-
+        public BaseMongoRepository(IMongoCollection<T> collection) => this.collection = collection;
+        public async Task DeleteAsync(string id) => await collection.DeleteOneAsync(x => x.Id == id);
+        public async Task<List<T>> GetAsync() => await (await collection.FindAsync(null)).ToListAsync();
+        public async Task<List<T>> GetAsync(Expression<Func<T, bool>> predicate) => await (await collection.FindAsync(predicate)).ToListAsync();
+        public async Task<T> GetAsync(string id) => await (await collection.FindAsync(x=>x.Id == id)).FirstOrDefaultAsync();
+        public async Task InsertAsync(T entity) => await collection.InsertOneAsync(entity);
+        public async Task UpdateAsync(T entity) => await collection.ReplaceOneAsync(x => x.Id == entity.Id, entity);
     }
 }

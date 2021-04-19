@@ -39,6 +39,7 @@ namespace IPTV.WebApi.Controller
         [HttpPut("{channelId}")]
         public async Task<IActionResult> UpdateChannel([FromRoute] string channelId, [FromBody] Channel request)
         {
+            request.Id = channelId;
             await service.UpdateChannel(channelId, request);
             return Ok();
         }
