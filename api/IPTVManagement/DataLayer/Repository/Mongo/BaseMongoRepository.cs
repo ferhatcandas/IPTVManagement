@@ -12,11 +12,15 @@ namespace DataLayer.Repository.Mongo.Concrete
         where T : class, IMongoEntity, new()
     {
         private readonly IMongoCollection<T> collection;
-        public BaseMongoRepository(IMongoCollection<T> collection) => this.collection = collection;
+        public BaseMongoRepository(IMongoCollection<T> collection)
+        {
+            this.collection = collection;
+        }
+
         public async Task DeleteAsync(string id) => await collection.DeleteOneAsync(x => x.Id == id);
-        public async Task<List<T>> GetAsync() => await (await collection.FindAsync(null)).ToListAsync();
-        public async Task<List<T>> GetAsync(Expression<Func<T, bool>> predicate) => await (await collection.FindAsync(predicate)).ToListAsync();
-        public async Task<T> GetAsync(string id) => await (await collection.FindAsync(x=>x.Id == id)).FirstOrDefaultAsync();
+        public virtual async Task<List<T>> GetAsync() => await (await collection.FindAsync(null)).ToListAsync();
+        public virtual async Task<List<T>> GetAsync(Expression<Func<T, bool>> predicate) => await (await collection.FindAsync(predicate)).ToListAsync();
+        public virtual async Task<T> GetAsync(string id) => await (await collection.FindAsync(x => x.Id == id)).FirstOrDefaultAsync();
         public async Task InsertAsync(T entity) => await collection.InsertOneAsync(entity);
         public async Task UpdateAsync(T entity) => await collection.ReplaceOneAsync(x => x.Id == entity.Id, entity);
     }

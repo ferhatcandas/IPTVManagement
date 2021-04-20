@@ -1,12 +1,14 @@
-# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
-
-version: '3.4'
-
+version: '3'
 services:
-  iptvwebapi:
-    image: iptvwebapi
-    build:
-      context: .
-      dockerfile: IPTV.WebApi/Dockerfile
+  mongodb:
+    image: mongo
+    container_name: mongodbserver
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
     ports:
-      - 8080
+        - 27017:27017
+    command: mongod
+volumes:
+  mongodb:
+  mongodb_config:

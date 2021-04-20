@@ -55,7 +55,7 @@ namespace Core
         public Stream GetStream()
         {
             var channels = GetChannels(true).Where(x=>!string.IsNullOrEmpty(x.Stream)).ToList();
-            var bytes = streamManager.Export(channels);
+            var bytes = streamManager.Export(channels).Result;
 
             return new MemoryStream(bytes);
         }

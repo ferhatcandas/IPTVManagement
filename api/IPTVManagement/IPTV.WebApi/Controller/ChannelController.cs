@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace IPTV.WebApi.Controller
 {
-    [Route("channels/v2")]
+    [Route("channels")]
     [ApiController]
-    public class ChannelControllerV2 : ControllerBase
+    public class ChannelController : ControllerBase
     {
         private readonly IChannelService service;
 
-        public ChannelControllerV2(IChannelService service)
+        public ChannelController(IChannelService service)
         {
             this.service = service;
         }

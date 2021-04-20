@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ElahmadSettingModel.cs" />
+    <Compile Remove="HalfIntegrateSettingModel.cs" />
+    <Compile Remove="HTASettingModel.cs" />
+  </ItemGroup>
+
 </Project>

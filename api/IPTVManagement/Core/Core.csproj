@@ -5,10 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="IntegrationsV2\**" />
+    <EmbeddedResource Remove="IntegrationsV2\**" />
+    <None Remove="IntegrationsV2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstract\IFixedChannelService.cs" />
+    <Compile Remove="Abstract\IGenericChannelService.cs" />
+    <Compile Remove="Concrete\FixedChannelManager.cs" />
+    <Compile Remove="Concrete\GenericChannelManager.cs" />
+    <Compile Remove="Concrete\IntegrationFactory.cs" />
     <Compile Remove="IntegrationFactory.cs" />
     <Compile Remove="IntegrationManager.cs" />
     <Compile Remove="M3UManager.cs" />
     <Compile Remove="Manager.cs" />
+    <Compile Remove="Service.cs" />
     <Compile Remove="TVChannelManager.cs" />
   </ItemGroup>
 

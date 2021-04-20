@@ -24,7 +24,7 @@ namespace IPTV.WebApi
                 {
                     webBuilder.UseContentRoot(Directory.GetCurrentDirectory());
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://0.0.0.0:8080");
+                    webBuilder.UseUrls("http://0.0.0.0:8085");
                 });
     }
 }

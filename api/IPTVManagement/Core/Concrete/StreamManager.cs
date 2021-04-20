@@ -6,21 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Core.Concrete
 {
     public class StreamManager
     {
-        
-
-        internal byte[] Export(List<CommonChannelModel> newChannels)
+        internal async Task<byte[]> Export(List<CommonChannelModel> newChannels)
         {
-            return UploadFile(GenerateM3UChannelFile(newChannels.Where(x=>x.HasStream).ToList()));
+            return await UploadFile(GenerateM3UChannelFile(newChannels.Where(x => x.HasStream).ToList()));
         }
 
-        private byte[] UploadFile(string text)
+        private async Task<byte[]> UploadFile(string text)
         {
-            SaveFile(text);
+            await SaveFile(text);
             byte[] bytes = Encoding.UTF8.GetBytes(text);
             return bytes;
         }
@@ -41,9 +40,9 @@ namespace Core.Concrete
         {
             return $"#EXTINF:-1 tvg-id=\"{channel.Name}\" tvg-name=\"{channel.Name}\" tvg-language=\"{channel.Language}\" tvg-logo=\"{channel.Logo}\" tvg-country=\"{channel.Country}\" tvg-url=\"\" group-title=\"{channel.Category}\",{channel.Name}\n{channel.Stream}";
         }
-        private void SaveFile(string context)
+        private async Task SaveFile(string context)
         {
-            File.WriteAllText("channels.m3u", context);
+            await File.WriteAllTextAsync("channels.m3u", context);
         }
     }
 }
