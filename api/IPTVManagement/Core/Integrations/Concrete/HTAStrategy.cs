@@ -27,7 +27,7 @@ namespace Core.Integrations.Concrete
         }
         public async Task<List<CommonChannelModel>> GetAsync()
         {
-            var setting = new IntegrationBase<HTASettings>();// await repository.GetFirstAsync();
+            var setting = await repository.GetFirstAsync();
             var settings = setting.Settings;
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
