@@ -11,6 +11,12 @@ namespace Core.Concrete
 {
     public class M3UManager
     {
+        private readonly HttpClient httpClient;
+
+        public M3UManager(HttpClient httpClient)
+        {
+            this.httpClient = httpClient;
+        }
         public List<M3U8Channel> DownloadAndGet(string url, string integration)
         {
             DownloadPlayList(url, out string output);

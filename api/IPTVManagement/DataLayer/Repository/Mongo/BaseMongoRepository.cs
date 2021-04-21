@@ -18,7 +18,7 @@ namespace DataLayer.Repository.Mongo.Concrete
         }
 
         public async Task DeleteAsync(string id) => await collection.DeleteOneAsync(x => x.Id == id);
-        public virtual async Task<List<T>> GetAsync() => await (await collection.FindAsync(null)).ToListAsync();
+        public virtual async Task<List<T>> GetAsync() => await (await collection.FindAsync(FilterDefinition<T>.Empty)).ToListAsync();
         public virtual async Task<List<T>> GetAsync(Expression<Func<T, bool>> predicate) => await (await collection.FindAsync(predicate)).ToListAsync();
         public virtual async Task<T> GetAsync(string id) => await (await collection.FindAsync(x => x.Id == id)).FirstOrDefaultAsync();
         public async Task InsertAsync(T entity) => await collection.InsertOneAsync(entity);

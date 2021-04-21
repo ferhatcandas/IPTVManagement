@@ -9,5 +9,6 @@ namespace Core.Abstract
     {
         Task Syncronize();
         Task TransferChannels();
+        Task TransferIntegrations();
     }
 }

@@ -63,24 +63,16 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
         private void RegisterServices(IServiceCollection services)
         {
             var settings = Configuration.Get<Settings>();
-            //services.AddHttpClient<M3UManager>(x =>
-            //{
-            //    x.Timeout = new TimeSpan(0, 0, 15);
-            //});
-            services.AddHttpClient();
-            services.AddScoped<GenericChannelRepository>();
-            //services.AddScoped<IntegrationFactory>();
-            //services.AddScoped<Service>();
-            //services.AddScoped<ChannelController>();
-            services.AddScoped<StreamManager>();
-            services.AddScoped<ChannelRepository>();
-            //services.AddScoped<CacheManager>();
-            services.AddScoped<M3UManager>();
-            //services.AddScoped<ElahmadManager>();
-            //services.AddScoped<HTAManager>();
-            //services.AddScoped<HalfIntegrateManager>();
-            //services.AddScoped<IFixedChannelService, FixedChannelManager>();
-            //services.AddScoped<IGenericChannelService, GenericChannelManager>();
+
+            //services.AddHttpClient();
+            services.AddHttpClient<M3UManager>(x =>
+            {
+                x.Timeout = new TimeSpan(0, 0, 15);
+            });
+
+            services.AddSingleton<GenericChannelRepository>();
+            services.AddSingleton<StreamManager>();
+            services.AddSingleton<ChannelRepository>();
 
             services.AddScoped<IChannelService, ChannelService>();
             services.AddScoped<IScheduleService, ScheduleService>();
@@ -88,7 +80,7 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
 
 
             services.AddTransient<IIntegration, ElahmadStrategy>();
-            services.AddTransient<IIntegration, HTAStrategy>();
+            services.AddHttpClient<IIntegration, HTAStrategy>();
             services.AddTransient<IIntegration, HalfIntegratedStrategy>();
 
             services.AddSingleton<IIntegrationRepository<ElahmadSettings>, IntegrationRepository<ElahmadSettings>>();
@@ -102,20 +94,17 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
 
             var client = new MongoClient(settings.MongoDBSettings.ConnectionString);
             var database = client.GetDatabase(settings.MongoDBSettings.Database);
-            var channelsCollection = database.GetCollection<CommonChannelModel>("channels");
 
-            var elahmadCollection = database.GetCollection<IntegrationBase<ElahmadSettings>>("integrations");
+            InjectMongoRepositories<CommonChannelModel>(services, database, "channels");
+            InjectMongoRepositories<IntegrationBase<ElahmadSettings>>(services, database, "integrations");
+            InjectMongoRepositories<IntegrationBase<HalfIntegratedSettings>>(services, database, "integrations");
+            InjectMongoRepositories<IntegrationBase<HTASettings>>(services, database, "integrations");
 
-            var halfCollection = database.GetCollection<IntegrationBase<HalfIntegratedSettings>>("integrations");
-
-
-            var htaCollection = database.GetCollection<IntegrationBase<HTASettings>>("integrations");
-
-            services.AddSingleton(channelsCollection);
-            services.AddSingleton(elahmadCollection);
-            services.AddSingleton(halfCollection);
-            services.AddSingleton(htaCollection);
-
+        }
+        private void InjectMongoRepositories<T>(IServiceCollection services, IMongoDatabase database, string name)
+        {
+            var collection = database.GetCollection<T>(name);
+            services.AddSingleton(collection);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -139,7 +128,7 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             app.UseHangfireDashboard();
 
             var service = serviceProvider.GetService<IScheduleService>();
-            service.Syncronize();
+            service.TransferIntegrations();
             //service.TransferIntegrations();
             //recurringJobManager.AddOrUpdate(
             //    "Run every minute",

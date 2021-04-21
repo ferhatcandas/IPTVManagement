@@ -18,22 +18,22 @@ namespace Core.Integrations.Concrete
         private readonly IIntegrationRepository<HTASettings> repository;
 
         public HTAStrategy(
-            //HttpClient httpClient,
+            HttpClient httpClient,
             IIntegrationRepository<HTASettings> repository
             )
         {
-            this.httpClient = new HttpClient();
+            this.httpClient = httpClient;
             this.repository = repository;
         }
         public async Task<List<CommonChannelModel>> GetAsync()
         {
-            var setting = await repository.GetFirstAsync();
+            var setting = new IntegrationBase<HTASettings>();// await repository.GetFirstAsync();
             var settings = setting.Settings;
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
             string token = await (await httpClient.GetAsync(settings.AuthToken)).Content.ReadAsStringAsync();
 
-            string tvList = httpClient.GetAsync(settings.Link).Result.Content.ReadAsStringAsync().Result;
+            string tvList = await (await httpClient.GetAsync(settings.Link)).Content.ReadAsStringAsync();
 
             JToken jobject = JObject.Parse(tvList).SelectToken("tiles");
 
