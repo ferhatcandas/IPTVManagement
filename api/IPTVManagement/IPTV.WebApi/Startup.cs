@@ -128,13 +128,11 @@ config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             app.UseHangfireDashboard();
 
             var service = serviceProvider.GetService<IScheduleService>();
-            service.TransferIntegrations();
-            //service.TransferIntegrations();
-            //recurringJobManager.AddOrUpdate(
-            //    "Run every minute",
-            //    () => ,
-            //    "0 */18 * ? * *"
-            //    );
+            recurringJobManager.AddOrUpdate(
+                "Run every minute",
+                () => service.Syncronize(),
+                "0 */18 * ? * *"
+                );
 
         }
     }

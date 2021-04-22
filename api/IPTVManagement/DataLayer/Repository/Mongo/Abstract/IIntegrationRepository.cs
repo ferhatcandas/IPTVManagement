@@ -9,6 +9,5 @@ namespace DataLayer.Repository.Mongo.Abstract
     public interface IIntegrationRepository<T> : IRepository<IntegrationBase<T>>
           where T : IntegrationSettings
     {
-        Task<IntegrationBase<T>> GetFirstAsync();
     }
 }

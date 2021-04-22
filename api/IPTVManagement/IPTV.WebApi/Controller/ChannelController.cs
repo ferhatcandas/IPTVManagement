@@ -25,6 +25,16 @@ namespace IPTV.WebApi.Controller
         {
             return Ok(await service.GetChannels());
         }
+        [HttpGet("active")]
+        public async Task<IActionResult> ActiveChannels()
+        {
+            return Ok((await service.GetChannels()).Where(x => x.HasStream));
+        }
+        [HttpGet("passive")]
+        public async Task<IActionResult> PassiveChannels()
+        {
+            return Ok((await service.GetChannels()).Where(x=>!x.HasStream));
+        }
         [HttpGet("{channelId}")]
         public async Task<IActionResult> GetChannel([FromRoute] string channelId)
         {
@@ -55,6 +65,5 @@ namespace IPTV.WebApi.Controller
             await service.DeleteChannel(channelId);
             return Ok();
         }
-
     }
 }

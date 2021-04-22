@@ -23,21 +23,26 @@ namespace Core.Concrete
         {
             return httpClient.GetAsync(url).Result;
         }
-        private void GetLastUrl(CommonChannelModel channelModel)
+        private void GetLastUrl(CommonChannelModel channelModel, out bool hasStream)
         {
+            hasStream = false;
             var response = GetResponse(channelModel.Stream);
             if ((response.StatusCode == HttpStatusCode.Moved || response.StatusCode == HttpStatusCode.MovedPermanently || response.StatusCode == HttpStatusCode.Found) && !string.IsNullOrEmpty(response.Headers?.Location?.AbsoluteUri))
             {
-                channelModel.Stream = response.Headers.Location.AbsoluteUri;
-                GetLastUrl(channelModel);
+                if (channelModel.Integration != "Fixed")
+                    channelModel.Stream = response.Headers.Location.AbsoluteUri;
+                GetLastUrl(channelModel, out hasStream);
             }
             else
             {
-                response = GetResponse(channelModel.Stream);
                 channelModel.StatusCode = response.StatusCode.ToString();
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    channelModel.Stream = "";
+                    hasStream = false;
+                }
+                else if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    hasStream = true;
                 }
             }
 
@@ -47,20 +52,22 @@ namespace Core.Concrete
 
             foreach (CommonChannelModel channel in filteredChannels)
             {
-                channel.HasStream = false;
+                bool hasStream = false;
+
+                channel.HasStream = hasStream;
                 int count = 0;
                 again:
                 try
                 {
-                    GetLastUrl(channel);
+                    GetLastUrl(channel, out hasStream);
                     count++;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     count++;
                 }
                 bool success = false;
-                if (!string.IsNullOrEmpty(channel.Stream))
+                if (!string.IsNullOrEmpty(channel.Stream) && hasStream)
                 {
 
                     success = true;

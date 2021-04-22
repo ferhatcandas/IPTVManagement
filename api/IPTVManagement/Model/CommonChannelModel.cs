@@ -16,7 +16,7 @@ namespace Model
         public CommonChannelModel Clone()
         {
             var clonedObject = (CommonChannelModel)this.MemberwiseClone();
-            clonedObject.Id = null;
+            clonedObject.Id = Guid.NewGuid().ToString();
             return clonedObject;
         }
     }

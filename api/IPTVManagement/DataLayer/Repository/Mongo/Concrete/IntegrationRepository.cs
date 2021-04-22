@@ -15,11 +15,5 @@ namespace DataLayer.Repository.Mongo.Concrete
         public IntegrationRepository(IMongoCollection<IntegrationBase<T>> collection) : base(collection)
         {
         }
-
-        public async Task<IntegrationBase<T>> GetFirstAsync()
-        {
-            var list = await GetAsync();
-            return list.FirstOrDefault();
-        }
     }
 }

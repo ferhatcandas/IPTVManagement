@@ -31,7 +31,7 @@ namespace Model
                 Name = Name,
                 Stream = Stream,
                 Tags = null,
-                Id = null
+                Id = Guid.NewGuid().ToString()
             };
         }
     }

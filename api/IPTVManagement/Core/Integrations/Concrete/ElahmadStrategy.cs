@@ -22,10 +22,12 @@ namespace Core.Integrations.Concrete
         {
             this.repository = repository;
         }
+
+
         public async Task<List<CommonChannelModel>> GetAsync()
         {
-            var setting = await repository.GetFirstAsync();
-            var settings = setting.Settings;
+            var setting = await repository.GetAsync(x=>x.Type == nameof(ElahmadStrategy));
+            var settings = setting.FirstOrDefault().Settings;
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
             HtmlAgilityPack.HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb();
             foreach (var channel in settings.ChannelLinks)
@@ -58,9 +60,10 @@ namespace Core.Integrations.Concrete
 
                     channels.Add(new CommonChannelModel
                     {
+                        Id = Guid.NewGuid().ToString(),
                         Category = "Elahmad",
                         Country = "AR",
-                        Integration = IntegrationType.Full.ToString(),
+                        Integration = nameof(ElahmadStrategy),
                         IsEditable = false,
                         HasStream = true,
                         IsActive = true,

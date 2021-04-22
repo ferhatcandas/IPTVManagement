@@ -1,5 +1,6 @@
 [
   {
+    "Id": "dailyiptvlist",
     "IntegrationType": "half",
     "Name": "dailyiptvlist",
     "Settings": {
@@ -14,6 +15,7 @@
     }
   },
   {
+    "Id": "freeiptvlists",
     "IntegrationType": "half",
     "Name": "freeiptvlists",
     "Settings": {
@@ -28,6 +30,7 @@
     }
   },
   {
+    "Id": "hta",
     "IntegrationType": "full",
     "Name": "hta",
     "Settings": {
@@ -36,6 +39,7 @@
     }
   },
   {
+    "Id": "elahmad",
     "IntegrationType": "full",
     "Name": "elahmad",
     "Settings": {

@@ -9,7 +9,7 @@ namespace Model.Integration
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public IntegrationType Type { get; set; }
+        public string Type { get; set; }
         public T Settings { get; set; }
     }
 }

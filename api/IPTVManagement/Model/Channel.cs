@@ -16,8 +16,8 @@ namespace Model
             {
                 Category = Category,
                 Country = Country,
-                Id = Id,
-                Integration = IntegrationType.Fixed.ToString(),
+                Id = Guid.NewGuid().ToString(),
+                Integration = "Fixed",
                 IsActive = IsActive,
                 HasStream = true,
                 IsEditable = true,

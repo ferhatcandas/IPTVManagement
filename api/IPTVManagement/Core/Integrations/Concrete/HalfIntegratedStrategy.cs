@@ -23,18 +23,25 @@ namespace Core.Integrations.Concrete
             this.repository = repository;
             this.manager = manager;
         }
+
+
         public async Task<List<CommonChannelModel>> GetAsync()
         {
-            var setting = await repository.GetFirstAsync();
+            var setting = await repository.GetAsync(x=>x.Type == nameof(HalfIntegratedStrategy));
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
-            List<string> links = GetLinks(setting.Settings);
 
-            foreach (string item in links)
+            foreach (var item in setting)
             {
-                List<M3U8Channel> list = manager.DownloadAndGet(item, IntegrationType.Half.ToString());
+                List<string> links = GetLinks(item.Settings);
 
-                channels.AddRange(list.Select(x => x.ToCommanChannel()));
+                foreach (string link in links)
+                {
+                    List<M3U8Channel> list = manager.DownloadAndGet(link, nameof(HalfIntegratedStrategy));
+
+                    channels.AddRange(list.Select(x => x.ToCommanChannel()));
+                }
             }
+            
             return channels;
         }
         private List<string> GetLinks(HalfIntegratedSettings settings)

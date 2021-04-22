@@ -31,8 +31,36 @@ namespace Core.Concrete
         }
         public async Task Syncronize()
         {
+            List<Task> tasks = new List<Task>();
+            tasks.Add(new Task(() =>
+            {
+                var existChannels = channelRepository.GetAsync(x => x.Integration == "Fixed").Result;
+                Control(existChannels);
+                foreach (var item in existChannels)
+                {
+                    channelRepository.UpdateAsync(item).Wait();
+                }
+            }));
             foreach (var item in integrations)
-                await Process(await item.GetAsync());
+            {
+                tasks.Add(new Task(() =>
+                {
+                    Proc(item);
+                }));
+            }
+
+
+
+            tasks.ForEach(x => x.Start());
+            await Task.WhenAll(tasks);
+        }
+
+        private void Proc(IIntegration item)
+        {
+            var existChannels = channelRepository.GetAsync(x => x.Integration == item.GetType().Name).Result;
+            foreach (var channel in existChannels)
+                channelRepository.DeleteAsync(channel.Id).Wait();
+            Process(item.GetAsync().Result).Wait();
         }
 
         public async Task TransferChannels()
@@ -41,34 +69,15 @@ namespace Core.Concrete
             await Process(channels);
         }
 
-        public async Task TransferIntegrations()
+        private void Control(List<CommonChannelModel> channels)
         {
-            var generics = genericChannelRepository.Get();
-            foreach (var item in generics)
-            {
-                switch (item.IntegrationType)
-                {
-                    case "Fixed":
-                        break;
-                    case "Half":
-                        break;
-                    case "Full":
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-
-            throw new NotImplementedException();
+            ChannelController channelController = new ChannelController();
+            channelController.ControlAndGet(channels);
         }
-
-
-
-
         private async Task Process(List<CommonChannelModel> channels)
         {
-            foreach (var item in channels)
+            Control(channels);
+            foreach (var item in channels.Where(x => x.HasStream))
                 await channelRepository.InsertAsync(item);
         }
     }

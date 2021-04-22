@@ -25,10 +25,12 @@ namespace Core.Integrations.Concrete
             this.httpClient = httpClient;
             this.repository = repository;
         }
+
+
         public async Task<List<CommonChannelModel>> GetAsync()
         {
-            var setting = await repository.GetFirstAsync();
-            var settings = setting.Settings;
+            var setting = await repository.GetAsync(x => x.Type == nameof(HTAStrategy));
+            var settings = setting.FirstOrDefault().Settings;
             List<CommonChannelModel> channels = new List<CommonChannelModel>();
 
             string token = await (await httpClient.GetAsync(settings.AuthToken)).Content.ReadAsStringAsync();
@@ -43,9 +45,10 @@ namespace Core.Integrations.Concrete
             {
                 channels.Add(new CommonChannelModel
                 {
+                    Id = Guid.NewGuid().ToString(),
                     Category = "HTA TV",
                     Country = "DZ",
-                    Integration = IntegrationType.Full.ToString(),
+                    Integration = nameof(HTAStrategy),
                     IsActive = true,
                     IsEditable = false,
                     HasStream = true,
